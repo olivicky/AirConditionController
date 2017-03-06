@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED51B8578A2A21569BD32DC2 /* Pods_ConditionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */; };
+		F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001A6741E1A92D9000BE03F /* CodeItem.swift */; };
+		F0035B421DA6CBF5009FA188 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0035B411DA6CBF5009FA188 /* Util.swift */; };
+		F0035B441DA6CCBF009FA188 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0035B431DA6CCBF009FA188 /* SystemConfiguration.framework */; };
+		F0035B461DA6D016009FA188 /* FirstActivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0035B451DA6D016009FA188 /* FirstActivationTableViewController.swift */; };
+		F0045FD41DB3BA41006024FE /* GuideNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0045FD31DB3BA41006024FE /* GuideNetworkViewController.swift */; };
+		F0059A6A1DB81A960066D780 /* AddDeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0059A691DB81A960066D780 /* AddDeviceTableViewController.swift */; };
+		F00B50B41DA5904D00CD4008 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B50B31DA5904D00CD4008 /* DevicesViewController.swift */; };
+		F00B50B61DA595DB00CD4008 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B50B51DA595DB00CD4008 /* Device.swift */; };
+		F010EFFC1DB256F4000D0EF5 /* AppSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010EFFB1DB256F4000D0EF5 /* AppSetup.swift */; };
+		F01DEEE31E1BC2F900C480C1 /* TestCommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DEEE21E1BC2F900C480C1 /* TestCommandTableViewController.swift */; };
+		F01E89921DA906D4008CCC08 /* IRControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E89911DA906D4008CCC08 /* IRControllerViewController.swift */; };
+		F02D739D1DB3F2A0005DB870 /* ConditionerDeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D739C1DB3F2A0005DB870 /* ConditionerDeviceList.swift */; };
+		F02D739F1DB3F823005DB870 /* ModelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D739E1DB3F823005DB870 /* ModelListViewController.swift */; };
+		F085E3271DBB74EE00C53A3C /* DeviceActivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F085E3261DBB74EE00C53A3C /* DeviceActivationTableViewController.swift */; };
+		F09BF47A1DB3E38C00918FC9 /* ConditionerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09BF4791DB3E38C00918FC9 /* ConditionerDevice.swift */; };
+		F0A514EF1E131EE9003F28D8 /* FirstSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A514EE1E131EE9003F28D8 /* FirstSettingsTableViewController.swift */; };
+		F0AD2C581DC13F910017AE18 /* DomiWiiDeviceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD2C571DC13F910017AE18 /* DomiWiiDeviceAPI.swift */; };
+		F0AD2C5A1DC14CF10017AE18 /* ManualActivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD2C591DC14CF10017AE18 /* ManualActivationViewController.swift */; };
+		F0EF189F1DA2F07000EF1718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF189E1DA2F07000EF1718 /* AppDelegate.swift */; };
+		F0EF18A11DA2F07000EF1718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF18A01DA2F07000EF1718 /* ViewController.swift */; };
+		F0EF18A41DA2F07000EF1718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EF18A21DA2F07000EF1718 /* Main.storyboard */; };
+		F0EF18A61DA2F07000EF1718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EF18A51DA2F07000EF1718 /* Assets.xcassets */; };
+		F0EF18A91DA2F07000EF1718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EF18A71DA2F07000EF1718 /* LaunchScreen.storyboard */; };
+		F0FEE8101DAECA4D00581214 /* DomiWiiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FEE80F1DAECA4D00581214 /* DomiWiiAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07828E6C267642E6D715D130 /* Pods-ConditionController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.debug.xcconfig"; sourceTree = "<group>"; };
+		A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConditionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.release.xcconfig"; sourceTree = "<group>"; };
+		F001A6741E1A92D9000BE03F /* CodeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeItem.swift; sourceTree = "<group>"; };
+		F0035B411DA6CBF5009FA188 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		F0035B431DA6CCBF009FA188 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F0035B451DA6D016009FA188 /* FirstActivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstActivationTableViewController.swift; sourceTree = "<group>"; };
+		F0045FD31DB3BA41006024FE /* GuideNetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideNetworkViewController.swift; sourceTree = "<group>"; };
+		F0059A691DB81A960066D780 /* AddDeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddDeviceTableViewController.swift; path = ../AddDeviceTableViewController.swift; sourceTree = "<group>"; };
+		F00B50B31DA5904D00CD4008 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
+		F00B50B51DA595DB00CD4008 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F010EFFB1DB256F4000D0EF5 /* AppSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
+		F01DEEE21E1BC2F900C480C1 /* TestCommandTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCommandTableViewController.swift; sourceTree = "<group>"; };
+		F01E89911DA906D4008CCC08 /* IRControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRControllerViewController.swift; sourceTree = "<group>"; };
+		F02D739C1DB3F2A0005DB870 /* ConditionerDeviceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionerDeviceList.swift; sourceTree = "<group>"; };
+		F02D739E1DB3F823005DB870 /* ModelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelListViewController.swift; sourceTree = "<group>"; };
+		F085E3261DBB74EE00C53A3C /* DeviceActivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceActivationTableViewController.swift; sourceTree = "<group>"; };
+		F09BF4791DB3E38C00918FC9 /* ConditionerDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionerDevice.swift; sourceTree = "<group>"; };
+		F0A514EE1E131EE9003F28D8 /* FirstSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSettingsTableViewController.swift; sourceTree = "<group>"; };
+		F0AD2C571DC13F910017AE18 /* DomiWiiDeviceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomiWiiDeviceAPI.swift; sourceTree = "<group>"; };
+		F0AD2C591DC14CF10017AE18 /* ManualActivationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualActivationViewController.swift; sourceTree = "<group>"; };
+		F0EF189B1DA2F07000EF1718 /* ConditionController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConditionController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EF189E1DA2F07000EF1718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0EF18A01DA2F07000EF1718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0EF18A31DA2F07000EF1718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F0EF18A51DA2F07000EF1718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0EF18A81DA2F07000EF1718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0EF18AA1DA2F07000EF1718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FEE80F1DAECA4D00581214 /* DomiWiiAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomiWiiAPI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0EF18981DA2F06F00EF1718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0035B441DA6CCBF009FA188 /* SystemConfiguration.framework in Frameworks */,
+				ED51B8578A2A21569BD32DC2 /* Pods_ConditionController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAE27409EE676A6193AD3494 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0035B431DA6CCBF009FA188 /* SystemConfiguration.framework */,
+				A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E942BE0492E1AA2026C4907E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07828E6C267642E6D715D130 /* Pods-ConditionController.debug.xcconfig */,
+				E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F02016871DA450CC003F3D90 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F0035B411DA6CBF5009FA188 /* Util.swift */,
+				F0FEE80F1DAECA4D00581214 /* DomiWiiAPI.swift */,
+				F010EFFB1DB256F4000D0EF5 /* AppSetup.swift */,
+				F0AD2C571DC13F910017AE18 /* DomiWiiDeviceAPI.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		F09BF4781DB3E21700918FC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F00B50B51DA595DB00CD4008 /* Device.swift */,
+				F09BF4791DB3E38C00918FC9 /* ConditionerDevice.swift */,
+				F02D739C1DB3F2A0005DB870 /* ConditionerDeviceList.swift */,
+				F001A6741E1A92D9000BE03F /* CodeItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F0EF18921DA2F06F00EF1718 = {
+			isa = PBXGroup;
+			children = (
+				F0EF189D1DA2F07000EF1718 /* ConditionController */,
+				F0EF189C1DA2F07000EF1718 /* Products */,
+				E942BE0492E1AA2026C4907E /* Pods */,
+				BAE27409EE676A6193AD3494 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F0EF189C1DA2F07000EF1718 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0EF189B1DA2F07000EF1718 /* ConditionController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0EF189D1DA2F07000EF1718 /* ConditionController */ = {
+			isa = PBXGroup;
+			children = (
+				F09BF4781DB3E21700918FC9 /* Model */,
+				F02016871DA450CC003F3D90 /* Utils */,
+				F0EF189E1DA2F07000EF1718 /* AppDelegate.swift */,
+				F0EF18A01DA2F07000EF1718 /* ViewController.swift */,
+				F0EF18A21DA2F07000EF1718 /* Main.storyboard */,
+				F0EF18A51DA2F07000EF1718 /* Assets.xcassets */,
+				F0EF18A71DA2F07000EF1718 /* LaunchScreen.storyboard */,
+				F0EF18AA1DA2F07000EF1718 /* Info.plist */,
+				F0059A691DB81A960066D780 /* AddDeviceTableViewController.swift */,
+				F00B50B31DA5904D00CD4008 /* DevicesViewController.swift */,
+				F0AD2C591DC14CF10017AE18 /* ManualActivationViewController.swift */,
+				F0035B451DA6D016009FA188 /* FirstActivationTableViewController.swift */,
+				F085E3261DBB74EE00C53A3C /* DeviceActivationTableViewController.swift */,
+				F01E89911DA906D4008CCC08 /* IRControllerViewController.swift */,
+				F0045FD31DB3BA41006024FE /* GuideNetworkViewController.swift */,
+				F02D739E1DB3F823005DB870 /* ModelListViewController.swift */,
+				F0A514EE1E131EE9003F28D8 /* FirstSettingsTableViewController.swift */,
+				F01DEEE21E1BC2F900C480C1 /* TestCommandTableViewController.swift */,
+			);
+			path = ConditionController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0EF189A1DA2F06F00EF1718 /* ConditionController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EF18AD1DA2F07000EF1718 /* Build configuration list for PBXNativeTarget "ConditionController" */;
+			buildPhases = (
+				35262B27C5BE90E9001740CB /* [CP] Check Pods Manifest.lock */,
+				F0EF18971DA2F06F00EF1718 /* Sources */,
+				F0EF18981DA2F06F00EF1718 /* Frameworks */,
+				F0EF18991DA2F06F00EF1718 /* Resources */,
+				073F75392D2981458A51E6EF /* [CP] Embed Pods Frameworks */,
+				917F2AC8D08FD1BC5F2AD67F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConditionController;
+			productName = ConditionController;
+			productReference = F0EF189B1DA2F07000EF1718 /* ConditionController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0EF18931DA2F06F00EF1718 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = vincenzoOlivito;
+				TargetAttributes = {
+					F0EF189A1DA2F06F00EF1718 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8Y3NDKK3E6;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F0EF18961DA2F06F00EF1718 /* Build configuration list for PBXProject "ConditionController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0EF18921DA2F06F00EF1718;
+			productRefGroup = F0EF189C1DA2F07000EF1718 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0EF189A1DA2F06F00EF1718 /* ConditionController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0EF18991DA2F06F00EF1718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0EF18A91DA2F07000EF1718 /* LaunchScreen.storyboard in Resources */,
+				F0EF18A61DA2F07000EF1718 /* Assets.xcassets in Resources */,
+				F0EF18A41DA2F07000EF1718 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		073F75392D2981458A51E6EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35262B27C5BE90E9001740CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		917F2AC8D08FD1BC5F2AD67F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0EF18971DA2F06F00EF1718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F02D739D1DB3F2A0005DB870 /* ConditionerDeviceList.swift in Sources */,
+				F01DEEE31E1BC2F900C480C1 /* TestCommandTableViewController.swift in Sources */,
+				F0059A6A1DB81A960066D780 /* AddDeviceTableViewController.swift in Sources */,
+				F0EF18A11DA2F07000EF1718 /* ViewController.swift in Sources */,
+				F00B50B41DA5904D00CD4008 /* DevicesViewController.swift in Sources */,
+				F085E3271DBB74EE00C53A3C /* DeviceActivationTableViewController.swift in Sources */,
+				F0AD2C5A1DC14CF10017AE18 /* ManualActivationViewController.swift in Sources */,
+				F010EFFC1DB256F4000D0EF5 /* AppSetup.swift in Sources */,
+				F0035B421DA6CBF5009FA188 /* Util.swift in Sources */,
+				F01E89921DA906D4008CCC08 /* IRControllerViewController.swift in Sources */,
+				F00B50B61DA595DB00CD4008 /* Device.swift in Sources */,
+				F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */,
+				F0035B461DA6D016009FA188 /* FirstActivationTableViewController.swift in Sources */,
+				F09BF47A1DB3E38C00918FC9 /* ConditionerDevice.swift in Sources */,
+				F0EF189F1DA2F07000EF1718 /* AppDelegate.swift in Sources */,
+				F0A514EF1E131EE9003F28D8 /* FirstSettingsTableViewController.swift in Sources */,
+				F02D739F1DB3F823005DB870 /* ModelListViewController.swift in Sources */,
+				F0AD2C581DC13F910017AE18 /* DomiWiiDeviceAPI.swift in Sources */,
+				F0045FD41DB3BA41006024FE /* GuideNetworkViewController.swift in Sources */,
+				F0FEE8101DAECA4D00581214 /* DomiWiiAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F0EF18A21DA2F07000EF1718 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0EF18A31DA2F07000EF1718 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0EF18A71DA2F07000EF1718 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0EF18A81DA2F07000EF1718 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0EF18AB1DA2F07000EF1718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0EF18AC1DA2F07000EF1718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0EF18AE1DA2F07000EF1718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07828E6C267642E6D715D130 /* Pods-ConditionController.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8Y3NDKK3E6;
+				INFOPLIST_FILE = ConditionController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.vincenzo.olivito.ConditionController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F0EF18AF1DA2F07000EF1718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8Y3NDKK3E6;
+				INFOPLIST_FILE = ConditionController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.vincenzo.olivito.ConditionController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0EF18961DA2F06F00EF1718 /* Build configuration list for PBXProject "ConditionController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EF18AB1DA2F07000EF1718 /* Debug */,
+				F0EF18AC1DA2F07000EF1718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EF18AD1DA2F07000EF1718 /* Build configuration list for PBXNativeTarget "ConditionController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EF18AE1DA2F07000EF1718 /* Debug */,
+				F0EF18AF1DA2F07000EF1718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0EF18931DA2F06F00EF1718 /* Project object */;
+}
