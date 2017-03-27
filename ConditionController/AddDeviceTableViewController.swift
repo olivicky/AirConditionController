@@ -68,7 +68,7 @@ class AddDeviceTableViewController: UITableViewController {
                         device.temperature = temperatureVal
                         device.humidity = humVal
                         try! self.realm.write {
-                            self.realm.add(device)
+                            self.realm.add(device, update: true)
                         }
                         self.showAlert("Add Device", message: "Dispositivo aggiunto correttamente")
                     }

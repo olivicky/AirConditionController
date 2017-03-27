@@ -71,7 +71,7 @@ class FirstSettingsTableViewController: UIViewController {
             switch result {
             case let .success(response):
                 do {
-                    let item: ConditionerDeviceList? = try response.mapObject(ConditionerDeviceList)
+                    let item: ConditionerDeviceList? = try response.mapObject(ConditionerDeviceList.self)
                     if let item = item {
                         // Presumably, you'd parse the JSON into a model object. This is just a demo, so we'll keep it as-is.
                         self.devicesList = item.conditionerDeviceList
