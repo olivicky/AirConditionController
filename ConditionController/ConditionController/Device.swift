@@ -17,4 +17,7 @@ class Device: Object{
     dynamic var humidity : String!
     dynamic var uid: String!
     
+    
+    override static func primaryKey()->String?{ return "uid"}
+    
 }
