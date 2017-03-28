@@ -5,6 +5,8 @@ use_frameworks!
 
 target 'ConditionController' do
 
+
+
     pod 'Moya', :git => 'https://github.com/Moya/Moya'
     pod 'Moya-ObjectMapper', :git => 'https://github.com/ivanbruel/Moya-ObjectMapper'
     pod 'SwiftyJSON'
@@ -20,6 +22,9 @@ target 'ConditionController' do
         end
     end
 end
+
+
+
 
 
 

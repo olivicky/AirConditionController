@@ -37,14 +37,14 @@ let endpointClosure = { (target: DomiWii) -> Endpoint<DomiWii> in
         encoding = JSONEncoding()
     }
     
-    let endpoint: Endpoint<DomiWii> = Endpoint<DomiWii>(URL: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: encoding)
+    let endpoint: Endpoint<DomiWii> = Endpoint<DomiWii>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: encoding)
     
     return endpoint
 }
 
 let DomiWiiProvider = MoyaProvider<DomiWii>(endpointClosure: endpointClosure,
-                                            requestClosure: MoyaProvider.DefaultRequestMapping,
-                                            stubClosure: MoyaProvider.NeverStub,
+                                            requestClosure: MoyaProvider.defaultRequestMapping,
+                                            stubClosure: MoyaProvider.neverStub,
                                             manager: manager,
                                             plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
@@ -126,6 +126,11 @@ extension DomiWii: TargetType {
             return nil
         }
     }
+    
+    public var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    
     public var task: Task {
         return .request
     }

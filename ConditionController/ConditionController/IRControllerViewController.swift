@@ -104,8 +104,8 @@ class IRControllerViewController: UIViewController {
     
     
     @IBAction func modeButtonTapped(_ sender: AnyObject) {
-        if(modeState == 5){
-            modeState = 1;
+        if(modeState == 4){
+            modeState = 0;
         }
         
         self.modeButton.setImage(UIImage(named: modalities[modeState]), for: UIControlState.normal)
