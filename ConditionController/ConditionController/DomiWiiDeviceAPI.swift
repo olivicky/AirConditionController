@@ -44,7 +44,7 @@ let managerDevice = Manager(
 
 let endpointClosureDevice = { (target: DomiWiiDevice) -> Endpoint<DomiWiiDevice> in
     let url = target.baseURL.absoluteString + target.path
-    return Endpoint(URL: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
+    return Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
 }
 
 let requestClosure = { (endpoint: Endpoint<DomiWiiDevice>, done: MoyaProvider.RequestResultClosure) in
@@ -56,8 +56,8 @@ let requestClosure = { (endpoint: Endpoint<DomiWiiDevice>, done: MoyaProvider.Re
 
 
 let DomiWiiDeviceProvider = MoyaProvider<DomiWiiDevice>(endpointClosure: endpointClosureDevice,
-                                            requestClosure: MoyaProvider.DefaultRequestMapping,
-                                            stubClosure: MoyaProvider.NeverStub,
+                                            requestClosure: MoyaProvider.defaultRequestMapping,
+                                            stubClosure: MoyaProvider.neverStub,
                                             manager: managerDevice,
                                             plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
@@ -135,13 +135,14 @@ extension DomiWiiDevice: TargetType {
         }
     }
     
-//    public var parameterEncoding: Moya.ParameterEncoding {
+    public var parameterEncoding: Moya.ParameterEncoding {
+        return URLEncoding.default;
 //        switch self {
 //        case .addContact(let bodyParam):
 //            
 //            return ParameterEncoding.Custom(MyAPICallCustomEncodingClosure)
 //        }
-//    }
+    }
     
     
     
