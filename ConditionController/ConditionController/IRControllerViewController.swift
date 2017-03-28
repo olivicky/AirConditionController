@@ -159,9 +159,9 @@ class IRControllerViewController: UIViewController {
         _ = DomiWiiProvider.request(.sendConditionerAction(alias: conditionerItem.alias, mode: modalita, speed: speed, temperature: temperature, confort: confort)) { result in
             switch result {
             case let .success(response):
-                    let json = JSON(response)
+                let json = JSON(data: response.data)
                     let resp = json["response"].boolValue
-                    if(resp ){
+                    if(resp){
                         self.showAlert("Perfetto", message: "Comando inviato correttamente")
                     }
                     else{
