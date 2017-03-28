@@ -66,7 +66,7 @@ public enum DomiWii {
 }
 
 extension DomiWii: TargetType {
-    public var baseURL: URL { return URL(string: "https://dmautomation-domoticadomain.rhcloud.com")! }
+    public var baseURL: URL { return URL(string: "https://domiwiiapp.herokuapp.com")! }
     public var path: String {
         switch self {
         case .devicesMetadata:
@@ -127,9 +127,11 @@ extension DomiWii: TargetType {
         }
     }
     
-    public var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+
+    public var parameterEncoding: ParameterEncoding  {
+     return URLEncoding.default;
     }
+
     
     public var task: Task {
         return .request

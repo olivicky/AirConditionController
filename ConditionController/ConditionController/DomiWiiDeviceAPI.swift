@@ -135,9 +135,16 @@ extension DomiWiiDevice: TargetType {
         }
     }
     
-    public var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+
+    public var parameterEncoding: Moya.ParameterEncoding {
+        return URLEncoding.default;
+//        switch self {
+//        case .addContact(let bodyParam):
+//            
+//            return ParameterEncoding.Custom(MyAPICallCustomEncodingClosure)
+//        }
     }
+
     
     
     
