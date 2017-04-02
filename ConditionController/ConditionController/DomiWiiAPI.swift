@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import Alamofire
 
 // MARK: - Provider setup
 
@@ -26,6 +27,7 @@ let manager = Manager(
 )
 
 
+
 let endpointClosure = { (target: DomiWii) -> Endpoint<DomiWii> in
     let url = target.baseURL.appendingPathComponent(target.path).absoluteString
     var encoding: Moya.ParameterEncoding = JSONEncoding()
@@ -35,18 +37,22 @@ let endpointClosure = { (target: DomiWii) -> Endpoint<DomiWii> in
         encoding = URLEncoding()
     default:
         encoding = JSONEncoding()
+        //encoding = JsonArrayEncoding()
     }
+    
     
     let endpoint: Endpoint<DomiWii> = Endpoint<DomiWii>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: encoding)
     
     return endpoint
 }
 
-let DomiWiiProvider = MoyaProvider<DomiWii>(endpointClosure: endpointClosure,
-                                            requestClosure: MoyaProvider.defaultRequestMapping,
-                                            stubClosure: MoyaProvider.neverStub,
-                                            manager: manager,
-                                            plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
+//let DomiWiiProvider = MoyaProvider<DomiWii>(endpointClosure: MoyaProvider,
+//                                            requestClosure: MoyaProvider.defaultRequestMapping,
+//                                            stubClosure: MoyaProvider.neverStub,
+//                                            manager: manager,
+//                                            plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
+
+let DomiWiiProvider = MoyaProvider<DomiWii>(plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
 // MARK: - Provider support
 
@@ -92,7 +98,7 @@ extension DomiWii: TargetType {
     public var parameters: [String: Any]? {
         switch self {
         case .devicesMetadata(let aliases):
-            return [ "" : aliases]
+            return  ["jsonArray" : aliases]
         case .sendConditionerAction(let alias, let  mode, let speed, let temperature, let confort):
             return [
                 "alias" : alias,
@@ -128,8 +134,15 @@ extension DomiWii: TargetType {
     }
     
 
-    public var parameterEncoding: ParameterEncoding  {
-     return URLEncoding.default;
+    public var parameterEncoding: Moya.ParameterEncoding  {
+     
+        switch self {
+        case .devicesMetadata:
+            return JsonArrayEncoding.default
+            //return ParameterEncoding.custom(JsonArrayEncodingClosure)
+        default:
+            return JSONEncoding.default
+        }
     }
 
     
@@ -152,5 +165,36 @@ extension DomiWii: TargetType {
             return "[{\"name\": \"Repo Name\"}]".data(using: String.Encoding.utf8)!
         }
     }
+    
+    
+
+    
+    
 }
+
+public struct JsonArrayEncoding: Moya.ParameterEncoding {
+    
+    public static var `default`: JsonArrayEncoding { return JsonArrayEncoding() }
+    
+    
+    /// Creates a URL request by encoding parameters and applying them onto an existing request.
+    ///
+    /// - parameter urlRequest: The request to have parameters applied.
+    /// - parameter parameters: The parameters to apply.
+    ///
+    /// - throws: An `AFError.parameterEncodingFailed` error if encoding fails.
+    ///
+    /// - returns: The encoded request.
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var req = try urlRequest.asURLRequest()
+        let json = try JSONSerialization.data(withJSONObject: parameters!["jsonArray"]!, options: JSONSerialization.WritingOptions.prettyPrinted)
+        req.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        req.httpBody = json
+        return req
+    }
+    
+}
+
+
+
 

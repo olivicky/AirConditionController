@@ -17,7 +17,7 @@ protocol GuideNetworkViewControllerDelegate
 
 class GuideNetworkViewController: UIViewController {
     
-    let DomiWiiSSID = "DomiWii_1"
+    let DomiWiiSSID = "DomiWii_"
     var homeNetworkSSID : String! = nil
     var homeNetworkPassword : String! = nil
     var ipStatico : String?
@@ -43,7 +43,7 @@ class GuideNetworkViewController: UIViewController {
     }
     
     func checkDomiNetworkConnection(){
-        if(Util.getSSID() == DomiWiiSSID){
+        if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
 //            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeviceActivationTableViewController") as? DeviceActivationTableViewController
 //            {
 //                vc.conditionerDeviceList = self.deviceList

@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class IRControllerViewController: UIViewController {
     
-    var modalities = ["winter", "summer", "humidity", "fan", "auto"];
+    var modalities = [ "summer", "winter", "humidity", "fan", "auto"];
     var fanLevel = ["fan_level_1", "fan_level_2", "fan_level_3", "fan_level_4"];
     
     @IBOutlet weak var conditionerTitle: UINavigationItem!
@@ -104,7 +104,7 @@ class IRControllerViewController: UIViewController {
     
     
     @IBAction func modeButtonTapped(_ sender: AnyObject) {
-        if(modeState == 4){
+        if(modeState == 5){
             modeState = 0;
         }
         

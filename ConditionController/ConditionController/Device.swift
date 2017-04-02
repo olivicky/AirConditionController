@@ -8,8 +8,9 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class Device: Object{
+class Device: Object, Mappable{
     
     dynamic var alias: String!
     dynamic var password: String!
@@ -19,5 +20,16 @@ class Device: Object{
     
     
     override static func primaryKey()->String?{ return "uid"}
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        alias <- map["alias"]
+        temperature <- map["temperature"]
+        humidity <- map["humidity"]
+        uid <- map["uiid"]
+    }
     
 }

@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import RealmSwift
+import PKHUD
 
 class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,6 +17,9 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
     let devicesCellIdentifier = "DevicesCellIdentifier"
     var itemToUpdate : Device! = nil
     let realm = try! Realm()
+    var devicesArray : [String] = [String]()
+    weak var timer: Timer?
+    var timerDispatchSourceTimer : DispatchSourceTimer?
 //    var devices = [Device( alias: "Cucina", password: "admin", temperature: "23", hum: "30"), Device( alias: "Soggiorno", password: "admin", temperature: "22", hum: "10"), Device(alias: "Corridoio", password: "admin", temperature: "19", hum: "50")]
     var devices : Results<Device>!
     
@@ -23,12 +27,48 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         devices = realm.objects(Device.self)
+        devices.forEach({devicesArray.append($0.uid) })
         // Do any additional setup after loading the view.
+        self.getDevicesMetadata()
+        startTimer()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        stopTimer()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning() 
         // Dispose of any resources that can be recreated.
+    }
+    
+    func startTimer() {
+        if #available(iOS 10.0, *) {
+            timer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
+                self?.getDevicesMetadata()
+            }
+            
+        } else {
+            // Fallback on earlier versions
+            timerDispatchSourceTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
+            timerDispatchSourceTimer?.scheduleRepeating(deadline: .now(), interval: .seconds(60))
+            timerDispatchSourceTimer?.setEventHandler{
+                self.getDevicesMetadata()
+                
+            }
+            timerDispatchSourceTimer?.resume()
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+        //timerDispatchSourceTimer?.suspend() // if you want to suspend timer
+        timerDispatchSourceTimer?.cancel()
+    }
+    
+    // if appropriate, make sure to stop your timer in `deinit`
+    deinit {
+        stopTimer()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -275,6 +315,45 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
             //                    break
             //                }
             self.showAlert("Errore", message: "Comando non inviato")
+            }
+        }
+    }
+    
+    func getDevicesMetadata(){
+        // Show spinner
+        //HUD.show(.progress)
+        _ = DomiWiiProvider.request(.devicesMetadata(aliases: devicesArray)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let item: ControlledDevices? = try response.mapObject(ControlledDevices.self)
+                    if let item = item {
+                        // Presumably, you'd parse the JSON into a model object. This is just a demo, so we'll keep it as-is.
+                        for device in item.controlledDevicesList
+                        {
+                            try! self.realm.write {
+                                self.realm.create(Device.self, value: ["uid": device.uid, "alias": device.alias, "temperature": device.temperature, "humidity": device.humidity], update: true)
+                                // the book's `title` property will remain unchanged.
+                            }
+                        }
+                    }
+                    // Hide spinner
+                    //HUD.hide(afterDelay: 2.0)
+                    
+                } catch {
+                    
+                    // Hide spinner
+                    //HUD.hide(afterDelay: 2.0)
+                    //self.showAlert("GitHub Fetch", message: "Unable to fetch from GitHub")
+                }
+            //self.tableView.reloadData()
+            case let .failure(_): break
+            //                guard let error = error as? CustomStringConvertible else {
+            //                    break
+            //                }
+            //self.showAlert("GitHub Fetch", message: error.description)
+            
+            //HUD.hide(afterDelay: 2.0)
             }
         }
     }
