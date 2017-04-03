@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8E08F61E9047C40086A3DE /* ControlledDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */; };
 		ED51B8578A2A21569BD32DC2 /* Pods_ConditionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */; };
 		F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001A6741E1A92D9000BE03F /* CodeItem.swift */; };
 		F0035B421DA6CBF5009FA188 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0035B411DA6CBF5009FA188 /* Util.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		07828E6C267642E6D715D130 /* Pods-ConditionController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.debug.xcconfig"; sourceTree = "<group>"; };
+		4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlledDevices.swift; sourceTree = "<group>"; };
 		A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConditionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.release.xcconfig"; sourceTree = "<group>"; };
 		F001A6741E1A92D9000BE03F /* CodeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeItem.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				F09BF4791DB3E38C00918FC9 /* ConditionerDevice.swift */,
 				F02D739C1DB3F2A0005DB870 /* ConditionerDeviceList.swift */,
 				F001A6741E1A92D9000BE03F /* CodeItem.swift */,
+				4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				F02D739D1DB3F2A0005DB870 /* ConditionerDeviceList.swift in Sources */,
 				F01DEEE31E1BC2F900C480C1 /* TestCommandTableViewController.swift in Sources */,
 				F0059A6A1DB81A960066D780 /* AddDeviceTableViewController.swift in Sources */,
+				4D8E08F61E9047C40086A3DE /* ControlledDevices.swift in Sources */,
 				F0EF18A11DA2F07000EF1718 /* ViewController.swift in Sources */,
 				F00B50B41DA5904D00CD4008 /* DevicesViewController.swift in Sources */,
 				F085E3271DBB74EE00C53A3C /* DeviceActivationTableViewController.swift in Sources */,

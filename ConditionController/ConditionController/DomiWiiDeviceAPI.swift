@@ -135,6 +135,7 @@ extension DomiWiiDevice: TargetType {
         }
     }
     
+
     public var parameterEncoding: Moya.ParameterEncoding {
         return URLEncoding.default;
 //        switch self {
@@ -143,7 +144,7 @@ extension DomiWiiDevice: TargetType {
 //            return ParameterEncoding.Custom(MyAPICallCustomEncodingClosure)
 //        }
     }
-    
+
     
     
     

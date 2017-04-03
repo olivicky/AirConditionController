@@ -15,7 +15,7 @@ import PKHUD
 class DeviceActivationTableViewController: UITableViewController, ModelListViewControllerDelegate, GuideNetworkViewControllerDelegate {
 
     @IBOutlet weak var modelLabel: UILabel!
-    let DomiWiiSSID = "DomiWii_1"
+    let DomiWiiSSID = "DomiWii_"
     var conditionerListIsEmpty : Bool = true
     var homeNetworkSSID : String! = nil
     var homeNetworkPassword : String! = nil
@@ -82,7 +82,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
     }
     
     func startDeviceControl(){
-        if(Util.getSSID() == DomiWiiSSID){
+        if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
             
         
         
