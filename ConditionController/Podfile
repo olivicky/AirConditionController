@@ -9,7 +9,7 @@ target 'ConditionController' do
     pod 'Moya-ObjectMapper', :git => 'https://github.com/ivanbruel/Moya-ObjectMapper'
     pod 'SwiftyJSON'
     pod 'RealmSwift'
-    pod 'PKHUD', :git => 'https://github.com/pkluz/PKHUD'
+    pod 'PKHUD', :git => 'https://github.com/pkluz/PKHUD.git‘
     
     
     post_install do |installer|
