@@ -22,23 +22,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUb-5s-RLg">
-                                <rect key="frame" x="15" y="372" width="345" height="280"/>
+                                <rect key="frame" x="15" y="402" width="345" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-z0-ZYx">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="280"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="250"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZYi-NC-tgH">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="136"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="121"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eK-mD-jSR" userLabel="settings_system">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="settings_system"/>
                                                         <connections>
                                                             <segue destination="t74-xL-r0E" kind="show" id="bq4-vg-hVn"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYr-6m-WEN" userLabel="set_functions">
-                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="set_functions"/>
                                                         <connections>
                                                             <segue destination="KKf-tS-yrQ" kind="show" id="ChV-oh-ZNg"/>
@@ -47,17 +47,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p31-Dl-cdd">
-                                                <rect key="frame" x="0.0" y="144" width="345" height="136"/>
+                                                <rect key="frame" x="0.0" y="129" width="345" height="121"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-cH-0Tr" userLabel="use">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="use"/>
                                                         <connections>
                                                             <segue destination="eak-Ej-Odj" kind="show" id="Bv6-8C-c6I"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwu-8s-sH6" userLabel="faq">
-                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="faq"/>
                                                         <connections>
                                                             <segue destination="N26-Ej-Jhz" kind="show" id="XPj-OB-sNA"/>
@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="trailing" secondItem="9dV-z0-ZYx" secondAttribute="trailing" id="Ae6-7e-FZc"/>
                                     <constraint firstItem="9dV-z0-ZYx" firstAttribute="leading" secondItem="cUb-5s-RLg" secondAttribute="leading" id="cyK-Gp-aJm"/>
                                     <constraint firstAttribute="bottom" secondItem="9dV-z0-ZYx" secondAttribute="bottom" id="s8J-Rl-nYk"/>
-                                    <constraint firstAttribute="height" constant="280" id="x1A-Xn-BM9"/>
+                                    <constraint firstAttribute="height" constant="250" id="x1A-Xn-BM9"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-1t-hmT">
@@ -1434,23 +1434,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QE-du-aaC">
-                                <rect key="frame" x="15" y="372" width="345" height="280"/>
+                                <rect key="frame" x="15" y="402" width="345" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UVj-Xb-zNS">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="280"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="250"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ylO-IC-LL9">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="136"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="121"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOg-dj-ljq" userLabel="settings_system">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="set_wifi"/>
                                                         <connections>
                                                             <segue destination="7fP-Ma-ku8" kind="show" id="48I-Lf-CCk"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-hw-2OC" userLabel="set_functions">
-                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="set_conditioner"/>
                                                         <connections>
                                                             <segue destination="e4j-l4-Lea" kind="show" id="z0n-LM-2hY"/>
@@ -1459,17 +1459,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dsl-rr-Z0B">
-                                                <rect key="frame" x="0.0" y="144" width="345" height="136"/>
+                                                <rect key="frame" x="0.0" y="129" width="345" height="121"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwB-Ju-VkS" userLabel="use">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="update_list_conditioner"/>
                                                         <connections>
                                                             <action selector="updateButtonTapped:" destination="t74-xL-r0E" eventType="touchUpInside" id="QHU-UC-Com"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LG-e0-WYQ" userLabel="faq">
-                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="136"/>
+                                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="121"/>
                                                         <state key="normal" title="Button" image="finish_configuration"/>
                                                         <connections>
                                                             <action selector="finishButtonTapped:" destination="t74-xL-r0E" eventType="touchUpInside" id="hjp-pv-X2I"/>
@@ -1484,7 +1484,7 @@
                                     <constraint firstItem="UVj-Xb-zNS" firstAttribute="leading" secondItem="2QE-du-aaC" secondAttribute="leading" id="PRz-QE-rAX"/>
                                     <constraint firstItem="UVj-Xb-zNS" firstAttribute="top" secondItem="2QE-du-aaC" secondAttribute="top" id="RU7-tf-oBV"/>
                                     <constraint firstAttribute="bottom" secondItem="UVj-Xb-zNS" secondAttribute="bottom" id="TL2-MO-AwO"/>
-                                    <constraint firstAttribute="height" constant="280" id="bLI-co-63V"/>
+                                    <constraint firstAttribute="height" constant="250" id="bLI-co-63V"/>
                                     <constraint firstAttribute="trailing" secondItem="UVj-Xb-zNS" secondAttribute="trailing" id="fTL-VL-b4D"/>
                                 </constraints>
                             </view>
