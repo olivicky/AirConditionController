@@ -49,7 +49,11 @@ class FirstActivationTableViewController: UITableViewController {
     
     func checkFields(sender: UITextField) {
         sender.text = sender.text?.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        self.buttonEnabling()
         
+    }
+    
+    func buttonEnabling(){
         if(self.swich.isOn){
             if ((ipStaticoTextField.text?.isEmpty)! || (maskTextField.text?.isEmpty)! || (ipRouterTextField.text?.isEmpty)! || (dnsPrimarioTextField.text?.isEmpty)!){
                 doneButton.isEnabled = false
@@ -70,6 +74,7 @@ class FirstActivationTableViewController: UITableViewController {
             self.doneButton.isEnabled = false
         }
         tableView.reloadData()
+        self.buttonEnabling()
     }
 
 

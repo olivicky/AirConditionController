@@ -43,7 +43,9 @@ class GuideNetworkViewController: UIViewController {
     }
     
     func checkDomiNetworkConnection(){
-        if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
+        if(Util.getSSID() != nil){
+            
+            if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
 //            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeviceActivationTableViewController") as? DeviceActivationTableViewController
 //            {
 //                vc.conditionerDeviceList = self.deviceList
@@ -53,6 +55,7 @@ class GuideNetworkViewController: UIViewController {
 //            }
         
             self.startDeviceControl()
+            }
        }
     }
     
