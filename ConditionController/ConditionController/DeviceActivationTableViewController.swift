@@ -82,9 +82,9 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
     }
     
     func startDeviceControl(){
-        if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
+        if(Util.getSSID() != nil){
             
-        
+            if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
         
         
         // Show spinner
@@ -101,6 +101,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
                 
             }
         }
+            }
         }
         else{
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "GuideNetworkViewController") as? GuideNetworkViewController
