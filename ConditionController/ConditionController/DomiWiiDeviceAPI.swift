@@ -61,6 +61,7 @@ let DomiWiiDeviceProvider = MoyaProvider<DomiWiiDevice>(endpointClosure: endpoin
                                             manager: managerDevice,
                                             plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
+
 // MARK: - Provider support
 
 private extension String {
@@ -83,7 +84,7 @@ extension DomiWiiDevice: TargetType {
     public var path: String {
         switch self {
         case .startControlMode:
-            return "?0?1?"
+            return "?0?1"
         case .endControlMode:
             return  "?0?0"
         case .activateDevice(let ssidHomeNetwork, let password, _,_,_,_):
@@ -91,9 +92,9 @@ extension DomiWiiDevice: TargetType {
         case .registerDevice(let count, let codes):
             return "?C?\(count)?\(codes)"
         case .testCommand(let commandCode):
-            return "?T?\(commandCode)?"
+            return "?T?\(commandCode)"
         case .manualActivationCommand(let commandCode):
-            return "?3?\(commandCode)?"
+            return "?3?\(commandCode)"
         }
     }
     

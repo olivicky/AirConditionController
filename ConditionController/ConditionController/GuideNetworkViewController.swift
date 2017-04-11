@@ -11,7 +11,7 @@ import PKHUD
 
 protocol GuideNetworkViewControllerDelegate
 {
-    func startDeviceControlCompleted(viewController: GuideNetworkViewController, isCompletedCorrect isCorrect: Bool)
+    func startDeviceControlCompleted(isCompletedCorrect isCorrect: Bool)
 }
 
 
@@ -71,7 +71,7 @@ class GuideNetworkViewController: UIViewController {
                 }
                 else{
                     if(self.delegate != nil){
-                        self.delegate?.startDeviceControlCompleted(viewController: self, isCompletedCorrect: true)
+                        self.delegate?.startDeviceControlCompleted(isCompletedCorrect: true)
                     }
                     // Hide spinner
                     HUD.hide(afterDelay: 2.0)
@@ -86,6 +86,8 @@ class GuideNetworkViewController: UIViewController {
                 // Hide spinner
                 HUD.hide(afterDelay: 2.0)
                 self.showAlert("Errore", message: "Controllare connessione con dispositivo")
+                
+                
                 
             }
         }

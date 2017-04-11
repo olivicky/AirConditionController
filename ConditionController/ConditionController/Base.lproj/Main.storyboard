@@ -588,7 +588,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WKn-47-ykF">
-                                <rect key="frame" x="0.0" y="-44" width="375" height="711"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConditionerDeviceCellIdentifier" textLabel="iyr-R9-hfn" style="IBUITableViewCellStyleDefault" id="5FP-yo-R2h">
@@ -1231,7 +1231,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yqB-7B-foc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VDL-WO-83i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VDL-WO-83i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1446,14 +1446,14 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="121"/>
                                                         <state key="normal" title="Button" image="set_wifi"/>
                                                         <connections>
-                                                            <segue destination="7fP-Ma-ku8" kind="show" id="48I-Lf-CCk"/>
+                                                            <segue destination="7fP-Ma-ku8" kind="show" identifier="impostaWifiIdentifier" id="48I-Lf-CCk"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-hw-2OC" userLabel="set_functions">
                                                         <rect key="frame" x="160" y="0.0" width="140" height="121"/>
                                                         <state key="normal" title="Button" image="set_conditioner"/>
                                                         <connections>
-                                                            <segue destination="e4j-l4-Lea" kind="show" id="z0n-LM-2hY"/>
+                                                            <segue destination="e4j-l4-Lea" kind="show" identifier="impostaCondizionatoreIdentifier" id="z0n-LM-2hY"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1541,7 +1541,7 @@
         <image name="wifi-connect" width="304" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fvk-un-bl6"/>
-        <segue reference="NDh-y0-QNK"/>
+        <segue reference="48I-Lf-CCk"/>
+        <segue reference="z0n-LM-2hY"/>
     </inferredMetricsTieBreakers>
 </document>

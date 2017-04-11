@@ -59,7 +59,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
             paramsString = paramsString.replacingOccurrences(of: " ", with: "")
             paramsString = paramsString.replacingOccurrences(of: "[", with: "{")
             paramsString = paramsString.replacingOccurrences(of: "]", with: "}")
-            paramsString = paramsString + "?"
+          //  paramsString = paramsString + "?"
         
         _ = DomiWiiDeviceProvider.request(.registerDevice(count: String(counter), codes: paramsString)) { result in
             switch result {
@@ -94,6 +94,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
             case .success(_):
                 // Hide spinner
                 HUD.hide(afterDelay: 2.0)
+                self.startDeviceControlCompleted(isCompletedCorrect: true)
             case .failure(_):
                 // Hide spinner
                 HUD.hide(afterDelay: 2.0)
@@ -101,6 +102,12 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
                 
             }
         }
+            }else{
+                if let vc = self.storyboard?.instantiateViewController(withIdentifier: "GuideNetworkViewController") as? GuideNetworkViewController
+                {
+                    vc.delegate = self
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             }
         }
         else{
@@ -130,9 +137,9 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
         self.navigationItem.rightBarButtonItem?.isEnabled = true
         self.selectedConditionerItem = item
     }
-    
+    		
     //GuideNetworkViewControllerDelegate
-    func startDeviceControlCompleted(viewController: GuideNetworkViewController, isCompletedCorrect isCorrect: Bool){
+    func startDeviceControlCompleted(isCompletedCorrect isCorrect: Bool){
         var indexPathToEnable = IndexPath(row: 0, section:0)
         var cell = self.tableView.cellForRow(at: indexPathToEnable)
         cell?.selectionStyle = UITableViewCellSelectionStyle.gray
