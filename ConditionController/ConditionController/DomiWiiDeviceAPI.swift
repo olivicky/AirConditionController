@@ -90,7 +90,8 @@ extension DomiWiiDevice: TargetType {
         case .activateDevice(let ssidHomeNetwork, let password, _,_,_,_):
             return "?1?\(ssidHomeNetwork)?\(password)?\(0)?\(0)?\(0)?\(0)"
         case .registerDevice(let count, let codes):
-            return "?C?\(count)?\(codes)"
+            let ret = "?C?\(count)?\(codes)"
+            return ret
         case .testCommand(let commandCode):
             return "?T?\(commandCode)"
         case .manualActivationCommand(let commandCode):

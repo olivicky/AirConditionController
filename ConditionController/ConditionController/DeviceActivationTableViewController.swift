@@ -57,13 +57,13 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
             var paramsString = paramsJSON.debugDescription
             paramsString = paramsString.replacingOccurrences(of: "\n", with: "")
             paramsString = paramsString.replacingOccurrences(of: " ", with: "")
-            paramsString = paramsString.replacingOccurrences(of: "[", with: "{")
-            paramsString = paramsString.replacingOccurrences(of: "]", with: "}")
+            paramsString = paramsString.replacingOccurrences(of: "[", with: "")
+            paramsString = paramsString.replacingOccurrences(of: "]", with: "")
           //  paramsString = paramsString + "?"
         
         _ = DomiWiiDeviceProvider.request(.registerDevice(count: String(counter), codes: paramsString)) { result in
             switch result {
-            case .success(_): break
+            case .success(_):
                let when = DispatchTime.now() + self.delayTime // change 2 to desired number of seconds
                 DispatchQueue.main.asyncAfter(deadline: when) {
                     count += 1

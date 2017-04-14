@@ -200,7 +200,7 @@
 				TargetAttributes = {
 					F0EF189A1DA2F06F00EF1718 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = QDH5SX2WU2;
+						DevelopmentTeam = 2Q5J298D4Z;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -437,7 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QDH5SX2WU2;
+				DEVELOPMENT_TEAM = 2Q5J298D4Z;
 				INFOPLIST_FILE = ConditionController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -456,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QDH5SX2WU2;
+				DEVELOPMENT_TEAM = 2Q5J298D4Z;
 				INFOPLIST_FILE = ConditionController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
