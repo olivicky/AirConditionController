@@ -46,6 +46,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
     
     func register(){
         self.registerDevice(counter: 0)
+        HUD.show(.progress)
     }
     
     func registerDevice(counter: Int){
@@ -71,12 +72,14 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
                 }
             case .failure(_):
                 self.showAlert("Errore", message: "Dispositivo non registrato, controllare connessione con dispositivo")
+                HUD.hide(afterDelay: 2.0)
                 return
                 
             }
         }
         }
         else{
+            HUD.hide(afterDelay: 2.0)
             return
         }
     }

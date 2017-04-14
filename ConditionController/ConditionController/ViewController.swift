@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var heightButtonBoxConstraint: NSLayoutConstraint!
+    @IBOutlet weak var widthButtonBoxConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightLogoConstraint: NSLayoutConstraint!
+    @IBOutlet weak var widthLogoConstraint: NSLayoutConstraint!
     let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
@@ -50,6 +54,20 @@ class ViewController: UIViewController {
 
         // 5
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        let size = UIScreen.main.bounds.size
+        
+        
+        if size.width == 320{
+            heightButtonBoxConstraint.constant = 150
+            widthButtonBoxConstraint.constant = 200
+            heightLogoConstraint.constant = 200
+            widthLogoConstraint.constant = 230
+        }
+            
+        
+        
+        
         
     }
 
