@@ -26,6 +26,8 @@ class ViewController: UIViewController {
 //            }
 //
 //        }
+        
+        
         let logo = UIImage(named: "domiwii")
         let imageView = UIImageView(image: logo)
         
@@ -55,20 +57,25 @@ class ViewController: UIViewController {
         // 5
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
+        self.view.layoutIfNeeded()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         let size = UIScreen.main.bounds.size
         
         
         if size.width == 320{
+            
             heightButtonBoxConstraint.constant = 150
+            
             widthButtonBoxConstraint.constant = 200
             heightLogoConstraint.constant = 200
-            widthLogoConstraint.constant = 230
-        }
             
-        
-        
-        
-        
+            widthLogoConstraint.constant = 230
+            
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

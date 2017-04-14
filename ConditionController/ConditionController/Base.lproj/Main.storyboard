@@ -1524,9 +1524,13 @@
                     <navigationItem key="navigationItem" title="Configura Sistema" id="fXd-Yb-YtH"/>
                     <connections>
                         <outlet property="finishButton" destination="0LG-e0-WYQ" id="oAR-Uy-0fA"/>
+                        <outlet property="heightButtonBoxConstraint" destination="bLI-co-63V" id="Suf-ZF-SO3"/>
+                        <outlet property="heightLogoConstraint" destination="SQY-dq-QbH" id="HUf-3D-NEE"/>
                         <outlet property="setConditionerButton" destination="b4X-hw-2OC" id="a85-pP-C6f"/>
                         <outlet property="setWifiButton" destination="oOg-dj-ljq" id="c43-ed-yUu"/>
                         <outlet property="updateConditionerButton" destination="YwB-Ju-VkS" id="T5v-Pa-fAr"/>
+                        <outlet property="weightButtonBoxConstraint" destination="l89-si-Vue" id="cdl-dP-JME"/>
+                        <outlet property="widthLogoConstraint" destination="k6Z-FD-Znd" id="MQ4-ps-vdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPO-Ff-QCf" sceneMemberID="firstResponder"/>

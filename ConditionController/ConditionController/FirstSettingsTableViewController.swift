@@ -19,8 +19,12 @@ class FirstSettingsTableViewController: UIViewController {
     @IBOutlet weak var updateConditionerButton: UIButton!
     @IBOutlet weak var finishButton: UIButton!
     
+    @IBOutlet weak var heightLogoConstraint: NSLayoutConstraint!
     let gradientLayer = CAGradientLayer()
+    @IBOutlet weak var widthLogoConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightButtonBoxConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var weightButtonBoxConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         HUD.dimsBackground = false
@@ -56,6 +60,24 @@ class FirstSettingsTableViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
 
         self.getConditionerList()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let size = UIScreen.main.bounds.size
+        
+        
+        if size.width == 320{
+            
+            heightButtonBoxConstraint.constant = 150
+            
+            weightButtonBoxConstraint.constant = 200
+            heightLogoConstraint.constant = 200
+            
+            widthLogoConstraint.constant = 230
+            
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
