@@ -59,7 +59,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
             paramsString = paramsString.replacingOccurrences(of: "\n", with: "")
             paramsString = paramsString.replacingOccurrences(of: " ", with: "")
             paramsString = paramsString.replacingOccurrences(of: "[", with: "")
-            paramsString = paramsString.replacingOccurrences(of: "]", with: "")
+            paramsString = paramsString.replacingOccurrences(of: "]", with: ",")
           //  paramsString = paramsString + "?"
         
         _ = DomiWiiDeviceProvider.request(.registerDevice(count: String(counter), codes: paramsString)) { result in
