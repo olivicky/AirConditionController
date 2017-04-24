@@ -85,7 +85,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let row = indexPath.row
         let device = devices[row]
         cell.textLabel?.text = devices[row].alias
-        cell.detailTextLabel?.text = "T:" + device.temperature + "° H:" + device.humidity + "%"
+        cell.detailTextLabel?.text  = device.temperature + "° " + device.humidity + "%"
         return cell
     }
     
@@ -99,13 +99,13 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         self.itemToUpdate = self.devices[indexPath.row]
-        let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+        let edit = UITableViewRowAction(style: .normal, title: "Modifica") { action, index in
             let editMenu = UIAlertController(title: nil, message: "Seleziona cosa vuoi modificare", preferredStyle: .actionSheet)
             
             let aliasAction = UIAlertAction(title: "Alias", style: UIAlertActionStyle.default, handler: self.editAlias)
             let passwordAction = UIAlertAction(title: "Password", style: UIAlertActionStyle.default, handler: self.editPassword)
             let resetAction = UIAlertAction(title: "Reset Device", style: UIAlertActionStyle.default, handler: self.resetDevice)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+            let cancelAction = UIAlertAction(title:"Annulla", style: UIAlertActionStyle.cancel, handler: nil)
             
             editMenu.addAction(aliasAction)
             editMenu.addAction(passwordAction)
@@ -117,7 +117,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         edit.backgroundColor = UIColor(colorLiteralRed: 32.0/255.0, green: 148.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { action, index in
+        let delete = UITableViewRowAction(style: .destructive, title: "Rimuovi") { action, index in
         
             try! self.realm.write {
                 let row = indexPath.row
@@ -181,6 +181,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
             (oldPassword) -> Void in
             oldPasswordTextField = oldPassword
             oldPasswordTextField!.placeholder = "Vecchia password"
+            oldPassword.addTarget(self, action: #selector(self.textChanged), for: .editingChanged)
         })
         
         alertController.addTextField(configurationHandler: {
@@ -188,6 +189,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
             newPasswordTextField = newPassword
             //newPasswordTextField!.secureTextEntry = true
             newPasswordTextField!.placeholder = "Nuova password"
+            newPassword.addTarget(self, action: #selector(self.textChanged), for: .editingChanged)
         })
 
     
@@ -234,6 +236,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
             if(isOk){
                 self.sendRequest(password: (password?.text)!, newPassword: (password?.text)!, alias: self.itemToUpdate.alias, newAlias: (nuovoAlias?.text)!)
             }
+            
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
@@ -243,6 +246,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
             (alias) -> Void in
             nuovoAlias = alias
             nuovoAlias!.placeholder = "Nuovo alias"
+            alias.addTarget(self, action: #selector(self.textChanged), for: .editingChanged)
         })
         
         alertController.addTextField(configurationHandler: {
@@ -250,6 +254,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
             password = passwordIns
             //newPasswordTextField!.secureTextEntry = true
             password!.placeholder = "password"
+            passwordIns.addTarget(self, action: #selector(self.textChanged), for: .editingChanged)
         })
         
         
@@ -257,7 +262,31 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         alertController.addAction(cancel)
         alertController.addAction(changePasswordAction)
         
+        alertController.actions[1].isEnabled = false
+
+        
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func textChanged(_ sender: Any) {
+//        let tf = sender as! UITextField
+//        var resp : UIResponder! = tf
+//        while !(resp is UIAlertController) { resp = resp.next }
+//        let alert = resp as! UIAlertController
+//        
+//        alert.actions[1].isEnabled = (tf.text != "")
+        
+        guard let alertController = self.presentedViewController as? UIAlertController,
+            let username = alertController.textFields?.first?.text,
+            let password = alertController.textFields?.last?.text,
+            let submitAction = alertController.actions.last
+            else
+        {
+            return
+        }
+        
+        submitAction.isEnabled = username.characters.count > 0 &&
+            password.characters.count > 0
     }
     
     //Private methods
