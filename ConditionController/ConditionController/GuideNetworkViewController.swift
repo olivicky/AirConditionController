@@ -94,7 +94,7 @@ class GuideNetworkViewController: UIViewController {
     }
     
     func registerDevice(ssidHomeNetwork: String, password: String, ipStatico: String?, mask: String?, ipRouter : String?, dnsPrimario : String?){
-        _ = DomiWiiDeviceProvider.request(.activateDevice(ssidHomeNetwork: ssidHomeNetwork, password: password, ipStatico: ipStatico, mask: mask, ipRouter: ipRouter, dnsPrimario: dnsPrimario)) { result in
+        _ = DomiWiiDeviceProvider.request(.activateDevice(ssidHomeNetwork: ssidHomeNetwork, password: password, ipStatico: (ipStatico != nil ? ipStatico! : "0"), mask: (mask != nil ? mask!: "0"), ipRouter: (ipRouter != nil ? ipRouter! : "0"), dnsPrimario: (dnsPrimario != nil ? dnsPrimario!: "0"))) { result in
             switch result {
             case .success(_):
                 // Hide spinner

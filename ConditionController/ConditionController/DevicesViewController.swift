@@ -299,6 +299,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let code = json["code"].stringValue
                 if(Int(code)! > 0 ){
                     self.showAlert("Perfetto", message: resp)
+                    self.getDevicesMetadata()
                 }
                 else{
                     self.showAlert("Errore", message: "Dispositivo non resettato")
@@ -306,8 +307,8 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
                 
                 
-            //self.tableView.reloadData()
-            case .failure(_): break
+            //
+            case .failure(_):
             //                guard let error = error as? CustomStringConvertible else {
             //                    break
             //                }
@@ -368,7 +369,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
                     }
                     // Hide spinner
                     //HUD.hide(afterDelay: 2.0)
-                    
+                    self.tableView.reloadData()
                 } catch {
                     
                     // Hide spinner

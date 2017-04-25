@@ -134,11 +134,11 @@ class FirstSettingsTableViewController: UIViewController {
                     //self.showAlert("GitHub Fetch", message: "Unable to fetch from GitHub")
                 }
             //self.tableView.reloadData()
-            case let .failure(_): break
+            case let .failure(error):
             //                guard let error = error as? CustomStringConvertible else {
             //                    break
             //                }
-            //self.showAlert("GitHub Fetch", message: error.description)
+            self.showAlert("DomiWii", message: error.errorDescription!)
             self.receivedDeviceModelData = false
                 HUD.hide(afterDelay: 2.0)
             }

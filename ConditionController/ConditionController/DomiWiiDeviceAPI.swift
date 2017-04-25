@@ -73,7 +73,7 @@ private extension String {
 public enum DomiWiiDevice {
     case startControlMode()
     case endControlMode()
-    case activateDevice(ssidHomeNetwork: String, password: String, ipStatico: String?, mask: String?, ipRouter : String?, dnsPrimario : String?)
+    case activateDevice(ssidHomeNetwork: String, password: String, ipStatico: String, mask: String, ipRouter : String, dnsPrimario : String)
     case registerDevice(count: String, codes: String)
     case testCommand(commandCode: String)
     case manualActivationCommand(commandCode: String)
@@ -84,18 +84,18 @@ extension DomiWiiDevice: TargetType {
     public var path: String {
         switch self {
         case .startControlMode:
-            return "?0?1"
+            return "?0?1?"
         case .endControlMode:
-            return  "?0?0"
-        case .activateDevice(let ssidHomeNetwork, let password, _,_,_,_):
-            return "?1?\(ssidHomeNetwork)?\(password)?\(0)?\(0)?\(0)?\(0)"
+            return  "?0?0?"
+        case .activateDevice(let ssidHomeNetwork, let password, let ipStatico, let mask, let ipRouter, let dnsPrimario):
+            return "?1?\(ssidHomeNetwork)?\(password)?\(ipStatico)?\(mask)?\(ipRouter)?\(dnsPrimario)"
         case .registerDevice(let count, let codes):
-            let ret = "?C?\(count)?\(codes)"
+            let ret = "?C?\(count)?\(codes)?"
             return ret
         case .testCommand(let commandCode):
-            return "?T?\(commandCode)"
+            return "?T?\(commandCode)?"
         case .manualActivationCommand(let commandCode):
-            return "?3?\(commandCode)"
+            return "?3?\(commandCode)?"
         }
     }
     

@@ -26,6 +26,17 @@ let manager = Manager(
     configuration: URLSessionConfiguration.default
 )
 
+class DefaultAlamofireManager: Alamofire.SessionManager {
+    static let sharedManager: DefaultAlamofireManager = {
+        let configuration = URLSessionConfiguration.default
+        //configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        configuration.timeoutIntervalForRequest = 20 // as seconds, you can set your request timeout
+        configuration.timeoutIntervalForResource = 20 // as seconds, you can set your resource timeout
+        //configuration.requestCachePolicy = .useProtocolCachePolicy
+        return DefaultAlamofireManager(configuration: configuration)
+    }()
+}
+
 
 
 let endpointClosure = { (target: DomiWii) -> Endpoint<DomiWii> in
@@ -52,7 +63,7 @@ let endpointClosure = { (target: DomiWii) -> Endpoint<DomiWii> in
 //                                            manager: manager,
 //                                            plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
-let DomiWiiProvider = MoyaProvider<DomiWii>(plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
+let DomiWiiProvider = MoyaProvider<DomiWii>(manager: DefaultAlamofireManager.sharedManager, plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
 // MARK: - Provider support
 
