@@ -32,7 +32,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(DeviceActivationTableViewController.register))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Registra", style: .done, target: self, action: #selector(DeviceActivationTableViewController.register))
         self.navigationItem.rightBarButtonItem?.isEnabled = false
         
         self.startDeviceControl()
@@ -51,7 +51,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
     
     func registerDevice(counter: Int){
         
-        if(counter < 8){
+        if(counter <= 8){
             var count = counter
             let codes = self.selectedConditionerItem.codes[counter]
             let paramsJSON = JSON(codes.codes)
