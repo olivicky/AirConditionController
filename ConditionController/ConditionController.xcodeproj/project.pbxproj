@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8D02851EB22DF2008F4971 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D02841EB22DF2008F4971 /* FAQViewController.swift */; };
+		4D8D02871EB23574008F4971 /* FAQ.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8D02861EB23574008F4971 /* FAQ.pdf */; };
 		4D8E08F61E9047C40086A3DE /* ControlledDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */; };
 		ED51B8578A2A21569BD32DC2 /* Pods_ConditionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */; };
 		F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001A6741E1A92D9000BE03F /* CodeItem.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		07828E6C267642E6D715D130 /* Pods-ConditionController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.debug.xcconfig"; sourceTree = "<group>"; };
+		4D8D02841EB22DF2008F4971 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		4D8D02861EB23574008F4971 /* FAQ.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ.pdf; sourceTree = "<group>"; };
 		4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlledDevices.swift; sourceTree = "<group>"; };
 		A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConditionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		F0EF189D1DA2F07000EF1718 /* ConditionController */ = {
 			isa = PBXGroup;
 			children = (
+				4D8D02861EB23574008F4971 /* FAQ.pdf */,
 				F09BF4781DB3E21700918FC9 /* Model */,
 				F02016871DA450CC003F3D90 /* Utils */,
 				F0EF189E1DA2F07000EF1718 /* AppDelegate.swift */,
@@ -161,6 +166,7 @@
 				F02D739E1DB3F823005DB870 /* ModelListViewController.swift */,
 				F0A514EE1E131EE9003F28D8 /* FirstSettingsTableViewController.swift */,
 				F01DEEE21E1BC2F900C480C1 /* TestCommandTableViewController.swift */,
+				4D8D02841EB22DF2008F4971 /* FAQViewController.swift */,
 			);
 			path = ConditionController;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				F0EF18A91DA2F07000EF1718 /* LaunchScreen.storyboard in Resources */,
 				F0EF18A61DA2F07000EF1718 /* Assets.xcassets in Resources */,
 				F0EF18A41DA2F07000EF1718 /* Main.storyboard in Resources */,
+				4D8D02871EB23574008F4971 /* FAQ.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +312,7 @@
 				F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */,
 				F0035B461DA6D016009FA188 /* FirstActivationTableViewController.swift in Sources */,
 				F09BF47A1DB3E38C00918FC9 /* ConditionerDevice.swift in Sources */,
+				4D8D02851EB22DF2008F4971 /* FAQViewController.swift in Sources */,
 				F0EF189F1DA2F07000EF1718 /* AppDelegate.swift in Sources */,
 				F0A514EF1E131EE9003F28D8 /* FirstSettingsTableViewController.swift in Sources */,
 				F02D739F1DB3F823005DB870 /* ModelListViewController.swift in Sources */,
