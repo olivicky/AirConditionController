@@ -392,135 +392,107 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MV0-cL-HV1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2Y-Ir-pJT" userLabel="DomiWii_device">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-1w-5nG" userLabel="1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-VP-zT9">
-                                                <rect key="frame" x="86" y="95" width="204" height="120"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="Sjv-wi-iPN"/>
-                                                    <constraint firstAttribute="width" constant="204" id="qgh-f6-aUn"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-VP-zT9">
+                                                <rect key="frame" x="35" y="40.5" width="304" height="120"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="bdg-dU-Acg">
-                                                <rect key="frame" x="67" y="227" width="17" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="17" id="ZQh-fZ-03P"/>
-                                                    <constraint firstAttribute="height" constant="17" id="adT-CF-vBy"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Vai nelle Impostazioni &gt; Wi-Fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-Yh-5xn">
-                                                <rect key="frame" x="92" y="227" width="191" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="191" id="rrq-dN-FXf"/>
-                                                </constraints>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attiva DomiWii in modalità locale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-Yh-5xn">
+                                                <rect key="frame" x="90" y="152.5" width="195.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="bdg-dU-Acg">
+                                                <rect key="frame" x="70" y="152.5" width="17" height="17"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="centerX" secondItem="oLt-Yh-5xn" secondAttribute="centerX" id="Onm-TM-vDe"/>
-                                            <constraint firstItem="oLt-Yh-5xn" firstAttribute="centerY" secondItem="bdg-dU-Acg" secondAttribute="centerY" id="XAh-PV-zM2"/>
-                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="centerY" secondItem="j2Y-Ir-pJT" secondAttribute="centerY" id="eHO-Af-nXl"/>
-                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="centerX" secondItem="j2Y-Ir-pJT" secondAttribute="centerX" id="jDs-Jr-91n"/>
-                                            <constraint firstItem="oLt-Yh-5xn" firstAttribute="leading" secondItem="bdg-dU-Acg" secondAttribute="trailing" constant="8" id="kcq-Tc-sBD"/>
-                                            <constraint firstItem="oLt-Yh-5xn" firstAttribute="top" secondItem="VLR-VP-zT9" secondAttribute="bottom" constant="12" id="mr6-6p-y11"/>
+                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="bottom" secondItem="oLt-Yh-5xn" secondAttribute="top" constant="8" id="9rM-Rd-d1w"/>
+                                            <constraint firstItem="oLt-Yh-5xn" firstAttribute="centerX" secondItem="GLA-1w-5nG" secondAttribute="centerX" id="AxI-if-oNf"/>
+                                            <constraint firstItem="bdg-dU-Acg" firstAttribute="centerY" secondItem="oLt-Yh-5xn" secondAttribute="centerY" id="Wen-pP-PJI"/>
+                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="centerX" secondItem="GLA-1w-5nG" secondAttribute="centerX" id="XIh-23-aOi"/>
+                                            <constraint firstItem="oLt-Yh-5xn" firstAttribute="leading" secondItem="bdg-dU-Acg" secondAttribute="trailing" constant="3" id="aWf-vu-rze"/>
+                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="centerY" secondItem="GLA-1w-5nG" secondAttribute="centerY" id="gyu-fw-bsu"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N39-Qx-gba" userLabel="Wifi settings">
-                                        <rect key="frame" x="0.0" y="269" width="375" height="0.0"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2d-Em-wOU" userLabel="2">
+                                        <rect key="frame" x="0.0" y="201.5" width="375" height="200"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-60-shD">
-                                                <rect key="frame" x="86" y="95" width="204" height="120"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="204" id="AQo-ut-iwA"/>
-                                                    <constraint firstAttribute="height" constant="20" id="SMP-gK-WQd"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-60-shD">
+                                                <rect key="frame" x="35" y="40" width="304" height="120"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-zV-9td">
-                                                <rect key="frame" x="67" y="227" width="17" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="17" id="t8U-v6-cjP"/>
-                                                    <constraint firstAttribute="height" constant="17" id="woO-dr-4Tl"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Vai nelle Impostazioni &gt; Wi-Fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-o5-XT9">
-                                                <rect key="frame" x="92" y="227" width="191" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="191" id="FfE-RU-ymR"/>
-                                                </constraints>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vai nelle Impostazioni &gt; Wi-Fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-o5-XT9">
+                                                <rect key="frame" x="100" y="152" width="175.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-zV-9td">
+                                                <rect key="frame" x="80" y="152" width="17" height="17"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="PnV-60-shD" firstAttribute="centerY" secondItem="N39-Qx-gba" secondAttribute="centerY" id="3Z5-4U-8aI"/>
-                                            <constraint firstItem="Nzk-o5-XT9" firstAttribute="top" secondItem="PnV-60-shD" secondAttribute="bottom" constant="12" id="PX9-Oo-mrU"/>
-                                            <constraint firstItem="PnV-60-shD" firstAttribute="centerX" secondItem="N39-Qx-gba" secondAttribute="centerX" id="ZnA-cT-F9q"/>
-                                            <constraint firstItem="Nzk-o5-XT9" firstAttribute="leading" secondItem="ud3-zV-9td" secondAttribute="trailing" constant="8" id="bAO-YU-qp2"/>
-                                            <constraint firstItem="Nzk-o5-XT9" firstAttribute="centerY" secondItem="ud3-zV-9td" secondAttribute="centerY" id="h9b-uV-JfD"/>
+                                            <constraint firstItem="PnV-60-shD" firstAttribute="centerY" secondItem="i2d-Em-wOU" secondAttribute="centerY" id="1gx-s8-1Jd"/>
+                                            <constraint firstItem="PnV-60-shD" firstAttribute="bottom" secondItem="Nzk-o5-XT9" secondAttribute="top" constant="8" id="6Ac-wy-2Ci"/>
+                                            <constraint firstItem="Nzk-o5-XT9" firstAttribute="centerX" secondItem="i2d-Em-wOU" secondAttribute="centerX" id="E1K-2u-rt4"/>
+                                            <constraint firstItem="ud3-zV-9td" firstAttribute="centerY" secondItem="Nzk-o5-XT9" secondAttribute="centerY" id="SFT-Ql-m62"/>
+                                            <constraint firstItem="PnV-60-shD" firstAttribute="centerX" secondItem="i2d-Em-wOU" secondAttribute="centerX" id="kqu-0S-NDw"/>
+                                            <constraint firstItem="Nzk-o5-XT9" firstAttribute="leading" secondItem="ud3-zV-9td" secondAttribute="trailing" constant="3" id="vM5-ZZ-5Mt"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TpE-EQ-8Q1" userLabel="DomiWii WI-FI">
-                                        <rect key="frame" x="0.0" y="270" width="375" height="333"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-q3-BWb" userLabel="3">
+                                        <rect key="frame" x="0.0" y="402.5" width="375" height="200.5"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Seleziona la rete WI-FI DomiWii_XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
-                                                <rect key="frame" x="88" y="243" width="226.5" height="17"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-tB-Num">
+                                                <rect key="frame" x="85" y="25" width="204" height="151"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleziona la rete WI-FI DomiWii_XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
+                                                <rect key="frame" x="74.5" y="168" width="226.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="domi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-tB-Num">
-                                                <rect key="frame" x="136" y="80" width="104" height="151"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="104" id="IfQ-No-E42"/>
-                                                    <constraint firstAttribute="height" constant="51" id="LE7-Pk-zsh"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
-                                                <rect key="frame" x="63" y="243" width="17" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="17" id="NxU-u8-UcL"/>
-                                                    <constraint firstAttribute="width" constant="17" id="U6r-kn-O2N"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
+                                                <rect key="frame" x="54.5" y="168" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="oIM-M7-kD4" firstAttribute="leading" secondItem="zMS-AU-aVQ" secondAttribute="trailing" constant="8" id="0qa-OQ-Ddd"/>
-                                            <constraint firstItem="N1f-tB-Num" firstAttribute="centerY" secondItem="TpE-EQ-8Q1" secondAttribute="centerY" id="EY7-hq-OWB"/>
-                                            <constraint firstItem="N1f-tB-Num" firstAttribute="centerX" secondItem="TpE-EQ-8Q1" secondAttribute="centerX" id="XHq-4Z-OZB"/>
-                                            <constraint firstItem="zMS-AU-aVQ" firstAttribute="centerY" secondItem="oIM-M7-kD4" secondAttribute="centerY" id="hZZ-1Q-IrH"/>
-                                            <constraint firstItem="oIM-M7-kD4" firstAttribute="top" secondItem="N1f-tB-Num" secondAttribute="bottom" constant="12" id="r3o-Tl-VuH"/>
+                                            <constraint firstItem="oIM-M7-kD4" firstAttribute="leading" secondItem="zMS-AU-aVQ" secondAttribute="trailing" constant="3" id="FIB-IV-MdH"/>
+                                            <constraint firstItem="N1f-tB-Num" firstAttribute="centerY" secondItem="XSM-q3-BWb" secondAttribute="centerY" id="Fpv-Di-HLW"/>
+                                            <constraint firstItem="N1f-tB-Num" firstAttribute="bottom" secondItem="oIM-M7-kD4" secondAttribute="top" constant="8" id="U38-PQ-8Mc"/>
+                                            <constraint firstItem="oIM-M7-kD4" firstAttribute="centerX" secondItem="XSM-q3-BWb" secondAttribute="centerX" id="Zma-q3-KVz"/>
+                                            <constraint firstItem="zMS-AU-aVQ" firstAttribute="centerY" secondItem="oIM-M7-kD4" secondAttribute="centerY" id="cpT-IJ-7Tw"/>
+                                            <constraint firstItem="N1f-tB-Num" firstAttribute="centerX" secondItem="XSM-q3-BWb" secondAttribute="centerX" id="wA6-br-Wii"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="N39-Qx-gba" firstAttribute="leading" secondItem="MV0-cL-HV1" secondAttribute="leading" id="92T-Wc-JbI"/>
-                                    <constraint firstAttribute="trailing" secondItem="TpE-EQ-8Q1" secondAttribute="trailing" id="CTy-oY-fqt"/>
-                                    <constraint firstItem="TpE-EQ-8Q1" firstAttribute="top" secondItem="N39-Qx-gba" secondAttribute="bottom" constant="1" id="Mnp-si-e6H"/>
-                                    <constraint firstItem="TpE-EQ-8Q1" firstAttribute="leading" secondItem="MV0-cL-HV1" secondAttribute="leading" id="NNB-2m-CID"/>
-                                    <constraint firstItem="N39-Qx-gba" firstAttribute="top" secondItem="j2Y-Ir-pJT" secondAttribute="bottom" constant="1" id="PCR-q1-irn"/>
-                                    <constraint firstItem="TpE-EQ-8Q1" firstAttribute="top" secondItem="N39-Qx-gba" secondAttribute="bottom" constant="1" id="R9X-vz-4DC"/>
-                                    <constraint firstAttribute="bottom" secondItem="TpE-EQ-8Q1" secondAttribute="bottom" id="Tzu-w1-Geo"/>
-                                    <constraint firstAttribute="trailing" secondItem="j2Y-Ir-pJT" secondAttribute="trailing" id="bFQ-Wx-uHC"/>
-                                    <constraint firstItem="j2Y-Ir-pJT" firstAttribute="top" secondItem="MV0-cL-HV1" secondAttribute="top" id="dMA-PC-Z8T"/>
-                                    <constraint firstItem="j2Y-Ir-pJT" firstAttribute="leading" secondItem="MV0-cL-HV1" secondAttribute="leading" id="gl9-Bu-viJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="N39-Qx-gba" secondAttribute="trailing" id="w1K-ZD-Hkx"/>
+                                    <constraint firstItem="XSM-q3-BWb" firstAttribute="top" secondItem="i2d-Em-wOU" secondAttribute="bottom" constant="1" id="UYh-LQ-xMo"/>
+                                    <constraint firstAttribute="bottom" secondItem="XSM-q3-BWb" secondAttribute="bottom" id="aev-ar-dak"/>
+                                    <constraint firstItem="i2d-Em-wOU" firstAttribute="top" secondItem="GLA-1w-5nG" secondAttribute="bottom" constant="1" id="ayQ-Fq-WGz"/>
+                                    <constraint firstItem="i2d-Em-wOU" firstAttribute="height" secondItem="XSM-q3-BWb" secondAttribute="height" id="foj-wv-f26"/>
+                                    <constraint firstItem="i2d-Em-wOU" firstAttribute="top" secondItem="GLA-1w-5nG" secondAttribute="bottom" constant="1" id="mde-Xk-gd9"/>
+                                    <constraint firstItem="GLA-1w-5nG" firstAttribute="height" secondItem="i2d-Em-wOU" secondAttribute="height" id="n1s-fp-YrM"/>
+                                    <constraint firstItem="XSM-q3-BWb" firstAttribute="top" secondItem="i2d-Em-wOU" secondAttribute="bottom" constant="1" id="uhk-Dm-2Qm"/>
+                                    <constraint firstItem="GLA-1w-5nG" firstAttribute="top" secondItem="MV0-cL-HV1" secondAttribute="top" id="y1a-Il-ZXq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MV0-cL-HV1" firstAttribute="leading" secondItem="8tT-Yb-I4B" secondAttribute="leading" id="3mR-1A-R6n"/>
-                            <constraint firstAttribute="bottom" secondItem="MV0-cL-HV1" secondAttribute="bottom" id="bcq-Gy-OLR"/>
-                            <constraint firstAttribute="trailing" secondItem="MV0-cL-HV1" secondAttribute="trailing" id="ofJ-kR-JIz"/>
-                            <constraint firstItem="MV0-cL-HV1" firstAttribute="top" secondItem="MKg-gm-fcr" secondAttribute="bottom" id="sMQ-yv-0iA"/>
+                            <constraint firstAttribute="bottom" secondItem="MV0-cL-HV1" secondAttribute="bottom" id="33w-fR-Fhl"/>
+                            <constraint firstAttribute="trailing" secondItem="MV0-cL-HV1" secondAttribute="trailing" id="FtX-IV-nJ2"/>
+                            <constraint firstItem="MV0-cL-HV1" firstAttribute="leading" secondItem="8tT-Yb-I4B" secondAttribute="leading" id="buz-WU-48E"/>
+                            <constraint firstItem="MV0-cL-HV1" firstAttribute="top" secondItem="MKg-gm-fcr" secondAttribute="bottom" id="jFS-4L-BUd"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmU-BV-qFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
