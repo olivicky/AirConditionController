@@ -389,99 +389,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YG-LW-KNW">
-                                <rect key="frame" x="27.5" y="333" width="320" height="1"/>
-                                <color key="backgroundColor" red="0.75559085609999999" green="0.75556832549999997" blue="0.75558108089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="1J9-GL-t2A"/>
-                                    <constraint firstAttribute="width" constant="320" id="diW-ct-cP9"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N39-Qx-gba">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MV0-cL-HV1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-60-shD">
-                                        <rect key="frame" x="35.5" y="95" width="304" height="120"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-1w-5nG" userLabel="1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-VP-zT9">
+                                                <rect key="frame" x="35" y="40.5" width="304" height="120"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attiva DomiWii in modalità locale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-Yh-5xn">
+                                                <rect key="frame" x="90" y="152.5" width="195.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="bdg-dU-Acg">
+                                                <rect key="frame" x="70" y="152.5" width="17" height="17"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="304" id="AQo-ut-iwA"/>
-                                            <constraint firstAttribute="height" constant="120" id="SMP-gK-WQd"/>
+                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="bottom" secondItem="oLt-Yh-5xn" secondAttribute="top" constant="8" id="9rM-Rd-d1w"/>
+                                            <constraint firstItem="oLt-Yh-5xn" firstAttribute="centerX" secondItem="GLA-1w-5nG" secondAttribute="centerX" id="AxI-if-oNf"/>
+                                            <constraint firstItem="bdg-dU-Acg" firstAttribute="centerY" secondItem="oLt-Yh-5xn" secondAttribute="centerY" id="Wen-pP-PJI"/>
+                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="centerX" secondItem="GLA-1w-5nG" secondAttribute="centerX" id="XIh-23-aOi"/>
+                                            <constraint firstItem="oLt-Yh-5xn" firstAttribute="leading" secondItem="bdg-dU-Acg" secondAttribute="trailing" constant="3" id="aWf-vu-rze"/>
+                                            <constraint firstItem="VLR-VP-zT9" firstAttribute="centerY" secondItem="GLA-1w-5nG" secondAttribute="centerY" id="gyu-fw-bsu"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-zV-9td">
-                                        <rect key="frame" x="67" y="227" width="17" height="17"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2d-Em-wOU" userLabel="2">
+                                        <rect key="frame" x="0.0" y="201.5" width="375" height="200"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-60-shD">
+                                                <rect key="frame" x="35" y="40" width="304" height="120"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vai nelle Impostazioni &gt; Wi-Fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-o5-XT9">
+                                                <rect key="frame" x="100" y="152" width="175.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-zV-9td">
+                                                <rect key="frame" x="80" y="152" width="17" height="17"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="17" id="t8U-v6-cjP"/>
-                                            <constraint firstAttribute="height" constant="17" id="woO-dr-4Tl"/>
+                                            <constraint firstItem="PnV-60-shD" firstAttribute="centerY" secondItem="i2d-Em-wOU" secondAttribute="centerY" id="1gx-s8-1Jd"/>
+                                            <constraint firstItem="PnV-60-shD" firstAttribute="bottom" secondItem="Nzk-o5-XT9" secondAttribute="top" constant="8" id="6Ac-wy-2Ci"/>
+                                            <constraint firstItem="Nzk-o5-XT9" firstAttribute="centerX" secondItem="i2d-Em-wOU" secondAttribute="centerX" id="E1K-2u-rt4"/>
+                                            <constraint firstItem="ud3-zV-9td" firstAttribute="centerY" secondItem="Nzk-o5-XT9" secondAttribute="centerY" id="SFT-Ql-m62"/>
+                                            <constraint firstItem="PnV-60-shD" firstAttribute="centerX" secondItem="i2d-Em-wOU" secondAttribute="centerX" id="kqu-0S-NDw"/>
+                                            <constraint firstItem="Nzk-o5-XT9" firstAttribute="leading" secondItem="ud3-zV-9td" secondAttribute="trailing" constant="3" id="vM5-ZZ-5Mt"/>
                                         </constraints>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigate to Settings &gt; Wi-Fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-o5-XT9">
-                                        <rect key="frame" x="92" y="227" width="191" height="17"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-q3-BWb" userLabel="3">
+                                        <rect key="frame" x="0.0" y="402.5" width="375" height="200.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-tB-Num">
+                                                <rect key="frame" x="85" y="25" width="204" height="151"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleziona la rete WI-FI DomiWii_XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
+                                                <rect key="frame" x="74.5" y="168" width="226.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
+                                                <rect key="frame" x="54.5" y="168" width="17" height="17"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="191" id="FfE-RU-ymR"/>
+                                            <constraint firstItem="oIM-M7-kD4" firstAttribute="leading" secondItem="zMS-AU-aVQ" secondAttribute="trailing" constant="3" id="FIB-IV-MdH"/>
+                                            <constraint firstItem="N1f-tB-Num" firstAttribute="centerY" secondItem="XSM-q3-BWb" secondAttribute="centerY" id="Fpv-Di-HLW"/>
+                                            <constraint firstItem="N1f-tB-Num" firstAttribute="bottom" secondItem="oIM-M7-kD4" secondAttribute="top" constant="8" id="U38-PQ-8Mc"/>
+                                            <constraint firstItem="oIM-M7-kD4" firstAttribute="centerX" secondItem="XSM-q3-BWb" secondAttribute="centerX" id="Zma-q3-KVz"/>
+                                            <constraint firstItem="zMS-AU-aVQ" firstAttribute="centerY" secondItem="oIM-M7-kD4" secondAttribute="centerY" id="cpT-IJ-7Tw"/>
+                                            <constraint firstItem="N1f-tB-Num" firstAttribute="centerX" secondItem="XSM-q3-BWb" secondAttribute="centerX" id="wA6-br-Wii"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="PnV-60-shD" secondAttribute="centerX" id="50O-aV-A8g"/>
-                                    <constraint firstAttribute="centerY" secondItem="PnV-60-shD" secondAttribute="centerY" constant="12" id="FGL-ZW-D8J"/>
-                                    <constraint firstItem="ud3-zV-9td" firstAttribute="leading" secondItem="N39-Qx-gba" secondAttribute="leading" constant="67" id="MxE-xg-Lr9"/>
-                                    <constraint firstItem="Nzk-o5-XT9" firstAttribute="top" secondItem="PnV-60-shD" secondAttribute="bottom" constant="12" id="PX9-Oo-mrU"/>
-                                    <constraint firstItem="Nzk-o5-XT9" firstAttribute="leading" secondItem="ud3-zV-9td" secondAttribute="trailing" constant="8" id="bAO-YU-qp2"/>
-                                    <constraint firstItem="Nzk-o5-XT9" firstAttribute="centerY" secondItem="ud3-zV-9td" secondAttribute="centerY" id="h9b-uV-JfD"/>
+                                    <constraint firstItem="XSM-q3-BWb" firstAttribute="top" secondItem="i2d-Em-wOU" secondAttribute="bottom" constant="1" id="UYh-LQ-xMo"/>
+                                    <constraint firstAttribute="bottom" secondItem="XSM-q3-BWb" secondAttribute="bottom" id="aev-ar-dak"/>
+                                    <constraint firstItem="i2d-Em-wOU" firstAttribute="top" secondItem="GLA-1w-5nG" secondAttribute="bottom" constant="1" id="ayQ-Fq-WGz"/>
+                                    <constraint firstItem="i2d-Em-wOU" firstAttribute="height" secondItem="XSM-q3-BWb" secondAttribute="height" id="foj-wv-f26"/>
+                                    <constraint firstItem="i2d-Em-wOU" firstAttribute="top" secondItem="GLA-1w-5nG" secondAttribute="bottom" constant="1" id="mde-Xk-gd9"/>
+                                    <constraint firstItem="GLA-1w-5nG" firstAttribute="height" secondItem="i2d-Em-wOU" secondAttribute="height" id="n1s-fp-YrM"/>
+                                    <constraint firstItem="XSM-q3-BWb" firstAttribute="top" secondItem="i2d-Em-wOU" secondAttribute="bottom" constant="1" id="uhk-Dm-2Qm"/>
+                                    <constraint firstItem="GLA-1w-5nG" firstAttribute="top" secondItem="MV0-cL-HV1" secondAttribute="top" id="y1a-Il-ZXq"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpE-EQ-8Q1">
-                                <rect key="frame" x="0.0" y="334" width="375" height="333"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose DomiWii Wi-Fi network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
-                                        <rect key="frame" x="88" y="242.5" width="188" height="17"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-tB-Num">
-                                        <rect key="frame" x="85.5" y="79.5" width="204" height="151"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="204" id="IfQ-No-E42"/>
-                                            <constraint firstAttribute="height" constant="151" id="LE7-Pk-zsh"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
-                                        <rect key="frame" x="63" y="242.5" width="17" height="17"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="17" id="NxU-u8-UcL"/>
-                                            <constraint firstAttribute="width" constant="17" id="U6r-kn-O2N"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="oIM-M7-kD4" firstAttribute="leading" secondItem="zMS-AU-aVQ" secondAttribute="trailing" constant="8" id="0qa-OQ-Ddd"/>
-                                    <constraint firstItem="zMS-AU-aVQ" firstAttribute="leading" secondItem="TpE-EQ-8Q1" secondAttribute="leading" constant="63" id="Bcp-II-FYU"/>
-                                    <constraint firstAttribute="centerX" secondItem="N1f-tB-Num" secondAttribute="centerX" id="MtE-Wz-89H"/>
-                                    <constraint firstAttribute="centerY" secondItem="N1f-tB-Num" secondAttribute="centerY" constant="12" id="adt-Ft-Hmp"/>
-                                    <constraint firstItem="zMS-AU-aVQ" firstAttribute="centerY" secondItem="oIM-M7-kD4" secondAttribute="centerY" id="hZZ-1Q-IrH"/>
-                                    <constraint firstItem="oIM-M7-kD4" firstAttribute="top" secondItem="N1f-tB-Num" secondAttribute="bottom" constant="12" id="r3o-Tl-VuH"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="4YG-LW-KNW" secondAttribute="centerY" id="8PU-4e-yvc"/>
-                            <constraint firstAttribute="centerX" secondItem="4YG-LW-KNW" secondAttribute="centerX" id="EFR-DF-Kua"/>
-                            <constraint firstItem="4YG-LW-KNW" firstAttribute="top" secondItem="N39-Qx-gba" secondAttribute="bottom" id="Hn4-NL-Ty7"/>
-                            <constraint firstAttribute="bottom" secondItem="TpE-EQ-8Q1" secondAttribute="bottom" id="Wle-vE-N7V"/>
-                            <constraint firstItem="TpE-EQ-8Q1" firstAttribute="top" secondItem="4YG-LW-KNW" secondAttribute="bottom" id="XSl-3Y-dPc"/>
-                            <constraint firstAttribute="trailing" secondItem="N39-Qx-gba" secondAttribute="trailing" id="dQa-Rz-LXM"/>
-                            <constraint firstItem="TpE-EQ-8Q1" firstAttribute="leading" secondItem="8tT-Yb-I4B" secondAttribute="leading" id="eOE-MH-AXO"/>
-                            <constraint firstItem="N39-Qx-gba" firstAttribute="leading" secondItem="8tT-Yb-I4B" secondAttribute="leading" id="jQQ-dr-mqS"/>
-                            <constraint firstItem="N39-Qx-gba" firstAttribute="top" secondItem="8tT-Yb-I4B" secondAttribute="top" id="msI-vm-0hy"/>
-                            <constraint firstAttribute="trailing" secondItem="TpE-EQ-8Q1" secondAttribute="trailing" id="w9H-JD-nDU"/>
+                            <constraint firstAttribute="bottom" secondItem="MV0-cL-HV1" secondAttribute="bottom" id="33w-fR-Fhl"/>
+                            <constraint firstAttribute="trailing" secondItem="MV0-cL-HV1" secondAttribute="trailing" id="FtX-IV-nJ2"/>
+                            <constraint firstItem="MV0-cL-HV1" firstAttribute="leading" secondItem="8tT-Yb-I4B" secondAttribute="leading" id="buz-WU-48E"/>
+                            <constraint firstItem="MV0-cL-HV1" firstAttribute="top" secondItem="MKg-gm-fcr" secondAttribute="bottom" id="jFS-4L-BUd"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmU-BV-qFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -665,7 +676,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dDY-u9-nPs">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dDY-u9-nPs">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -682,7 +693,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso estate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gf4-wl-8td">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso estate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gf4-wl-8td">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -699,7 +710,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso estate max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="age-Wz-4KE">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso estate max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="age-Wz-4KE">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -716,7 +727,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso inverno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SYH-7e-SoS">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso inverno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SYH-7e-SoS">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -733,7 +744,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso inverno max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Af-ki-trn">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso inverno max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Af-ki-trn">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -750,7 +761,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso ventilatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y26-Hb-igP">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso ventilatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y26-Hb-igP">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -767,7 +778,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso ventilatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xBo-ih-XlY">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso ventilatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xBo-ih-XlY">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -784,7 +795,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso deumidificatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PYF-wQ-bxK">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso deumidificatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PYF-wQ-bxK">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -801,7 +812,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso deumidificatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5z4-oy-dVB">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso deumidificatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5z4-oy-dVB">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -827,7 +838,7 @@
         <!--View Controller-->
         <scene sceneID="hGq-8z-9ze">
             <objects>
-                <viewController id="N26-Ej-Jhz" sceneMemberID="viewController">
+                <viewController id="N26-Ej-Jhz" customClass="FAQViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G62-c2-QqH"/>
                         <viewControllerLayoutGuide type="bottom" id="tax-9X-iqP"/>
@@ -835,8 +846,23 @@
                     <view key="view" contentMode="scaleToFill" id="ggD-9u-Niu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-dX-yT9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kmb-dX-yT9" firstAttribute="top" secondItem="G62-c2-QqH" secondAttribute="bottom" id="3F7-jB-hxj"/>
+                            <constraint firstItem="kmb-dX-yT9" firstAttribute="leading" secondItem="ggD-9u-Niu" secondAttribute="leading" id="ZM1-Ix-bbc"/>
+                            <constraint firstAttribute="trailing" secondItem="kmb-dX-yT9" secondAttribute="trailing" id="gdH-ub-eFW"/>
+                            <constraint firstItem="tax-9X-iqP" firstAttribute="top" secondItem="kmb-dX-yT9" secondAttribute="bottom" id="reW-MA-1HN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="kmb-dX-yT9" id="556-qU-CEZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gD-oX-lum" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1278,7 +1304,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mgm-XL-MkB">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mgm-XL-MkB">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1295,7 +1321,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso estate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s2V-qR-adM">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso estate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s2V-qR-adM">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1312,7 +1338,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso estate max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x9Q-CO-3cK">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso estate max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x9Q-CO-3cK">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1329,7 +1355,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso inverno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clc-Vv-OtA">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso inverno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clc-Vv-OtA">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1346,7 +1372,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso inverno max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27P-iw-jRE">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso inverno max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27P-iw-jRE">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1363,7 +1389,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso ventilatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WAY-2s-8pL">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso ventilatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WAY-2s-8pL">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1380,7 +1406,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso ventilatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FoY-Qe-bbQ">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso ventilatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FoY-Qe-bbQ">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1397,7 +1423,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso deumidificatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="quT-bK-gDA">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso deumidificatore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="quT-bK-gDA">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1414,7 +1440,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Apprendi acceso deumidificatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T6w-Br-xer">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Verifica acceso deumidificatore max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T6w-Br-xer">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
