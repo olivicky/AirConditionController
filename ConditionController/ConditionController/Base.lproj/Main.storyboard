@@ -395,17 +395,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-1w-5nG" userLabel="1">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-VP-zT9">
-                                                <rect key="frame" x="35" y="40.5" width="304" height="120"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reset" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-VP-zT9">
+                                                <rect key="frame" x="60.5" y="50.5" width="253" height="100"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attiva DomiWii in modalità locale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-Yh-5xn">
-                                                <rect key="frame" x="90" y="152.5" width="195.5" height="17"/>
+                                                <rect key="frame" x="90" y="142.5" width="195.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="bdg-dU-Acg">
-                                                <rect key="frame" x="70" y="152.5" width="17" height="17"/>
+                                                <rect key="frame" x="70" y="142.5" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -422,16 +422,16 @@
                                         <rect key="frame" x="0.0" y="201.5" width="375" height="200"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-60-shD">
-                                                <rect key="frame" x="35" y="40" width="304" height="120"/>
+                                                <rect key="frame" x="60.5" y="50" width="253" height="100"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vai nelle Impostazioni &gt; Wi-Fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-o5-XT9">
-                                                <rect key="frame" x="100" y="152" width="175.5" height="17"/>
+                                                <rect key="frame" x="100" y="142" width="175.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-zV-9td">
-                                                <rect key="frame" x="80" y="152" width="17" height="17"/>
+                                                <rect key="frame" x="80" y="142" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -448,16 +448,16 @@
                                         <rect key="frame" x="0.0" y="402.5" width="375" height="200.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-tB-Num">
-                                                <rect key="frame" x="85" y="25" width="204" height="151"/>
+                                                <rect key="frame" x="119.5" y="50.5" width="135" height="100"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleziona la rete WI-FI DomiWii_XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
-                                                <rect key="frame" x="74.5" y="168" width="226.5" height="17"/>
+                                                <rect key="frame" x="74.5" y="142.5" width="226.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
-                                                <rect key="frame" x="54.5" y="168" width="17" height="17"/>
+                                                <rect key="frame" x="54.5" y="142.5" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1568,7 +1568,7 @@
         <image name="1" width="17" height="17"/>
         <image name="2" width="17" height="17"/>
         <image name="cond" width="30" height="21"/>
-        <image name="domi-connect" width="204" height="151"/>
+        <image name="domi-connect" width="135" height="100"/>
         <image name="down" width="256" height="256"/>
         <image name="fan" width="100" height="100"/>
         <image name="fan_level_1" width="199" height="158"/>
@@ -1576,6 +1576,7 @@
         <image name="finish_configuration" width="272" height="229"/>
         <image name="logo" width="765" height="727"/>
         <image name="off" width="261" height="267"/>
+        <image name="reset" width="253" height="100"/>
         <image name="set_conditioner" width="272" height="229"/>
         <image name="set_functions" width="272" height="229"/>
         <image name="set_wifi" width="272" height="229"/>
@@ -1584,7 +1585,7 @@
         <image name="up" width="64" height="64"/>
         <image name="update_list_conditioner" width="272" height="229"/>
         <image name="use" width="272" height="229"/>
-        <image name="wifi-connect" width="304" height="120"/>
+        <image name="wifi-connect" width="253" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="48I-Lf-CCk"/>
