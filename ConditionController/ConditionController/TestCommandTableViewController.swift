@@ -52,10 +52,47 @@ class TestCommandTableViewController: UITableViewController {
     //Private methods
     func alertController(indexPath: IndexPath){
         
+        var tit = ""
+        var msg = ""
+        
+        switch indexPath.row {
+        case 0:
+            tit = "Verifica OFF"
+            msg = "Avvicina il telecomando al dispositivo e premi il pulsante OFF"
+        case 1:
+            tit = "Verifica acceso estate"
+            msg = "imposta il telecomando in modalità ACCESO, Estate, Temperatura 18°, Velocità 1"
+        case 2:
+            tit = "Verifica acceso estate max"
+            msg = "imposta il telecomando in modalità ACCESO, Estate, Temperatura 18°, Velocità 4"
+        case 3:
+            tit = "Verifica acceso inverno"
+            msg = "imposta il telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 1"
+        case 4:
+            tit = "Verifica acceso inverno max"
+            msg = "imposta il telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 1"
+        case 5:
+            tit = "Verifica acceso ventilatore"
+            msg = "imposta il telecomando in modalità ACCESO, Ventilatore, Velocità 1"
+        case 6:
+            tit = "Verifica acceso ventilatore max"
+            msg = "imposta il telecomando in modalità ACCESO, Ventilatore, Velocità 4"
+        case 7:
+            tit = "Verifica acceso deumidificatore"
+            msg = "imposta il telecomando in modalità ACCESO, Deumidificatore, Temperatura 18°, Velocità 1"
+        case 8:
+            tit = "Verifica acceso deumidificatore max"
+            msg = "imposta il telecomando in modalità ACCESO, Deumidificatore, Temperatura 18°, Velocità 4"
+        default:
+            tit = "Verifica manuale"
+            msg = "Vuoi procedere alla verifica manuale?"
+        }
+        
+        
         // 1.
         let alertController = UIAlertController(
-            title: "Apprendimento manuale",
-            message: "Vuoi procedere all'apprendimento?",
+            title: tit,
+            message: msg,
             preferredStyle: UIAlertControllerStyle.alert)
         
         // 2.

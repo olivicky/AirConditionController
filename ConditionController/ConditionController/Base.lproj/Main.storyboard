@@ -425,19 +425,19 @@
                                                 <rect key="frame" x="60.5" y="50" width="253" height="100"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vai nelle Impostazioni &gt; Wi-Fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-o5-XT9">
-                                                <rect key="frame" x="100" y="142" width="175.5" height="17"/>
+                                                <rect key="frame" x="100" y="158" width="175.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-zV-9td">
-                                                <rect key="frame" x="80" y="142" width="17" height="17"/>
+                                                <rect key="frame" x="80" y="158" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="PnV-60-shD" firstAttribute="centerY" secondItem="i2d-Em-wOU" secondAttribute="centerY" id="1gx-s8-1Jd"/>
-                                            <constraint firstItem="PnV-60-shD" firstAttribute="bottom" secondItem="Nzk-o5-XT9" secondAttribute="top" constant="8" id="6Ac-wy-2Ci"/>
+                                            <constraint firstItem="PnV-60-shD" firstAttribute="bottom" secondItem="Nzk-o5-XT9" secondAttribute="top" constant="-8" id="6Ac-wy-2Ci"/>
                                             <constraint firstItem="Nzk-o5-XT9" firstAttribute="centerX" secondItem="i2d-Em-wOU" secondAttribute="centerX" id="E1K-2u-rt4"/>
                                             <constraint firstItem="ud3-zV-9td" firstAttribute="centerY" secondItem="Nzk-o5-XT9" secondAttribute="centerY" id="SFT-Ql-m62"/>
                                             <constraint firstItem="PnV-60-shD" firstAttribute="centerX" secondItem="i2d-Em-wOU" secondAttribute="centerX" id="kqu-0S-NDw"/>
@@ -451,20 +451,20 @@
                                                 <rect key="frame" x="119.5" y="50.5" width="135" height="100"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleziona la rete WI-FI DomiWii_XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
-                                                <rect key="frame" x="74.5" y="142.5" width="226.5" height="17"/>
+                                                <rect key="frame" x="74.5" y="158.5" width="226.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
-                                                <rect key="frame" x="54.5" y="142.5" width="17" height="17"/>
+                                                <rect key="frame" x="54.5" y="158.5" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="oIM-M7-kD4" firstAttribute="leading" secondItem="zMS-AU-aVQ" secondAttribute="trailing" constant="3" id="FIB-IV-MdH"/>
                                             <constraint firstItem="N1f-tB-Num" firstAttribute="centerY" secondItem="XSM-q3-BWb" secondAttribute="centerY" id="Fpv-Di-HLW"/>
-                                            <constraint firstItem="N1f-tB-Num" firstAttribute="bottom" secondItem="oIM-M7-kD4" secondAttribute="top" constant="8" id="U38-PQ-8Mc"/>
+                                            <constraint firstItem="N1f-tB-Num" firstAttribute="bottom" secondItem="oIM-M7-kD4" secondAttribute="top" constant="-8" id="U38-PQ-8Mc"/>
                                             <constraint firstItem="oIM-M7-kD4" firstAttribute="centerX" secondItem="XSM-q3-BWb" secondAttribute="centerX" id="Zma-q3-KVz"/>
                                             <constraint firstItem="zMS-AU-aVQ" firstAttribute="centerY" secondItem="oIM-M7-kD4" secondAttribute="centerY" id="cpT-IJ-7Tw"/>
                                             <constraint firstItem="N1f-tB-Num" firstAttribute="centerX" secondItem="XSM-q3-BWb" secondAttribute="centerX" id="wA6-br-Wii"/>

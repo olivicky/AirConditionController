@@ -154,6 +154,12 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
         cell?.selectionStyle = UITableViewCellSelectionStyle.gray
         cell?.textLabel?.textColor = UIColor.black
         cell?.isUserInteractionEnabled = true
+        
+        indexPathToEnable = IndexPath(row: 0, section: 2)
+        cell = self.tableView.cellForRow(at: indexPathToEnable)
+        cell?.selectionStyle = UITableViewCellSelectionStyle.default
+        cell?.textLabel?.textColor = UIColor.black
+        cell?.isUserInteractionEnabled = true
     }
 
     // MARK: - Table view data source
