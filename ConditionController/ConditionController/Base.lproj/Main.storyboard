@@ -456,7 +456,7 @@
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
                                                 <rect key="frame" x="54.5" y="158.5" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
@@ -1567,6 +1567,7 @@
     <resources>
         <image name="1" width="17" height="17"/>
         <image name="2" width="17" height="17"/>
+        <image name="3" width="17" height="17"/>
         <image name="cond" width="30" height="21"/>
         <image name="domi-connect" width="135" height="100"/>
         <image name="down" width="256" height="256"/>
