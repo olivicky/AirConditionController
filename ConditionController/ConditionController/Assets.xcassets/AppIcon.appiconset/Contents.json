@@ -3,49 +3,49 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazione_small2x.png",
+      "filename" : "ico-Not@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazione_sm3x.png",
+      "filename" : "ico-Not@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazione_mi2x.png",
+      "filename" : "ico-OldSpot@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazionemi3x.png",
+      "filename" : "ico-OldSpot@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazione_mid2x.png",
+      "filename" : "ico-Spot@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazione-1.png",
+      "filename" : "ico-App@2x.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazione.png",
+      "filename" : "ico-App@2x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icona-iniziale-dell'applicazione3x.png",
+      "filename" : "ico-App@3x.png",
       "scale" : "3x"
     }
   ],
