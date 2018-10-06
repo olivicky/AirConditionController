@@ -39,7 +39,7 @@ class DefaultAlamofireManager: Alamofire.SessionManager {
 
 
 
-let endpointClosure = { (target: DomiWii) -> Endpoint<DomiWii> in
+let endpointClosure = { (target: DomiWii) -> Endpoint in
     let url = target.baseURL.appendingPathComponent(target.path).absoluteString
     var encoding: Moya.ParameterEncoding = JSONEncoding()
     
@@ -52,7 +52,7 @@ let endpointClosure = { (target: DomiWii) -> Endpoint<DomiWii> in
     }
     
     
-    let endpoint: Endpoint<DomiWii> = Endpoint<DomiWii>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: encoding)
+    let endpoint: Endpoint = Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
     
     return endpoint
 }
@@ -80,10 +80,20 @@ public enum DomiWii {
     case updateDeviceProp(password : String, newPassword : String, alias : String, newAlias : String)
     case checkDevice(alias: String, password: String)
     case resetDevice(alias: String, password: String)
+    case subscribeDevicesNotification(devices : ControlledNotificationDevices)
+    case unsubscribeDevicesNotification(devices : NotificationModel)
+    case sendDeviceAction(alias: String, password: String, uuid: String, command: Int, day: Int?, hour: Int?, minutes: Int?, cap: Int?, setPointBenessere: Int?, setPointEco: Int?, mode: Int?, minTemperature: Int?, maxTemperatura: Int?, notificationPeriod: Int?, enableMobileNotification: Bool?, enableBotNotification: Bool?, temperature: Int?, timeOn: Int?, planning: [[Int]]? )
+    
+    
 }
 
 extension DomiWii: TargetType {
-    public var baseURL: URL { return URL(string: "https://domiwiiapp.herokuapp.com")! }
+    
+    public var headers: [String : String]? {
+        return ["Content-Type": "application/json"]
+    }
+    
+    public var baseURL: URL { return URL(string: "https://domiwiiprj.herokuapp.com")! }
     public var path: String {
         switch self {
         case .devicesMetadata:
@@ -98,6 +108,12 @@ extension DomiWii: TargetType {
             return "/checkDeviceByUid"
         case .resetDevice:
             return "/resetDevice"
+        case .sendDeviceAction:
+            return "/addAction"
+        case .subscribeDevicesNotification:
+            return "/subscribeDevicesNotification"
+        case .unsubscribeDevicesNotification:
+            return "/unSubscribeDeviceNotification"
         }
     }
     
@@ -106,43 +122,43 @@ extension DomiWii: TargetType {
     }
     
     
-    public var parameters: [String: Any]? {
-        switch self {
-        case .devicesMetadata(let aliases):
-            return  ["jsonArray" : aliases]
-        case .sendConditionerAction(let alias, let  mode, let speed, let temperature, let confort):
-            return [
-                "alias" : alias,
-                "mode" : mode,
-                "speed": (speed != nil ? speed : "-1" ),
-                "temperature": (temperature != nil ? temperature : "-1"),
-                "confort": (confort != nil ? confort : "-1")
-            ]
-        case .updateDeviceProp(let password, let newPassword, let alias, let newAlias):
-            return [
-                "password" : password,
-                "newPassword" : newPassword,
-                "alias" : alias,
-                "newAlias" : newAlias
-            ]
-        case .checkDevice(let alias, let password):
-            return [
-                "alias": "",
-                "password": password,
-                "uid": alias
-            ]
-        case .resetDevice(let alias, let password):
-            return [
-                "alias":alias,
-                "newAlias": "",
-                "password": password,
-                "newPassword": ""
-            ]
-            
-        default:
-            return nil
-        }
-    }
+//    public var parameters: Task {
+//        switch self {
+//        case .devicesMetadata(let aliases):
+//            return  ["jsonArray" : aliases]
+//        case .sendConditionerAction(let alias, let  mode, let speed, let temperature, let confort):
+//            return [
+//                "alias" : alias,
+//                "mode" : mode,
+//                "speed": (speed != nil ? speed : "-1" ),
+//                "temperature": (temperature != nil ? temperature : "-1"),
+//                "confort": (confort != nil ? confort : "-1")
+//            ]
+//        case .updateDeviceProp(let password, let newPassword, let alias, let newAlias):
+//            return [
+//                "password" : password,
+//                "newPassword" : newPassword,
+//                "alias" : alias,
+//                "newAlias" : newAlias
+//            ]
+//        case .checkDevice(let alias, let password):
+//            return [
+//                "alias": "",
+//                "password": password,
+//                "uid": alias
+//            ]
+//        case .resetDevice(let alias, let password):
+//            return [
+//                "alias":alias,
+//                "newAlias": "",
+//                "password": password,
+//                "newPassword": ""
+//            ]
+//
+//        default:
+//            return nil
+//        }
+//    }
     
 
     public var parameterEncoding: Moya.ParameterEncoding  {
@@ -158,8 +174,72 @@ extension DomiWii: TargetType {
 
     
     public var task: Task {
-        return .request
+        switch self {
+        case .devicesMetadata(let aliases):
+            return .requestParameters(parameters: ["jsonArray" : aliases], encoding: JsonArrayEncoding.default)
+        case .sendConditionerAction(let alias, let  mode, let speed, let temperature, let confort):
+            return .requestParameters(parameters: [
+                "alias" : alias,
+                "mode" : mode,
+                "speed": (speed != nil ? speed : "-1" ),
+                "temperature": (temperature != nil ? temperature : "-1"),
+                "confort": (confort != nil ? confort : "-1")
+                ], encoding: JSONEncoding.default)
+        case .updateDeviceProp(let password, let newPassword, let alias, let newAlias):
+            return .requestParameters(parameters: [
+                "password" : password,
+                "newPassword" : newPassword,
+                "alias" : alias,
+                "newAlias" : newAlias
+                ], encoding: JSONEncoding.default)
+        case .checkDevice(let alias, let password):
+            return .requestParameters(parameters: [
+                "alias": "",
+                "password": password,
+                "uid": alias
+                ], encoding: JSONEncoding.default)
+        case .resetDevice(let alias, let password):
+            return .requestParameters(parameters: [
+                "alias":alias,
+                "newAlias": "",
+                "password": password,
+                "newPassword": ""
+                ], encoding: JSONEncoding.default)
+        case .sendDeviceAction(let alias,let password, let uuid, let command, let day, let hour, let minutes, let cap, let setPointBenessere, let setPointEco, let mode, let minTemperature, let maxTemperature, let notificationPeriod, let enableMobileNotification, let enableBotNotification, let temperature, let timeOn, let planning):
+            var params: [String:Any] = [:]
+            params["alias"] = alias
+            params["password"] = password
+            params["uuid"] = uuid
+            params["command"] = command
+            params["day"] = day
+            params["hour"] = hour
+            params["minutes"] = minutes
+            params["cap"] = cap
+            params["setPointBenessere"] = setPointBenessere
+            params["setPointEco"] = setPointEco
+            params["mode"] = mode
+            params["minTemperature"] = minTemperature
+            params["maxTemperature"] = maxTemperature
+            params["notificationPeriod"] = notificationPeriod
+            params["enableMobileNotification"] = enableMobileNotification
+            params["enableBotNotification"] = enableBotNotification
+            params["temperature"] = temperature
+            params["timerOn"] = timeOn
+            params["planning"] = planning
+            return .requestParameters(parameters:params, encoding: JSONEncoding.default)
+        case .subscribeDevicesNotification(let devices):
+            return .requestParameters(parameters: ["jsonArray" : devices.controlledDevicesList.toJSONString(prettyPrint: true)], encoding: JsonArrayObjectEncoding.default)
+
+        case .unsubscribeDevicesNotification(let devices):
+            return .requestParameters(parameters: ["jsonArray" : devices.toJSONString(prettyPrint: true)], encoding: JsonArrayObjectEncoding.default)
+
+        default:
+            return .requestPlain
+            
+        }
+        
     }
+    
     public var sampleData: Data {
         switch self {
         case .devicesMetadata:
@@ -173,6 +253,10 @@ extension DomiWii: TargetType {
         case .checkDevice(_):
             return "[{\"name\": \"Repo Name\"}]".data(using: String.Encoding.utf8)!
         case .resetDevice(_):
+            return "[{\"name\": \"Repo Name\"}]".data(using: String.Encoding.utf8)!
+        case .sendDeviceAction(_):
+            return "[{\"name\": \"Repo Name\"}]".data(using: String.Encoding.utf8)!
+        default:
             return "[{\"name\": \"Repo Name\"}]".data(using: String.Encoding.utf8)!
         }
     }
@@ -201,6 +285,30 @@ public struct JsonArrayEncoding: Moya.ParameterEncoding {
         let json = try JSONSerialization.data(withJSONObject: parameters!["jsonArray"]!, options: JSONSerialization.WritingOptions.prettyPrinted)
         req.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         req.httpBody = json
+        return req
+    }
+    
+}
+
+
+public struct JsonArrayObjectEncoding: Moya.ParameterEncoding {
+    
+    public static var `default`: JsonArrayObjectEncoding { return JsonArrayObjectEncoding() }
+    
+    
+    /// Creates a URL request by encoding parameters and applying them onto an existing request.
+    ///
+    /// - parameter urlRequest: The request to have parameters applied.
+    /// - parameter parameters: The parameters to apply.
+    ///
+    /// - throws: An `AFError.parameterEncodingFailed` error if encoding fails.
+    ///
+    /// - returns: The encoded request.
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var req = try urlRequest.asURLRequest()
+        let json = (parameters!["jsonArray"] as! String).data(using: .utf8)
+        req.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        req.httpBody = json 
         return req
     }
     

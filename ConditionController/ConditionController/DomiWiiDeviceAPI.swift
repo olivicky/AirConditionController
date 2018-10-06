@@ -42,24 +42,43 @@ let managerDevice = Manager(
 //    return endpoint
 //}
 
-let endpointClosureDevice = { (target: DomiWiiDevice) -> Endpoint<DomiWiiDevice> in
-    let url = target.baseURL.absoluteString + target.path
-    return Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
+let endpointClosureDevice = { (target: DomiWiiDevice) -> Endpoint in
+    //let url = target.baseURL.appendingPathComponent(target.path).absoluteString
+//    var encoding: Moya.ParameterEncoding = URLEncoding()
+//
+//    switch target.method {
+//    case Moya.Method.get:
+//        encoding = URLEncoding()
+//    default:
+//        encoding = URLEncoding()
+//        //encoding = JsonArrayEncoding()
+//    }
+//    let url = target.baseURL.absoluteString + target.path
+    let url = URL(target: target).absoluteString
+    return Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
 }
 
-let requestClosure = { (endpoint: Endpoint<DomiWiiDevice>, done: MoyaProvider.RequestResultClosure) in
-    var request = endpoint.urlRequest! as URLRequest
-    // Modify the request however you like.
-    done(.success(request))
-}
+//let requestClosure = { (endpoint: Endpoint, done: MoyaProvider.RequestResultClosure) in
+//    do{
+//        var request = try endpoint.urlRequest()
+//        // Modify the request however you like.
+//        done(.success(request))
+//    }
+//    catch{
+//        done(.failure(MoyaError.underlying(error, <#Response?#>)))
+//    }
+//
+//}
 
 
 
-let DomiWiiDeviceProvider = MoyaProvider<DomiWiiDevice>(endpointClosure: endpointClosureDevice,
-                                            requestClosure: MoyaProvider.defaultRequestMapping,
-                                            stubClosure: MoyaProvider.neverStub,
-                                            manager: managerDevice,
-                                            plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
+//let DomiWiiDeviceProvider = MoyaProvider<DomiWiiDevice>(endpointClosure: endpointClosureDevice,
+//                                            requestClosure: MoyaProvider<DomiWiiDevice>.defaultRequestMapping,
+//                                            stubClosure: MoyaProvider.neverStub,
+//                                            manager: managerDevice,
+//                                            plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
+
+let DomiWiiDeviceProvider = MoyaProvider<DomiWiiDevice>(manager: DefaultAlamofireManager.sharedManager, plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
 
 // MARK: - Provider support
@@ -80,69 +99,47 @@ public enum DomiWiiDevice {
 }
 
 extension DomiWiiDevice: TargetType {
-    public var baseURL: URL { return URL(string: "http://192.168.4.1:8090")! }
-    public var path: String {
+    
+    
+    
+    //public var baseURL: URL { return URL(string: "http://192.168.4.1:8090")! }
+    
+    public var baseURL: URL {
+        
+        var url = "http://192.168.4.1:8090"
+        
         switch self {
         case .startControlMode:
-            return "?0?1?"
+            url += "?0?1?"
         case .endControlMode:
-            return  "?0?0?"
+            url +=  "?0?0?"
         case .activateDevice(let ssidHomeNetwork, let password, let ipStatico, let mask, let ipRouter, let dnsPrimario):
-            return "?1?\(ssidHomeNetwork)?\(password)?\(ipStatico)?\(mask)?\(ipRouter)?\(dnsPrimario)"
+            url += "?1?\(ssidHomeNetwork)?\(password)?\(ipStatico)?\(mask)?\(ipRouter)?\(dnsPrimario)"
         case .registerDevice(let count, let codes):
             let ret = "?C?\(count)?\(codes)?"
-            return ret
+            url += ret
         case .testCommand(let commandCode):
-            return "?T?\(commandCode)?"
+            url += "?T?\(commandCode)?"
         case .manualActivationCommand(let commandCode):
-            return "?3?\(commandCode)?"
+            url += "?3?\(commandCode)?"
         }
+        
+        return URL(string: url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!
     }
+    
+    public var path : String {return ""}
     
     public var method: Moya.Method {
-        return Moya.Method.get
+        return .get
     }
     
-    
-    public var parameters: [String: Any]? {
-        switch self {
-//        case .startControlMode():
-//            return [:]
-//        case .endControlMode():
-//            return [:]
-//        case .activateDevice(let ssidHomeNetwork, let password, let ipStatico, let mask, let ipRouter, let dnsPrimario):
-//            return [:]
-////            return [
-////            "": ssidHomeNetwork,
-////            "": password,
-////            "": ipStatico ?? "0",
-////            "": mask ??  "0",
-////            "": ipRouter ?? "0",
-////            "": dnsPrimario ?? "0"
-////            ]
-//            
-//        case .registerDevice(let count, let codes):
-//            return [:]
-////            return [count:
-////                    codes]
-//        case .testCommand(let commandCode):
-//            return [:]
-////            return ["code" : commandCode]
-//        case .manualActivationCommand(let commandCode):
-//            return [:]
-////            return ["code" : commandCode]
-//            
-        default:
-            return nil
-        }
-    }
     
 
-    public var parameterEncoding: Moya.ParameterEncoding {
+    public var parameterEncodingCustom: Moya.ParameterEncoding {
         return URLEncoding.default;
-//        switch self {
+ //        switch self {
 //        case .addContact(let bodyParam):
-//            
+//
 //            return ParameterEncoding.Custom(MyAPICallCustomEncodingClosure)
 //        }
     }
@@ -151,8 +148,12 @@ extension DomiWiiDevice: TargetType {
     
     
     public var task: Task {
-        return .request
+        return .requestPlain
     }
+    
+    
+    
+    
     public var sampleData: Data {
         switch self {
         case .startControlMode:
@@ -168,6 +169,10 @@ extension DomiWiiDevice: TargetType {
         case .manualActivationCommand(_):
             return "[{\"name\": \"Repo Name\"}]".data(using: String.Encoding.utf8)!
         }
+    }
+    
+    public var headers: [String : String]? {
+        return ["Content-Type": "application/json"]
     }
 }
 

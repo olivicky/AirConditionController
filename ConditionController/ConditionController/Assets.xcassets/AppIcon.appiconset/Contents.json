@@ -3,50 +3,56 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "ico-Not@2x.png",
+      "filename" : "iPhoneNotification_2x.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "ico-Not@3x.png",
+      "filename" : "iPhoneNotification_3x.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ico-OldSpot@2x.png",
+      "filename" : "iPhoneSettings_2x.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ico-OldSpot@3x.png",
+      "filename" : "iPhoneSettings_3x.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ico-Spot@2x.png",
+      "filename" : "iPhoneSpotlight_2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ico-App@2x.png",
+      "filename" : "iPhoneApp_2x-1.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ico-App@2x-1.png",
+      "filename" : "iPhoneApp_2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ico-App@3x.png",
+      "filename" : "iPhoneApp_3x.png",
       "scale" : "3x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "icona-Appstore.jpg",
+      "scale" : "1x"
     }
   ],
   "info" : {

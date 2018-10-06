@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import RealmSwift
 
+
 class AddDeviceTableViewController: UITableViewController {
 
     @IBOutlet weak var aliasTextField: UITextField!
@@ -54,30 +55,60 @@ class AddDeviceTableViewController: UITableViewController {
         _ = DomiWiiProvider.request(.checkDevice(alias: self.aliasTextField.text!, password: self.passwordTextField.text!)) { result in
             switch result {
             case let .success(response):
-                
-                    let json = JSON(data: response.data)
+                do{
+                    let json = try JSON(data: response.data)
                     let resp = json["response"].boolValue
                     if(resp ){
-                        let temperatureVal = json["temperature"].stringValue
-                        let humVal = json["humidity"].stringValue
-                        //Aggiungere il dispositivo a realm
-                        let device = Device()
-                        device.uid = self.aliasTextField.text!
+                        let device: Device = try response.mapObject(Device.self)
                         device.alias = self.aliasTextField.text!
                         device.password = self.passwordTextField.text!
-                        device.temperature = temperatureVal
-                        device.humidity = humVal
+                        device.uid = self.aliasTextField.text!
+                        
                         try! self.realm.write {
                             self.realm.add(device, update: true)
                         }
-                        self.showAlert("Add Device", message: "Dispositivo aggiunto correttamente")
+                        
+                        var devNot = NotificationModel()
+                        devNot.uiid = device.uid
+                        devNot.password = device.password
+                        devNot.registrationId = (UIApplication.shared.delegate as! AppDelegate).token
+                        
+                        let controlledNotificationDevice = ControlledNotificationDevices(device: devNot)
+                        
+                        _ = DomiWiiProvider.request(.subscribeDevicesNotification(devices: controlledNotificationDevice)) { result in
+                            switch result {
+                            case let .success(response):
+                                do{
+                                    let json = try JSON(data: response.data)
+                                    let resp = json["code"].stringValue
+                                    if(resp == "1" ){
+                                        self.showAlert("Add Device", message: "Dispositivo aggiunto correttamente")
+                                        
+                                    }
+                                    else{
+                                        self.showAlert("Errore", message: "Dispositivo non aggiunto")
+                                    }
+                                } catch {}
+                                
+                                
+                            //self.tableView.reloadData()
+                            case let .failure(_):
+                                //                guard let error = error as? CustomStringConvertible else {
+                                //                    break
+                                //                }
+                                self.showAlert("Errore", message: "Dispositivo non aggiunto")
+                            }
+                        }
+                        
                     }
                     else{
                         self.showAlert("Errore", message: "Dispositivo non aggiunto")
                     }
+                } catch {}
+                
                 
             //self.tableView.reloadData()
-            case let .failure(_): break
+            case let .failure(_):
                 //                guard let error = error as? CustomStringConvertible else {
                 //                    break
                 //                }
@@ -144,7 +175,9 @@ class AddDeviceTableViewController: UITableViewController {
     
     fileprivate func showAlert(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { action in 
+            _ = self.navigationController?.popToRootViewController(animated: true)
+        })
         alertController.addAction(ok)
         present(alertController, animated: true, completion: nil)
     }

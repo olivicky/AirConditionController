@@ -10,14 +10,19 @@ import Foundation
 import ObjectMapper
 
 // MARK: Initializer and Properties
-struct ControlledDevices: Mappable {
+public struct ControlledDevices: Mappable {
     
     var controlledDevicesList : [Device]! = nil
     
-    // MARK: JSON
-    init?(map: Map) { }
+    init(device: Device){
+        controlledDevicesList = []
+        controlledDevicesList.append(device)
+    }
     
-    mutating func mapping(map: Map) {
+    // MARK: JSON
+    public init?(map: Map) { }
+    
+    public mutating func mapping(map: Map) {
         controlledDevicesList <- map["response"]
     }
     

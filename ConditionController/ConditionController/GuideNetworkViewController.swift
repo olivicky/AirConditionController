@@ -17,7 +17,7 @@ protocol GuideNetworkViewControllerDelegate
 
 class GuideNetworkViewController: UIViewController {
     
-    let DomiWiiSSID = "DomiWii_"
+    let DomiWiiSSID = "Domi"
     var homeNetworkSSID : String! = nil
     var homeNetworkPassword : String! = nil
     var ipStatico : String?
@@ -100,7 +100,7 @@ class GuideNetworkViewController: UIViewController {
                 // Hide spinner
                 HUD.hide(afterDelay: 2.0)
                 let alertController = UIAlertController(title: "Success", message: "Complimenti hai registrato correttamente la Wi-Fi", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popViewController(animated: true)})
+                let ok = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popToViewController((self.navigationController?.viewControllers[1])!, animated: true) })
                 alertController.addAction(ok)
                 self.present(alertController, animated: true, completion: nil)
                 

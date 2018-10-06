@@ -21,12 +21,11 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
     weak var timer: Timer?
     var timerDispatchSourceTimer : DispatchSourceTimer?
 //    var devices = [Device( alias: "Cucina", password: "admin", temperature: "23", hum: "30"), Device( alias: "Soggiorno", password: "admin", temperature: "22", hum: "10"), Device(alias: "Corridoio", password: "admin", temperature: "19", hum: "50")]
-    var devices : Results<Device>!
+    let devices : Results<Device>! = try! Realm().objects(Device.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        devices = realm.objects(Device.self)
         devices.forEach({devicesArray.append($0.uid) })
         // Do any additional setup after loading the view.
         self.getDevicesMetadata()
@@ -83,10 +82,59 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: devicesCellIdentifier, for: indexPath)
         
         let row = indexPath.row
-        let device = devices[row]
+        //let device = devices[row]
         cell.textLabel?.text = devices[row].alias
-        cell.detailTextLabel?.text  = device.temperature + "° " + device.humidity + "%"
+        if devices[row].type == .DomiWii {
+            if(devices[row].temperature != nil && devices[row].humidity != nil){
+                cell.detailTextLabel?.text  = devices[row].temperature + "° " + devices[row].humidity + "%"
+            }
+            cell.imageView?.image = UIImage(named: "domiwii")
+        }
+        else if devices[row].type == .DomiTouch{
+            if(devices[row].temperature != nil && devices[row].status != nil){
+                cell.detailTextLabel?.text  = devices[row].temperature + "° Modo: " + devices[row].status.getStringValue()
+            }
+            
+            cell.imageView?.image = UIImage(named: "domitouch")
+        }
+        else if devices[row].type == .DomiPlug{
+            if(devices[row].status != nil){
+                cell.detailTextLabel?.text  = "Funzione: " + devices[row].status.getStringValue()
+            }
+            cell.imageView?.image = UIImage(named: "domiPlug")
+        }
+        else if devices[row].type == .DomiPlugPro{
+            if(devices[row].status != nil){
+                cell.detailTextLabel?.text  = "Funzione: " + devices[row].status.getStringValue()
+            }
+            cell.imageView?.image = UIImage(named: "domiPlug")
+        }
+        else if devices[row].type == .DomiSwitch{
+            cell.imageView?.image = UIImage(named: "domiswitch")
+            cell.detailTextLabel?.text = ""
+        }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let device = devices[indexPath.row]
+        
+        if device.type == .DomiWii {
+            performSegue(withIdentifier: "DomiWiiSegueIdentifier", sender: indexPath)
+        }
+        else if device.type == .DomiTouch{
+            performSegue(withIdentifier: "DomiTouchSegueIdentifier", sender: indexPath)
+        }
+        else if device.type == .DomiPlug{
+            performSegue(withIdentifier: "DomiPlugSegueIdentifier", sender: indexPath)
+        }
+        else if device.type == .DomiPlugPro{
+            performSegue(withIdentifier: "DomiPlugProSegueIdentifier", sender: indexPath)
+        }
+        else if device.type == .DomiSwitch{
+            performSegue(withIdentifier: "DomiSwitchSegueIdentifier", sender: indexPath)
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -119,6 +167,30 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let delete = UITableViewRowAction(style: .destructive, title: "Rimuovi") { action, index in
         
+            let row = indexPath.row
+            let item = self.devices[row]
+            
+            var devNot = NotificationModel()
+            devNot.uiid = item.uid
+            devNot.password = item.password
+            devNot.registrationId = item.notificationToken
+            
+            
+            
+            
+            _ = DomiWiiProvider.request(.unsubscribeDevicesNotification(devices: devNot)) { result in
+                switch result {
+                case let .success(response): break
+                
+                    
+                //self.tableView.reloadData()
+                case let .failure(_): break
+                    
+                }
+            }
+            
+            
+            
             try! self.realm.write {
                 let row = indexPath.row
                 let item = self.devices[row]
@@ -294,7 +366,8 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         _ = DomiWiiProvider.request(.resetDevice(alias: self.itemToUpdate.alias, password: self.itemToUpdate.password)) { result in
             switch result {
             case let .success(response):
-                let json = JSON(data: response.data)
+                do{
+                let json = try JSON(data: response.data)
                 let resp = json["response"].stringValue
                 let code = json["code"].stringValue
                 if(Int(code)! > 0 ){
@@ -304,6 +377,8 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
                 else{
                     self.showAlert("Errore", message: "Dispositivo non resettato")
                 }
+                }
+                catch {}
                 
                 
                 
@@ -322,7 +397,8 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         _ = DomiWiiProvider.request(.updateDeviceProp(password: password, newPassword: newPassword, alias: alias, newAlias: newAlias)) { result in
             switch result {
             case let .success(response):
-                let json = JSON(data: response.data)
+                do{
+                let json = try JSON(data: response.data)
                 let resp = json["response"].stringValue
                 let code = json["code"].stringValue
                 if(Int(code)! > 0 ){
@@ -337,6 +413,8 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
                 else{
                     self.showAlert("Errore", message: resp)
                 }
+                }
+                catch{}
                 
                 
             //self.tableView.reloadData()
@@ -362,7 +440,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
                         for device in item.controlledDevicesList
                         {
                             try! self.realm.write {
-                                self.realm.create(Device.self, value: ["uid": device.uid, "alias": device.alias, "temperature": device.temperature, "humidity": device.humidity], update: true)
+                                self.realm.create(Device.self, value: ["uid": device.uid, "temperature": device.temperature, "humidity": device.humidity, "_consumption": device._consumption, "_daily_temperature":device._daily_temperature, "_daily_timeron":device._daily_timeron, "timerOn": device.timerOn, "power_active": device.power_active, "power_reactive": device.power_reactive, "day": device.day, "hh": device.hh, "mm": device.mm, "set_point_benessere": device.set_point_benessere, "set_point_eco" :device.set_point_eco, "_planning": device._planning, "mode": device.mode, "_status": device._status, "set_point": device.set_point, "min_temperature" : device.min_temperature, "max_temperature": device.max_temperature, "max_power": device.max_power, "enableBotNotification": device.enableBotNotification, "enableMobileNotification": device.enableMobileNotification, "faulty": device.faulty, "is_running": device.is_running], update: true)
                                 // the book's `title` property will remain unchanged.
                             }
                         }
@@ -410,8 +488,32 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let path = self.tableView.indexPathForSelectedRow!
-        let irViewController = segue.destination as! IRControllerViewController
-        irViewController.conditionerItem = devices[path.row]
+        
+        if segue.identifier == "DomiWiiSegueIdentifier" {
+            let irViewController = segue.destination as! IRControllerViewController
+            irViewController.conditionerItem = devices[path.row]
+        }
+        else if segue.identifier == "DomiTouchSegueIdentifier" {
+            let domiTouchViewController = segue.destination as! DomiTouchViewController
+            domiTouchViewController.touch = devices[path.row]
+        }
+        else if segue.identifier == "DomiPlugSegueIdentifier" {
+            let domiPlugViewController = segue.destination as! DomiPlugViewController
+            domiPlugViewController.touch = devices[path.row]
+        }
+        else if segue.identifier == "DomiPlugProSegueIdentifier" {
+            let domiPlugProViewController = segue.destination as! DomiPlugProViewController
+            domiPlugProViewController.touch = devices[path.row]
+        }
+        else if segue.identifier == "DomiSwitchSegueIdentifier" {
+            let domiswitchViewController = segue.destination as! DomiSwitchViewController
+            domiswitchViewController.touch = devices[path.row]
+        }
+        
+//        else if device.type == "domiswitch"{
+//            performSegue(withIdentifier: "DomiSwitchSegueIdentifier", sender: indexPath)
+//        }
+        
     }
     
 

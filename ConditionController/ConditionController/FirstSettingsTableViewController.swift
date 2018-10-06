@@ -30,34 +30,34 @@ class FirstSettingsTableViewController: UIViewController {
         HUD.dimsBackground = false
         HUD.allowsInteraction = false
         
-        let logo = UIImage(named: "domiwii")
-        let imageView = UIImageView(image: logo)
-        
-        let titleView = UIView(frame: CGRect(x: 0,y: 0,width: 110,height: 44))
-        imageView.frame = titleView.bounds
-        titleView.addSubview(imageView)
-        
-        self.navigationItem.titleView = titleView
-        
-        
-        
-        self.view.backgroundColor = UIColor.white
-        
-        // 2
-        gradientLayer.frame = self.view.bounds
-        
-        // 3
-        let color1 = UIColor.gray.cgColor as CGColor
-        let color2 = UIColor.white.cgColor as CGColor
-        gradientLayer.colors = [color1, color2]
-        gradientLayer.startPoint = CGPoint(x: 0.0,y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0,y: 0.5)
-        
-        // 4
-        gradientLayer.locations = [0.0, 1.0]
-        
-        // 5
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+//        let logo = UIImage(named: "domiwii")
+//        let imageView = UIImageView(image: logo)
+//        
+//        let titleView = UIView(frame: CGRect(x: 0,y: 0,width: 110,height: 44))
+//        imageView.frame = titleView.bounds
+//        titleView.addSubview(imageView)
+//        
+//        self.navigationItem.titleView = titleView
+//        
+//        
+//        
+//        self.view.backgroundColor = UIColor.white
+//        
+//        // 2
+//        gradientLayer.frame = self.view.bounds
+//        
+//        // 3
+//        let color1 = UIColor.gray.cgColor as CGColor
+//        let color2 = UIColor.white.cgColor as CGColor
+//        gradientLayer.colors = [color1, color2]
+//        gradientLayer.startPoint = CGPoint(x: 0.0,y: 0.5)
+//        gradientLayer.endPoint = CGPoint(x: 1.0,y: 0.5)
+//        
+//        // 4
+//        gradientLayer.locations = [0.0, 1.0]
+//        
+//        // 5
+//        self.view.layer.insertSublayer(gradientLayer, at: 0)
 
         self.getConditionerList()
     }

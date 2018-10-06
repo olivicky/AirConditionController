@@ -1,23 +1,28 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '11.0'
 # Uncomment this line if you're using Swift
 use_frameworks!
 
 target 'ConditionController' do
-
-
-
-    pod 'Moya', :git => 'https://github.com/Moya/Moya'
-    pod 'Moya-ObjectMapper', :git => 'https://github.com/ivanbruel/Moya-ObjectMapper'
-    pod 'SwiftyJSON'
+    pod 'Moya'
+    pod 'Moya-ObjectMapper'
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON'
     pod 'RealmSwift'
+    pod 'ObjectMapper+Realm'
+    pod 'ObjectMapperAdditions/Realm', '~> 4.1'
     pod 'PKHUD', :git => 'https://github.com/pkluz/PKHUD.git‘
+    pod 'MKMagneticProgress'
+    pod 'RKPieChart'
+    pod 'ObjectMapper', '~> 3.3'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    
     
     
     post_install do |installer|
         installer.pods_project.targets.each do |target|
             target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '3.0' # or '3.0'
+                config.build_settings['SWIFT_VERSION'] = '4.0' # or '3.0'
             end
         end
     end
