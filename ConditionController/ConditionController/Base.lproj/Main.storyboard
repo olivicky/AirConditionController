@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--DomiHome-->
+        <!--Luminosa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,13 +81,13 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-1t-hmT">
-                                <rect key="frame" x="37.5" y="84" width="300" height="280"/>
+                                <rect key="frame" x="12.5" y="84" width="350" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="UKY-k4-UOe">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="280"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="200"/>
                                     </constraint>
                                     <constraint firstAttribute="width" constant="300" id="VCY-6G-vLC">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="350"/>
                                     </constraint>
                                 </constraints>
                             </imageView>
@@ -104,7 +104,7 @@
                             <constraint firstItem="cUb-5s-RLg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rSi-iG-0Hk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiHome" id="XvQ-6w-hQj"/>
+                    <navigationItem key="navigationItem" title="Luminosa" id="XvQ-6w-hQj"/>
                     <connections>
                         <outlet property="heightButtonBoxConstraint" destination="x1A-Xn-BM9" id="303-8m-CQ4"/>
                         <outlet property="heightLogoConstraint" destination="UKY-k4-UOe" id="2h2-hl-Z6h"/>
@@ -500,7 +500,7 @@
             </objects>
             <point key="canvasLocation" x="3754" y="2694"/>
         </scene>
-        <!--DomiSwitch-->
+        <!--LumiSwitch-->
         <scene sceneID="bNW-Dc-nvR">
             <objects>
                 <viewController id="PgS-4d-o1J" customClass="DomiSwitchViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -530,7 +530,7 @@
                             <constraint firstItem="qWB-SO-Rk1" firstAttribute="centerY" secondItem="jKY-1U-h4J" secondAttribute="centerY" id="1gc-8C-ykI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiSwitch" id="CTd-af-Z2R"/>
+                    <navigationItem key="navigationItem" title="LumiSwitch" id="CTd-af-Z2R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQ8-cx-52E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1155,7 +1155,7 @@
             </objects>
             <point key="canvasLocation" x="134" y="1505"/>
         </scene>
-        <!--Title-->
+        <!--LumiWii-->
         <scene sceneID="0nj-Qz-5l5">
             <objects>
                 <viewController id="5Ty-aL-kiu" customClass="IRControllerViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -1291,7 +1291,7 @@
                             <constraint firstItem="RZp-xO-qsA" firstAttribute="top" secondItem="dPc-Ib-9Up" secondAttribute="bottom" id="xIv-tz-pdC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="mfW-31-wDq"/>
+                    <navigationItem key="navigationItem" title="LumiWii" id="mfW-31-wDq"/>
                     <connections>
                         <outlet property="conditionerTitle" destination="mfW-31-wDq" id="kwo-bc-e8L"/>
                         <outlet property="downButton" destination="R7a-6h-MhU" id="1qP-yE-Jac"/>
@@ -1572,10 +1572,10 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="a2C-2G-enw">
-                                <rect key="frame" x="37.5" y="114" width="300" height="280"/>
+                                <rect key="frame" x="12.5" y="114" width="350" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="SQY-dq-QbH"/>
-                                    <constraint firstAttribute="width" constant="300" id="k6Z-FD-Znd"/>
+                                    <constraint firstAttribute="height" constant="200" id="SQY-dq-QbH"/>
+                                    <constraint firstAttribute="width" constant="350" id="k6Z-FD-Znd"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -1621,8 +1621,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q3u-aG-wPl">
-                                                    <rect key="frame" x="121" y="25" width="63.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q3u-aG-wPl">
+                                                    <rect key="frame" x="121" y="25" width="61" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1653,8 +1653,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oex-OJ-BxP">
-                                                    <rect key="frame" x="121" y="25" width="86.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oex-OJ-BxP">
+                                                    <rect key="frame" x="121" y="25" width="84" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1685,8 +1685,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fva-XK-KkF">
-                                                    <rect key="frame" x="121" y="25" width="74" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fva-XK-KkF">
+                                                    <rect key="frame" x="121" y="25" width="71" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1717,8 +1717,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mc2-Xp-1Db">
-                                                    <rect key="frame" x="121" y="25" width="91.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mc2-Xp-1Db">
+                                                    <rect key="frame" x="121" y="25" width="88.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1755,7 +1755,7 @@
             </objects>
             <point key="canvasLocation" x="2996" y="-2177"/>
         </scene>
-        <!--DomiTouch-->
+        <!--LumiTouch-->
         <scene sceneID="iLx-5E-BjM">
             <objects>
                 <viewController id="X5v-ND-WDR" customClass="DomiTouchViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -2017,7 +2017,7 @@
                             <constraint firstItem="W1m-YJ-rzr" firstAttribute="top" secondItem="0kg-Hu-l1w" secondAttribute="bottom" constant="40" id="qv4-ck-HEu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiTouch" id="3OY-yc-Ack"/>
+                    <navigationItem key="navigationItem" title="LumiTouch" id="3OY-yc-Ack"/>
                     <connections>
                         <outlet property="comandoDispositivoButton" destination="0kQ-Zi-nsa" id="FJl-eu-5Yh"/>
                         <outlet property="erroreLabel" destination="xg3-7t-YOD" id="6DM-GJ-lgu"/>
@@ -2350,8 +2350,8 @@
                                                     <rect key="frame" x="127" y="8" width="121" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <segments>
-                                                        <segment title="Estate"/>
                                                         <segment title="Inverno"/>
+                                                        <segment title="Estate"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>
@@ -2432,15 +2432,19 @@
                     <connections>
                         <outlet property="addButton" destination="Tb6-UI-e2T" id="9dq-BD-C4p"/>
                         <outlet property="benessereLabel" destination="dSp-Lz-wcg" id="24q-Hw-FtP"/>
+                        <outlet property="benessereSlider" destination="cPW-oc-hVp" id="C5L-Cb-e0P"/>
                         <outlet property="capTextField" destination="L6s-V0-qQN" id="hX5-3M-Vwr"/>
                         <outlet property="ecoLabel" destination="MZI-5m-3ae" id="9pK-6b-do9"/>
+                        <outlet property="ecoSlider" destination="EDx-fl-lao" id="fsj-XW-joc"/>
                         <outlet property="facebookNotification" destination="d6u-VX-DeG" id="LMg-5v-9RZ"/>
                         <outlet property="inAppNotification" destination="PZD-OZ-gvB" id="l4r-uS-LrH"/>
                         <outlet property="orarioLabel" destination="9Fu-Sx-28J" id="Ih3-tr-6k4"/>
                         <outlet property="periodicitàLabel" destination="Atc-2b-g5f" id="7ni-vl-sp5"/>
                         <outlet property="stagione" destination="lZl-Nn-jNH" id="CWR-jF-j85"/>
                         <outlet property="tempMaxLabel" destination="5c2-Nc-6gk" id="mNY-cU-ZrU"/>
+                        <outlet property="tempMaxSlider" destination="s5T-J6-3KS" id="vyr-6d-M1y"/>
                         <outlet property="tempMinLabel" destination="j7D-Wb-mfn" id="hRu-4b-uhP"/>
+                        <outlet property="tempMinSlider" destination="j9x-qC-YSe" id="lhn-I7-mDh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgb-Hx-Hwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2770,8 +2774,8 @@
                                                     <rect key="frame" x="127" y="8" width="121" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <segments>
-                                                        <segment title="Estate"/>
                                                         <segment title="Inverno"/>
+                                                        <segment title="Estate"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>
@@ -2848,10 +2852,10 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Q6q-Nn-UeE">
-                                <rect key="frame" x="37.5" y="114" width="300" height="280"/>
+                                <rect key="frame" x="12.5" y="114" width="350" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="QBZ-OB-4Mn"/>
-                                    <constraint firstAttribute="height" constant="280" id="d4R-X7-d79"/>
+                                    <constraint firstAttribute="width" constant="350" id="QBZ-OB-4Mn"/>
+                                    <constraint firstAttribute="height" constant="200" id="d4R-X7-d79"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -2869,7 +2873,7 @@
             </objects>
             <point key="canvasLocation" x="2996" y="506"/>
         </scene>
-        <!--DomiPlug-->
+        <!--LumiPlug-->
         <scene sceneID="8iR-Au-xCZ">
             <objects>
                 <viewController id="a5b-YD-eqe" customClass="DomiPlugViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -3051,7 +3055,7 @@
                             <constraint firstAttribute="trailing" secondItem="1KJ-U0-Q5q" secondAttribute="trailing" id="ysK-Ps-unW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiPlug" id="iP7-qt-Xq2"/>
+                    <navigationItem key="navigationItem" title="LumiPlug" id="iP7-qt-Xq2"/>
                     <connections>
                         <outlet property="comandoDispositivoButton" destination="2Jt-xN-G3O" id="Gpl-jE-vv3"/>
                         <outlet property="erroreLabel" destination="ncd-qO-pXR" id="4XI-JZ-ccI"/>
@@ -3208,7 +3212,7 @@
             </objects>
             <point key="canvasLocation" x="6950" y="3125"/>
         </scene>
-        <!--DomiPlug Pro-->
+        <!--LumiPlug Pro-->
         <scene sceneID="VEK-iX-Wfh">
             <objects>
                 <viewController id="Pc3-rW-VGH" customClass="DomiPlugProViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -3319,14 +3323,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFm-Gv-EdZ">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="88"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Potenza Reattiva KW:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7D-Jy-hcr">
-                                                <rect key="frame" x="0.0" y="53" width="121" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Potenza Reattiva Var:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7D-Jy-hcr">
+                                                <rect key="frame" x="0.0" y="53" width="120.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbw-zM-WsB">
-                                                <rect key="frame" x="122" y="53" width="0.0" height="21"/>
+                                                <rect key="frame" x="121.5" y="53" width="0.0" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -3433,7 +3437,7 @@
                             <constraint firstAttribute="trailing" secondItem="t4m-oX-KYp" secondAttribute="trailing" id="yd9-H4-QUT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiPlug Pro" id="p8N-34-Z6G"/>
+                    <navigationItem key="navigationItem" title="LumiPlug Pro" id="p8N-34-Z6G"/>
                     <connections>
                         <outlet property="erroreLabel" destination="3TY-jr-zWr" id="Q80-zn-vQj"/>
                         <outlet property="funzioneLabel" destination="IqR-IQ-ZuK" id="K4s-wL-zgL"/>
@@ -3534,13 +3538,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pot. Max(KW):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxO-KL-6xC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pot. Max W:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxO-KL-6xC">
                                                     <rect key="frame" x="16" y="11" width="88" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uYX-Cz-jHc">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="3500" translatesAutoresizingMaskIntoConstraints="NO" id="uYX-Cz-jHc">
                                                     <rect key="frame" x="163" y="7" width="204" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="eHr-vO-Q4e"/>
@@ -3551,7 +3555,7 @@
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfp-lV-zTq">
                                                     <rect key="frame" x="120" y="11" width="21" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -3561,8 +3565,8 @@
                                                 <constraint firstItem="oxO-KL-6xC" firstAttribute="top" secondItem="rZF-4g-6N9" secondAttribute="top" constant="11" id="FfI-c0-y5s"/>
                                                 <constraint firstAttribute="bottom" secondItem="uYX-Cz-jHc" secondAttribute="bottom" constant="7.5" id="JeE-UR-Y9N"/>
                                                 <constraint firstItem="uYX-Cz-jHc" firstAttribute="top" secondItem="rZF-4g-6N9" secondAttribute="top" constant="7" id="Qxg-Wt-bnf"/>
-                                                <constraint firstItem="uYX-Cz-jHc" firstAttribute="leading" secondItem="Jfp-lV-zTq" secondAttribute="trailing" constant="24" id="RAZ-Ha-naB"/>
-                                                <constraint firstItem="Jfp-lV-zTq" firstAttribute="leading" secondItem="oxO-KL-6xC" secondAttribute="trailing" constant="16" id="V0d-Qx-3Eu"/>
+                                                <constraint firstItem="uYX-Cz-jHc" firstAttribute="leading" secondItem="Jfp-lV-zTq" secondAttribute="trailing" constant="10" id="RAZ-Ha-naB"/>
+                                                <constraint firstItem="Jfp-lV-zTq" firstAttribute="leading" secondItem="oxO-KL-6xC" secondAttribute="trailing" constant="10" id="V0d-Qx-3Eu"/>
                                                 <constraint firstAttribute="trailing" secondItem="uYX-Cz-jHc" secondAttribute="trailing" constant="10" id="Wok-k6-STK"/>
                                                 <constraint firstAttribute="bottom" secondItem="oxO-KL-6xC" secondAttribute="bottom" constant="11.5" id="pGt-Yd-hHm"/>
                                                 <constraint firstItem="oxO-KL-6xC" firstAttribute="leading" secondItem="rZF-4g-6N9" secondAttribute="leading" constant="16" id="vur-GB-sXR"/>
@@ -3664,6 +3668,7 @@
                         <outlet property="orarioLabel" destination="pzu-H5-gV2" id="L5q-lD-Olf"/>
                         <outlet property="periodicitàLabel" destination="VEd-wn-hKx" id="kb3-q1-fGU"/>
                         <outlet property="powMaxLabel" destination="Jfp-lV-zTq" id="nEB-Ye-het"/>
+                        <outlet property="powMaxSlider" destination="uYX-Cz-jHc" id="06a-nR-OlM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nz-Fg-TjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3688,8 +3693,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qQ8-Qa-SFU">
-                                                    <rect key="frame" x="121" y="25" width="63.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qQ8-Qa-SFU">
+                                                    <rect key="frame" x="121" y="25" width="61" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -3720,8 +3725,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iZx-EU-XPh">
-                                                    <rect key="frame" x="121" y="25" width="86.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iZx-EU-XPh">
+                                                    <rect key="frame" x="121" y="25" width="84" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -3752,8 +3757,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRt-Qc-mpO">
-                                                    <rect key="frame" x="121" y="25" width="74" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRt-Qc-mpO">
+                                                    <rect key="frame" x="121" y="25" width="71" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -3784,8 +3789,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TeT-bP-2K9">
-                                                    <rect key="frame" x="121" y="25" width="91.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TeT-bP-2K9">
+                                                    <rect key="frame" x="121" y="25" width="88.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -3840,7 +3845,7 @@
         <image name="faq" width="89" height="112"/>
         <image name="finish_configuration" width="89" height="112"/>
         <image name="general_settings" width="89" height="112"/>
-        <image name="logo" width="250" height="230"/>
+        <image name="logo" width="250" height="100"/>
         <image name="min100" width="50" height="50"/>
         <image name="off" width="261" height="267"/>
         <image name="programma" width="89" height="112"/>
@@ -3858,11 +3863,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mcn-nu-xIb"/>
-        <segue reference="cIw-x8-pwf"/>
-        <segue reference="9nR-gx-VZc"/>
+        <segue reference="hfm-Co-QuO"/>
+        <segue reference="UkT-9a-0Pj"/>
         <segue reference="O7Y-sT-AMn"/>
         <segue reference="Nd7-P9-QA5"/>
         <segue reference="z0n-LM-2hY"/>
-        <segue reference="48I-Lf-CCk"/>
+        <segue reference="fP1-5s-fTd"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -230,7 +230,7 @@ class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
                 }
                 else
                 {
-                    header.headerLabel.text = "Potenza media"
+                    header.headerLabel.text = "Energia assorbita (Wh)"
                 }
             }
             else {

@@ -28,6 +28,7 @@ class DomiPlugSettingsTableViewController: UITableViewController {
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.getTimeOfDate), userInfo: nil, repeats: true)
         
         addButton.isEnabled = true
+
         
         
         // Uncomment the following line to preserve selection between presentations

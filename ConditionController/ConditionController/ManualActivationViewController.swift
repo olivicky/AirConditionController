@@ -135,9 +135,9 @@ class ManualActivationViewController: UITableViewController {
         case 6:
             code = 8
         case 7:
-            code = 5
-        case 8:
             code = 6
+        case 8:
+            code = 5
         default:
             code = 0
         }

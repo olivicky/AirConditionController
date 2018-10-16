@@ -93,7 +93,7 @@ extension DomiWii: TargetType {
         return ["Content-Type": "application/json"]
     }
     
-    public var baseURL: URL { return URL(string: "https://domiwiiprj.herokuapp.com")! }
+    public var baseURL: URL { return URL(string: "https://domiwiiapp.herokuapp.com")! }
     public var path: String {
         switch self {
         case .devicesMetadata:
@@ -209,7 +209,7 @@ extension DomiWii: TargetType {
             var params: [String:Any] = [:]
             params["alias"] = alias
             params["password"] = password
-            params["uuid"] = uuid
+            params["uiid"] = uuid
             params["command"] = command
             params["day"] = day
             params["hour"] = hour
@@ -224,7 +224,7 @@ extension DomiWii: TargetType {
             params["enableMobileNotification"] = enableMobileNotification
             params["enableBotNotification"] = enableBotNotification
             params["temperature"] = temperature
-            params["timerOn"] = timeOn
+            params["timeOn"] = timeOn
             params["planning"] = planning
             return .requestParameters(parameters:params, encoding: JSONEncoding.default)
         case .subscribeDevicesNotification(let devices):

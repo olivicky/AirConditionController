@@ -313,7 +313,7 @@ class DomiTouchViewController: UIViewController {
         
         var giorno : String
         
-        switch(dayOfWeek){
+        switch(device.day){
         case 0: giorno = "LUN"
         case 1: giorno = "MAR"
         case 2: giorno = "MER"

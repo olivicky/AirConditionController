@@ -18,10 +18,14 @@ class DomiTouchSettingsTableViewController: UITableViewController {
     @IBOutlet weak var facebookNotification: UISwitch!
     @IBOutlet weak var inAppNotification: UISwitch!
     @IBOutlet weak var tempMaxLabel: UILabel!
+    @IBOutlet weak var tempMaxSlider: UISlider!
     @IBOutlet weak var tempMinLabel: UILabel!
+    @IBOutlet weak var tempMinSlider: UISlider!
     @IBOutlet weak var periodicitàLabel: UILabel!
     @IBOutlet weak var benessereLabel: UILabel!
+    @IBOutlet weak var benessereSlider: UISlider!
     @IBOutlet weak var ecoLabel: UILabel!
+    @IBOutlet weak var ecoSlider: UISlider!
     @IBOutlet weak var stagione: UISegmentedControl!
     @IBOutlet weak var orarioLabel: UILabel!
     @IBOutlet weak var capTextField: UITextField!
@@ -34,7 +38,16 @@ class DomiTouchSettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.getTimeOfDate), userInfo: nil, repeats: true)
-        
+        self.facebookNotification.isOn = device.enableBotNotification
+        self.inAppNotification.isOn = device.enableMobileNotification
+        self.tempMinLabel.text = String(device.max_temperature)
+        self.tempMinLabel.text = String(device.min_temperature)
+        self.benessereLabel.text = String(device.set_point_benessere)
+        self.ecoLabel.text = String(device.set_point_eco)
+        self.tempMinSlider.value = Float(device.min_temperature)
+        self.tempMaxSlider.value = Float(device.max_temperature)
+        self.ecoSlider.value = Float(device.set_point_eco)
+        self.benessereSlider.value = Float(device.set_point_benessere)
 //        addButton.isEnabled = false
 //        //        ssdTextField.addTarget(self, action: #selector(FirstActivationTableViewController.checkFields(sender:)) , for: .editingDidEnd)
 //        capTextField.addTarget(self, action: #selector(DomiTouchSettingsTableViewController.checkFields(sender:)), for: .editingChanged)
