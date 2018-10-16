@@ -114,7 +114,7 @@ extension DomiWiiDevice: TargetType {
         case .endControlMode:
             url +=  "?0?0?"
         case .activateDevice(let ssidHomeNetwork, let password, let ipStatico, let mask, let ipRouter, let dnsPrimario):
-            url += "?1?\(ssidHomeNetwork)?\(password)?\(ipStatico)?\(mask)?\(ipRouter)?\(dnsPrimario)"
+            url += "?1?\(ssidHomeNetwork)?\(password)?\(ipStatico)?\(ipRouter)?\(dnsPrimario)?\(mask)"
         case .registerDevice(let count, let codes):
             let ret = "?C?\(count)?\(codes)?"
             url += ret

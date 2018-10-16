@@ -127,8 +127,8 @@ class Device: Object, Mappable{
     
     
     //settings
-    var enableBotNotification: Bool?
-    var enableMobileNotification: Bool?
+    dynamic var enableBotNotification : Bool = false
+    dynamic var enableMobileNotification : Bool = false
     var faulty = -1
     
     

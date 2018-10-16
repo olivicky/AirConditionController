@@ -227,18 +227,18 @@ class DomiPlugProViewController: UIViewController {
             self.generalSettingsButton.isEnabled = true
         }
         let pow = Int(device.power_active!)!
-            if( pow <= 25 && pow > 22 ){
+            if( pow <= 2200 && pow >= 1000 ){
             self.tempRingView.progressShapeColor = UIColor.yellow
             self.tempRingView.setProgress(progress: 0.60, animated: true)
             
-        }else if(pow > 25 ){
+        }else if(pow > 2200 ){
             self.tempRingView.progressShapeColor = UIColor.red
             self.tempRingView.setProgress(progress: 0.80, animated: true)
         }else{
             self.tempRingView.progressShapeColor = UIColor.blue
             self.tempRingView.setProgress(progress: 0.30, animated: true)
         }
-        self.tempRingView.percentLabel.text = String(pow) + "KW"
+        self.tempRingView.percentLabel.text = String(pow) + " W"
         
         tempRingView.widthAnchor.constraint(equalToConstant: 130).isActive = true
         tempRingView.heightAnchor.constraint(equalToConstant: 130).isActive = true

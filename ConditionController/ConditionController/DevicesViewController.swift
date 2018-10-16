@@ -29,6 +29,9 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         devices.forEach({devicesArray.append($0.uid) })
         // Do any additional setup after loading the view.
         self.getDevicesMetadata()
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
         startTimer()
     }
     
@@ -50,7 +53,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             // Fallback on earlier versions
             timerDispatchSourceTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
-            timerDispatchSourceTimer?.scheduleRepeating(deadline: .now(), interval: .seconds(60))
+            timerDispatchSourceTimer?.scheduleRepeating(deadline: .now(), interval: .seconds(30))
             timerDispatchSourceTimer?.setEventHandler{
                 self.getDevicesMetadata()
                 
@@ -440,7 +443,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
                         for device in item.controlledDevicesList
                         {
                             try! self.realm.write {
-                                self.realm.create(Device.self, value: ["uid": device.uid, "temperature": device.temperature, "humidity": device.humidity, "_consumption": device._consumption, "_daily_temperature":device._daily_temperature, "_daily_timeron":device._daily_timeron, "timerOn": device.timerOn, "power_active": device.power_active, "power_reactive": device.power_reactive, "day": device.day, "hh": device.hh, "mm": device.mm, "set_point_benessere": device.set_point_benessere, "set_point_eco" :device.set_point_eco, "_planning": device._planning, "mode": device.mode, "_status": device._status, "set_point": device.set_point, "min_temperature" : device.min_temperature, "max_temperature": device.max_temperature, "max_power": device.max_power, "enableBotNotification": device.enableBotNotification, "enableMobileNotification": device.enableMobileNotification, "faulty": device.faulty, "is_running": device.is_running], update: true)
+                                self.realm.create(Device.self, value: ["uid": device.uid, "alias": device.alias, "temperature": device.temperature, "humidity": device.humidity, "_consumption": device._consumption, "_daily_temperature":device._daily_temperature, "_daily_timeron":device._daily_timeron, "timerOn": device.timerOn, "power_active": device.power_active, "power_reactive": device.power_reactive, "day": device.day, "hh": device.hh, "mm": device.mm, "set_point_benessere": device.set_point_benessere, "set_point_eco" :device.set_point_eco, "_planning": device._planning, "mode": device.mode, "_status": device._status, "set_point": device.set_point, "min_temperature" : device.min_temperature, "max_temperature": device.max_temperature, "max_power": device.max_power, "enableBotNotification": device.enableBotNotification, "enableMobileNotification": device.enableMobileNotification, "faulty": device.faulty, "is_running": device.is_running], update: true)
                                 // the book's `title` property will remain unchanged.
                             }
                         }

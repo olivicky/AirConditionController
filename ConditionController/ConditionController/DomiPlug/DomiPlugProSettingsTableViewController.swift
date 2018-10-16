@@ -18,6 +18,7 @@ class DomiPlugProSettingsTableViewController: UITableViewController {
     @IBOutlet weak var facebookNotification: UISwitch!
     @IBOutlet weak var inAppNotification: UISwitch!
     @IBOutlet weak var powMaxLabel: UILabel!
+    @IBOutlet weak var powMaxSlider: UISlider!
     @IBOutlet weak var periodicitàLabel: UILabel!
     @IBOutlet weak var orarioLabel: UILabel!
     var timer : Timer?
@@ -29,6 +30,10 @@ class DomiPlugProSettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.getTimeOfDate), userInfo: nil, repeats: true)
+        self.facebookNotification.isOn = device.enableBotNotification
+        self.inAppNotification.isOn = device.enableMobileNotification
+        self.powMaxLabel.text = String(device.max_power)
+        self.powMaxSlider.value = Float(device.max_power)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
