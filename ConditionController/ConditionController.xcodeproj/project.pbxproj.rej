@@ -1,0 +1,26 @@
+diff a/ConditionController/ConditionController.xcodeproj/project.pbxproj b/ConditionController/ConditionController.xcodeproj/project.pbxproj	(rejected hunks)
+@@ -245,6 +254,9 @@
+ 				AD02DC6E2163A15D0097B8D8 /* ConditionController.entitlements */,
+ 				AD5B2C1F215E65DF00555998 /* DomiSwitch */,
+ 				AD57B028215304B100D92866 /* DomiPlug */,
++				AD9B2B6E2191AB5600392E46 /* FAQ1.pdf */,
++				AD9B2B6C2191AB5500392E46 /* FAQ2.pdf */,
++				AD9B2B6D2191AB5600392E46 /* FAQ3.pdf */,
+ 				AD40B80F218498DA00345CAE /* FAQ.pdf */,
+ 				F09BF4781DB3E21700918FC9 /* Model */,
+ 				F02016871DA450CC003F3D90 /* Utils */,
+@@ -339,11 +351,14 @@
+ 			isa = PBXResourcesBuildPhase;
+ 			buildActionMask = 2147483647;
+ 			files = (
++				AD9B2B6F2191AB5600392E46 /* FAQ2.pdf in Resources */,
++				AD9B2B712191AB5600392E46 /* FAQ1.pdf in Resources */,
+ 				F0EF18A91DA2F07000EF1718 /* LaunchScreen.storyboard in Resources */,
+ 				F0EF18A61DA2F07000EF1718 /* Assets.xcassets in Resources */,
+ 				AD02DC7021661DAA0097B8D8 /* GoogleService-Info.plist in Resources */,
+ 				AD40B810218498DB00345CAE /* FAQ.pdf in Resources */,
+ 				F0EF18A41DA2F07000EF1718 /* Main.storyboard in Resources */,
++				AD9B2B702191AB5600392E46 /* FAQ3.pdf in Resources */,
+ 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+ 		};

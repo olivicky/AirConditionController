@@ -244,14 +244,24 @@ class DomiTouchViewController: UIViewController {
         tempRingView.centerXAnchor.constraint(equalTo: self.tempRingView.centerXAnchor).isActive = true
         tempRingView.centerYAnchor.constraint(equalTo: self.tempRingView.centerYAnchor).isActive = true
         
+        var timeH = String(device.hh)
+        var timeM = String(device.mm)
+        if(timeH.count < 2){
+            timeH="0"+timeH
+        }
+        if(timeM.count < 2){
+            timeM="0"+timeM;
+        }
+        let time = timeH + ":" + timeM
+        
         
         let calendar = Calendar.current
-        let hourOfDay = calendar.component(.hour, from: Date()) - 1
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.date(from: time)!
+        let hourOfDay = calendar.component(.hour, from: date) - 1
         let endHourOfDay = (hourOfDay + (device.timerOn / 60))
-        var dayOfWeek = calendar.component(.weekday, from: Date()) - calendar.firstWeekday
-        if dayOfWeek < 0 {
-            dayOfWeek += 7
-        }
+        
         
         if device.status == .MANUAL {
             let rangeHour = hourOfDay...endHourOfDay
@@ -272,7 +282,7 @@ class DomiTouchViewController: UIViewController {
             
             var item : RKPieChartItem
             
-            let plans = device.planning[dayOfWeek]
+            let plans = device.planning[device.day]
             for i in 0...23 {
                 if(i == hourOfDay){
                     item = RKPieChartItem(ratio: 4, color: UIColor.lightGray, title:"")
@@ -293,23 +303,19 @@ class DomiTouchViewController: UIViewController {
         }
         else {
             var item : RKPieChartItem
-            for _ in 0...23 {
-                
-                item  = RKPieChartItem(ratio: 4, color: UIColor.gray, title:"")
-                
+            for i in 0...23 {
+                if(i == hourOfDay){
+                    item = RKPieChartItem(ratio: 4, color: UIColor.lightGray, title:"")
+                }
+                else{
+                    item  = RKPieChartItem(ratio: 4, color: UIColor.gray, title:"")
+                }
                 
                 chartItemArray.append(item)
             }
         }
 
-        var timeH = String(device.hh)
-        var timeM = String(device.mm)
-        if(timeH.count < 2){
-            timeH="0"+timeH
-        }
-        if(timeM.count < 2){
-            timeM="0"+timeM;
-        }
+        
         
         var giorno : String
         
@@ -374,10 +380,10 @@ class DomiTouchViewController: UIViewController {
         self.funzioneLabel.text = device.status.getStringValue()
         
         if device.faulty != -1 {
-            self.erroreLabel.text = "Code:" + "\(device.faulty)"
+            self.erroreLabel.text = "code " + "\(device.faulty)"
         }
         else{
-            self.erroreLabel.text = "nessuna anomalia"
+            self.erroreLabel.text = "nessuno"
         }
         
         var timerOnH = String(device.timerOn/60)

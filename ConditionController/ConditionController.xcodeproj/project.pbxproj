@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D8D02851EB22DF2008F4971 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D02841EB22DF2008F4971 /* FAQViewController.swift */; };
-		4D8D02871EB23574008F4971 /* FAQ.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8D02861EB23574008F4971 /* FAQ.pdf */; };
 		4D8E08F61E9047C40086A3DE /* ControlledDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */; };
 		AD02B2F5215B967E00C23634 /* DomiPlugProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02B2F4215B967E00C23634 /* DomiPlugProViewController.swift */; };
 		AD02DC7021661DAA0097B8D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD02DC6F21661DA90097B8D8 /* GoogleService-Info.plist */; };
@@ -31,6 +30,10 @@
 		AD7DEFDB21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DEFDA21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift */; };
 		AD8ED25D2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8ED25C2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift */; };
 		AD992A092137F37100F1C04B /* FirstSettingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD992A082137F37100F1C04B /* FirstSettingDeviceViewController.swift */; };
+		AD9B2B6F2191AB5600392E46 /* FAQ2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD9B2B6C2191AB5500392E46 /* FAQ2.pdf */; };
+		AD9B2B702191AB5600392E46 /* FAQ3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD9B2B6D2191AB5600392E46 /* FAQ3.pdf */; };
+		AD9B2B712191AB5600392E46 /* FAQ1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD9B2B6E2191AB5600392E46 /* FAQ1.pdf */; };
+		AD9B2B732191ADBC00392E46 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */; };
 		ADFE6E88214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE6E87214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift */; };
 		ADFE6E8A214B1D6700DD5349 /* StatisticaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE6E89214B1D6700DD5349 /* StatisticaCollectionViewCell.swift */; };
 		ED51B8578A2A21569BD32DC2 /* Pods_ConditionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */; };
@@ -63,7 +66,6 @@
 /* Begin PBXFileReference section */
 		07828E6C267642E6D715D130 /* Pods-ConditionController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.debug.xcconfig"; sourceTree = "<group>"; };
 		4D8D02841EB22DF2008F4971 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
-		4D8D02861EB23574008F4971 /* FAQ.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ.pdf; sourceTree = "<group>"; };
 		4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlledDevices.swift; sourceTree = "<group>"; };
 		A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConditionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD02B2F4215B967E00C23634 /* DomiPlugProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugProViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,10 @@
 		AD7DEFDA21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugSettingsTableViewController.swift; sourceTree = "<group>"; };
 		AD8ED25C2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchProgramCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		AD992A082137F37100F1C04B /* FirstSettingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstSettingDeviceViewController.swift; path = /Users/vincenzoolivito/Desktop/DomiWiiIOS/ConditionController/ConditionController/FirstSettingDeviceViewController.swift; sourceTree = "<absolute>"; };
+		AD9B2B6C2191AB5500392E46 /* FAQ2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ2.pdf; sourceTree = "<group>"; };
+		AD9B2B6D2191AB5600392E46 /* FAQ3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ3.pdf; sourceTree = "<group>"; };
+		AD9B2B6E2191AB5600392E46 /* FAQ1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ1.pdf; sourceTree = "<group>"; };
+		AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
 		ADFE6E87214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchStatisticaCollectionViewController.swift; sourceTree = "<group>"; };
 		ADFE6E89214B1D6700DD5349 /* StatisticaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticaCollectionViewCell.swift; sourceTree = "<group>"; };
 		E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 		F0EF18921DA2F06F00EF1718 = {
 			isa = PBXGroup;
 			children = (
+				AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */,
 				F0EF189D1DA2F07000EF1718 /* ConditionController */,
 				F0EF189C1DA2F07000EF1718 /* Products */,
 				E942BE0492E1AA2026C4907E /* Pods */,
@@ -453,6 +460,7 @@
 				F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */,
 				F0035B461DA6D016009FA188 /* FirstActivationTableViewController.swift in Sources */,
 				F09BF47A1DB3E38C00918FC9 /* ConditionerDevice.swift in Sources */,
+				AD9B2B732191ADBC00392E46 /* FAQTableViewController.swift in Sources */,
 				AD10E8CC21418FA600498004 /* ExternalCollectionViewCell.swift in Sources */,
 				4D8D02851EB22DF2008F4971 /* FAQViewController.swift in Sources */,
 				AD02DC7621665C190097B8D8 /* ControlledNotificationDevice.swift in Sources */,
@@ -536,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -580,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

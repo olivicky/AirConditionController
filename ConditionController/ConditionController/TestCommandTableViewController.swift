@@ -70,7 +70,7 @@ class TestCommandTableViewController: UITableViewController {
             msg = "telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 1"
         case 4:
             tit = "Verifica acceso inverno max"
-            msg = "telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 1"
+            msg = "telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 4"
         case 5:
             tit = "Verifica acceso ventilatore"
             msg = "telecomando in modalità ACCESO, Ventilatore, Velocità 1"

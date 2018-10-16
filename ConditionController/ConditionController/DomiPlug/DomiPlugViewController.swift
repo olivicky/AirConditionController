@@ -210,9 +210,22 @@ class DomiPlugViewController: UIViewController {
     func createDiagrams(device: Device){
         chartItemArray.removeAll()
 
+        var timeH = String(device.hh)
+        var timeM = String(device.mm)
+        if(timeH.count < 2){
+            timeH="0"+timeH
+        }
+        if(timeM.count < 2){
+            timeM="0"+timeM;
+        }
+        let time = timeH + ":" + timeM
+        
         let calendar = Calendar.current
-        let hourOfDay = calendar.component(.hour, from: Date()) - 1
-        let endHourOfDay = (hourOfDay + (device.timerOn/60)) - 1
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.date(from: time)!
+        let hourOfDay = calendar.component(.hour, from: date) - 1
+        let endHourOfDay = (hourOfDay + (device.timerOn/60))
         
 
         if device.status == .TIMER {
@@ -255,22 +268,18 @@ class DomiPlugViewController: UIViewController {
         else {
             var item : RKPieChartItem
             for i in 0...23 {
-                
-                item  = RKPieChartItem(ratio: 4, color: UIColor.gray, title:"")
-                
+                if(i == hourOfDay){
+                    item = RKPieChartItem(ratio: 4, color: UIColor.lightGray, title:"")
+                }
+                else{
+                    item  = RKPieChartItem(ratio: 4, color: UIColor.gray, title:"")
+                }
                 
                 chartItemArray.append(item)
             }
         }
         
-        var timeH = String(device.hh)
-        var timeM = String(device.mm)
-        if(timeH.count < 2){
-            timeH="0"+timeH
-        }
-        if(timeM.count < 2){
-            timeM="0"+timeM;
-        }
+        
         var giorno : String
         
         switch(device.day){
@@ -291,7 +300,7 @@ class DomiPlugViewController: UIViewController {
         }
         else{
             
-            chartView.items = chartItemArray
+            chartView.upatedItems = chartItemArray
             chartView.centerTitle = orario
         }
         
@@ -334,10 +343,10 @@ class DomiPlugViewController: UIViewController {
         
         self.funzioneLabel.text = device.status.getStringValue()
         if device.faulty != -1 {
-            self.erroreLabel.text = "Code:" + "\(device.faulty)"
+            self.erroreLabel.text = "code " + "\(device.faulty)"
         }
         else{
-            self.erroreLabel.text = "nessuna anomalia"
+            self.erroreLabel.text = "nessuno"
         }
         
         
