@@ -3,49 +3,49 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "iPhoneNotification_2x.png",
+      "filename" : "40x40.jpg",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "iPhoneNotification_3x.png",
+      "filename" : "60x60.jpg",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "iPhoneSettings_2x.png",
+      "filename" : "58x58.jpg",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "iPhoneSettings_3x.png",
+      "filename" : "87x87.jpg",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "iPhoneSpotlight_2x.png",
+      "filename" : "80x80.jpg",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "iPhoneApp_2x-1.png",
+      "filename" : "120x120.jpg",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "iPhoneApp_2x.png",
+      "filename" : "120x120-1.jpg",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "iPhoneApp_3x.png",
+      "filename" : "180x180.jpg",
       "scale" : "3x"
     },
     {

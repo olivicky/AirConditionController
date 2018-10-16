@@ -4,7 +4,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "2436h",
-      "filename" : "launc_iPhoneX.jpg",
+      "filename" : "splash_X.jpg",
       "minimum-system-version" : "11.0",
       "orientation" : "portrait",
       "scale" : "3x"
@@ -21,7 +21,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",
-      "filename" : "launch_retinaHD.jpg",
+      "filename" : "splash_7_plus.jpg",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "3x"
@@ -38,7 +38,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "667h",
-      "filename" : "launch_retinaHD_piccolo-1.jpg",
+      "filename" : "splash_8.jpg",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -46,7 +46,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "launc_iPhone_2x.jpg",
+      "filename" : "splash_7_2.jpg",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
@@ -55,7 +55,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "retina4",
-      "filename" : "launch_retina4.jpg",
+      "filename" : "splash_7_se.jpg",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
       "scale" : "2x"

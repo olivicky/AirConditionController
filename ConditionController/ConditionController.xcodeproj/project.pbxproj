@@ -22,6 +22,7 @@
 		AD10E8CA2141890000498004 /* InternalCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD10E8C92141890000498004 /* InternalCellCollectionViewCell.swift */; };
 		AD10E8CC21418FA600498004 /* ExternalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD10E8CB21418FA600498004 /* ExternalCollectionViewCell.swift */; };
 		AD407D34214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD407D33214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift */; };
+		AD425418216A0326004359FF /* F.A.Q..pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD425417216A0325004359FF /* F.A.Q..pdf */; };
 		AD4AF68C20F53B150058885E /* ArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4AF68B20F53B150058885E /* ArrayTransform.swift */; };
 		AD50C1C020EF7348006100BE /* DomiTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50C1BF20EF7348006100BE /* DomiTouchViewController.swift */; };
 		AD57B02A215304DB00D92866 /* DomiPlugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57B029215304DB00D92866 /* DomiPlugViewController.swift */; };
@@ -78,6 +79,7 @@
 		AD10E8C92141890000498004 /* InternalCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD10E8CB21418FA600498004 /* ExternalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD407D33214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		AD425417216A0325004359FF /* F.A.Q..pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = F.A.Q..pdf; sourceTree = "<group>"; };
 		AD4AF68B20F53B150058885E /* ArrayTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTransform.swift; sourceTree = "<group>"; };
 		AD50C1BF20EF7348006100BE /* DomiTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchViewController.swift; sourceTree = "<group>"; };
 		AD57B029215304DB00D92866 /* DomiPlugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				AD5B2C1F215E65DF00555998 /* DomiSwitch */,
 				AD57B028215304B100D92866 /* DomiPlug */,
 				4D8D02861EB23574008F4971 /* FAQ.pdf */,
+				AD425417216A0325004359FF /* F.A.Q..pdf */,
 				F09BF4781DB3E21700918FC9 /* Model */,
 				F02016871DA450CC003F3D90 /* Utils */,
 				F0EF189E1DA2F07000EF1718 /* AppDelegate.swift */,
@@ -343,6 +346,7 @@
 				F0EF18A61DA2F07000EF1718 /* Assets.xcassets in Resources */,
 				AD02DC7021661DAA0097B8D8 /* GoogleService-Info.plist in Resources */,
 				F0EF18A41DA2F07000EF1718 /* Main.storyboard in Resources */,
+				AD425418216A0326004359FF /* F.A.Q..pdf in Resources */,
 				4D8D02871EB23574008F4971 /* FAQ.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
