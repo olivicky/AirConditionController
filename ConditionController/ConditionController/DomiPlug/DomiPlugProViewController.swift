@@ -247,7 +247,7 @@ class DomiPlugProViewController: UIViewController {
         
         let calendar = Calendar.current
         let hourOfDay = calendar.component(.hour, from: Date()) - 1
-        let endHourOfDay = (hourOfDay + (device.timerOn/60)) - 1
+        let endHourOfDay = (hourOfDay + (device.timerOn/60)) 
         
         if device.status == .TIMER {
             let rangeHour = hourOfDay...endHourOfDay

@@ -17,7 +17,7 @@ class FAQViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let pdf = Bundle.main.url(forResource: "F.A.Q.", withExtension: "pdf")
+        if let pdf = Bundle.main.url(forResource: "FAQ", withExtension: "pdf")
         {
             webView.loadRequest(URLRequest(url: pdf))
         }
