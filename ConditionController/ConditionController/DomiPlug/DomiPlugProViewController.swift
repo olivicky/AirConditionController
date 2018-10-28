@@ -32,7 +32,9 @@ class DomiPlugProViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var powReacLabel: UILabel!
     @IBOutlet weak var erroreLabel: UILabel!
+    @IBOutlet weak var impiantoBackground: UIView!
     
+    @IBOutlet weak var impiantoLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -356,6 +358,15 @@ class DomiPlugProViewController: UIViewController {
             timerOnM="0"+timerOnM;
         }
         self.timerLabel.text = timerOnH + ":" + timerOnM
+        
+        if device.is_running!{
+            self.impiantoLabel.text = "ON"
+            self.impiantoBackground.backgroundColor = UIColor.green
+        }
+        else {
+            self.impiantoLabel.text = "OFF"
+            self.impiantoBackground.backgroundColor = UIColor.red
+        }
         
         self.powReacLabel.text = device.power_reactive
         
