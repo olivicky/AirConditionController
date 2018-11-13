@@ -72,7 +72,7 @@ class ManualActivationViewController: UITableViewController {
             msg = "imposta il telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 1"
         case 4:
             tit = "Apprendi acceso inverno max"
-            msg = "imposta il telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 1"
+            msg = "imposta il telecomando in modalità ACCESO, Inverno, Temperatura 28°, Velocità 4"
         case 5:
             tit = "Apprendi acceso ventilatore"
             msg = "imposta il telecomando in modalità ACCESO, Ventilatore, Velocità 1"

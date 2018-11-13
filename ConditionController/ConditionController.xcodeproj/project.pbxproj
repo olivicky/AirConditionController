@@ -30,6 +30,10 @@
 		AD7DEFDB21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DEFDA21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift */; };
 		AD8ED25D2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8ED25C2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift */; };
 		AD992A092137F37100F1C04B /* FirstSettingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD992A082137F37100F1C04B /* FirstSettingDeviceViewController.swift */; };
+		AD9B2B6F2191AB5600392E46 /* FAQ2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD9B2B6C2191AB5500392E46 /* FAQ2.pdf */; };
+		AD9B2B702191AB5600392E46 /* FAQ3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD9B2B6D2191AB5600392E46 /* FAQ3.pdf */; };
+		AD9B2B712191AB5600392E46 /* FAQ1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD9B2B6E2191AB5600392E46 /* FAQ1.pdf */; };
+		AD9B2B732191ADBC00392E46 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */; };
 		ADFE6E88214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE6E87214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift */; };
 		ADFE6E8A214B1D6700DD5349 /* StatisticaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE6E89214B1D6700DD5349 /* StatisticaCollectionViewCell.swift */; };
 		ED51B8578A2A21569BD32DC2 /* Pods_ConditionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */; };
@@ -86,6 +90,10 @@
 		AD7DEFDA21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugSettingsTableViewController.swift; sourceTree = "<group>"; };
 		AD8ED25C2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchProgramCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		AD992A082137F37100F1C04B /* FirstSettingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstSettingDeviceViewController.swift; path = /Users/vincenzoolivito/Desktop/DomiWiiIOS/ConditionController/ConditionController/FirstSettingDeviceViewController.swift; sourceTree = "<absolute>"; };
+		AD9B2B6C2191AB5500392E46 /* FAQ2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ2.pdf; sourceTree = "<group>"; };
+		AD9B2B6D2191AB5600392E46 /* FAQ3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ3.pdf; sourceTree = "<group>"; };
+		AD9B2B6E2191AB5600392E46 /* FAQ1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FAQ1.pdf; sourceTree = "<group>"; };
+		AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
 		ADFE6E87214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchStatisticaCollectionViewController.swift; sourceTree = "<group>"; };
 		ADFE6E89214B1D6700DD5349 /* StatisticaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticaCollectionViewCell.swift; sourceTree = "<group>"; };
 		E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +231,7 @@
 		F0EF18921DA2F06F00EF1718 = {
 			isa = PBXGroup;
 			children = (
+				AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */,
 				F0EF189D1DA2F07000EF1718 /* ConditionController */,
 				F0EF189C1DA2F07000EF1718 /* Products */,
 				E942BE0492E1AA2026C4907E /* Pods */,
@@ -245,6 +254,9 @@
 				AD02DC6E2163A15D0097B8D8 /* ConditionController.entitlements */,
 				AD5B2C1F215E65DF00555998 /* DomiSwitch */,
 				AD57B028215304B100D92866 /* DomiPlug */,
+				AD9B2B6E2191AB5600392E46 /* FAQ1.pdf */,
+				AD9B2B6C2191AB5500392E46 /* FAQ2.pdf */,
+				AD9B2B6D2191AB5600392E46 /* FAQ3.pdf */,
 				AD40B80F218498DA00345CAE /* FAQ.pdf */,
 				F09BF4781DB3E21700918FC9 /* Model */,
 				F02016871DA450CC003F3D90 /* Utils */,
@@ -339,11 +351,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9B2B6F2191AB5600392E46 /* FAQ2.pdf in Resources */,
+				AD9B2B712191AB5600392E46 /* FAQ1.pdf in Resources */,
 				F0EF18A91DA2F07000EF1718 /* LaunchScreen.storyboard in Resources */,
 				F0EF18A61DA2F07000EF1718 /* Assets.xcassets in Resources */,
 				AD02DC7021661DAA0097B8D8 /* GoogleService-Info.plist in Resources */,
 				AD40B810218498DB00345CAE /* FAQ.pdf in Resources */,
 				F0EF18A41DA2F07000EF1718 /* Main.storyboard in Resources */,
+				AD9B2B702191AB5600392E46 /* FAQ3.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +464,7 @@
 				F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */,
 				F0035B461DA6D016009FA188 /* FirstActivationTableViewController.swift in Sources */,
 				F09BF47A1DB3E38C00918FC9 /* ConditionerDevice.swift in Sources */,
+				AD9B2B732191ADBC00392E46 /* FAQTableViewController.swift in Sources */,
 				AD10E8CC21418FA600498004 /* ExternalCollectionViewCell.swift in Sources */,
 				4D8D02851EB22DF2008F4971 /* FAQViewController.swift in Sources */,
 				AD02DC7621665C190097B8D8 /* ControlledNotificationDevice.swift in Sources */,
