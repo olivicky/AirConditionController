@@ -1,11 +1,3 @@
-//
-//  DevicesViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 05/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 import RealmSwift
@@ -87,32 +79,32 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let row = indexPath.row
         //let device = devices[row]
         cell.textLabel?.text = devices[row].alias
-        if devices[row].type == .DomiWii {
+        if devices[row].type == .LumiWii {
             if(devices[row].temperature != nil && devices[row].humidity != nil){
                 cell.detailTextLabel?.text  = devices[row].temperature + "° " + devices[row].humidity + "%"
             }
             cell.imageView?.image = UIImage(named: "domiwii")
         }
-        else if devices[row].type == .DomiTouch{
+        else if devices[row].type == .LumiTouch{
             if(devices[row].temperature != nil && devices[row].status != nil){
                 cell.detailTextLabel?.text  = devices[row].temperature + "° Modo: " + devices[row].status.getStringValue()
             }
             
             cell.imageView?.image = UIImage(named: "domitouch")
         }
-        else if devices[row].type == .DomiPlug{
+        else if devices[row].type == .LumiPlug{
             if(devices[row].status != nil){
                 cell.detailTextLabel?.text  = "Funzione: " + devices[row].status.getStringValue()
             }
             cell.imageView?.image = UIImage(named: "domiPlug")
         }
-        else if devices[row].type == .DomiPlugPro{
+        else if devices[row].type == .LumiPlugPro{
             if(devices[row].status != nil){
                 cell.detailTextLabel?.text  = "Funzione: " + devices[row].status.getStringValue()
             }
             cell.imageView?.image = UIImage(named: "domiPlug")
         }
-        else if devices[row].type == .DomiSwitch{
+        else if devices[row].type == .LumiSwitch{
             cell.imageView?.image = UIImage(named: "domiswitch")
             cell.detailTextLabel?.text = ""
         }
@@ -123,20 +115,20 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let device = devices[indexPath.row]
         
-        if device.type == .DomiWii {
-            performSegue(withIdentifier: "DomiWiiSegueIdentifier", sender: indexPath)
+        if device.type == .LumiWii {
+            performSegue(withIdentifier: "LumiWiiSegueIdentifier", sender: indexPath)
         }
-        else if device.type == .DomiTouch{
-            performSegue(withIdentifier: "DomiTouchSegueIdentifier", sender: indexPath)
+        else if device.type == .LumiTouch{
+            performSegue(withIdentifier: "LumiTouchSegueIdentifier", sender: indexPath)
         }
-        else if device.type == .DomiPlug{
-            performSegue(withIdentifier: "DomiPlugSegueIdentifier", sender: indexPath)
+        else if device.type == .LumiPlug{
+            performSegue(withIdentifier: "LumiPlugSegueIdentifier", sender: indexPath)
         }
-        else if device.type == .DomiPlugPro{
-            performSegue(withIdentifier: "DomiPlugProSegueIdentifier", sender: indexPath)
+        else if device.type == .LumiPlugPro{
+            performSegue(withIdentifier: "LumiPlugProSegueIdentifier", sender: indexPath)
         }
-        else if device.type == .DomiSwitch{
-            performSegue(withIdentifier: "DomiSwitchSegueIdentifier", sender: indexPath)
+        else if device.type == .LumiSwitch{
+            performSegue(withIdentifier: "LumiSwitchSegueIdentifier", sender: indexPath)
         }
     }
     
@@ -181,7 +173,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             
             
-            _ = DomiWiiProvider.request(.unsubscribeDevicesNotification(devices: devNot)) { result in
+            _ = LumiProvider.request(.unsubscribeDevicesNotification(devices: devNot)) { result in
                 switch result {
                 case let .success(response): break
                 
@@ -366,7 +358,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //Private methods
     func resetDevice(alert: UIAlertAction!){
-        _ = DomiWiiProvider.request(.resetDevice(alias: self.itemToUpdate.alias, password: self.itemToUpdate.password)) { result in
+        _ = LumiProvider.request(.resetDevice(alias: self.itemToUpdate.alias, password: self.itemToUpdate.password)) { result in
             switch result {
             case let .success(response):
                 do{
@@ -397,7 +389,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func sendRequest(password: String, newPassword: String, alias: String, newAlias: String){
-        _ = DomiWiiProvider.request(.updateDeviceProp(password: password, newPassword: newPassword, alias: alias, newAlias: newAlias)) { result in
+        _ = LumiProvider.request(.updateDeviceProp(password: password, newPassword: newPassword, alias: alias, newAlias: newAlias)) { result in
             switch result {
             case let .success(response):
                 do{
@@ -433,7 +425,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getDevicesMetadata(){
         // Show spinner
         //HUD.show(.progress)
-        _ = DomiWiiProvider.request(.devicesMetadata(aliases: devicesArray)) { result in
+        _ = LumiProvider.request(.devicesMetadata(aliases: devicesArray)) { result in
             switch result {
             case let .success(response):
                 do {
@@ -492,30 +484,26 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Pass the selected object to the new view controller.
         let path = self.tableView.indexPathForSelectedRow!
         
-        if segue.identifier == "DomiWiiSegueIdentifier" {
+        if segue.identifier == "LumiWiiSegueIdentifier" {
             let irViewController = segue.destination as! IRControllerViewController
             irViewController.conditionerItem = devices[path.row]
         }
-        else if segue.identifier == "DomiTouchSegueIdentifier" {
-            let domiTouchViewController = segue.destination as! DomiTouchViewController
-            domiTouchViewController.touch = devices[path.row]
+        else if segue.identifier == "LumiTouchSegueIdentifier" {
+            let lumiTouchViewController = segue.destination as! LumiTouchViewController
+            lumiTouchViewController.touch = devices[path.row]
         }
-        else if segue.identifier == "DomiPlugSegueIdentifier" {
-            let domiPlugViewController = segue.destination as! DomiPlugViewController
-            domiPlugViewController.touch = devices[path.row]
+        else if segue.identifier == "LumiPlugSegueIdentifier" {
+            let lumiPlugViewController = segue.destination as! LumiPlugViewController
+            lumiPlugViewController.touch = devices[path.row]
         }
-        else if segue.identifier == "DomiPlugProSegueIdentifier" {
-            let domiPlugProViewController = segue.destination as! DomiPlugProViewController
-            domiPlugProViewController.touch = devices[path.row]
+        else if segue.identifier == "LumiPlugProSegueIdentifier" {
+            let lumiPlugProViewController = segue.destination as! LumiPlugProViewController
+            lumiPlugProViewController.touch = devices[path.row]
         }
-        else if segue.identifier == "DomiSwitchSegueIdentifier" {
-            let domiswitchViewController = segue.destination as! DomiSwitchViewController
-            domiswitchViewController.touch = devices[path.row]
+        else if segue.identifier == "LumiSwitchSegueIdentifier" {
+            let lumiswitchViewController = segue.destination as! LumiSwitchViewController
+            lumiswitchViewController.touch = devices[path.row]
         }
-        
-//        else if device.type == "domiswitch"{
-//            performSegue(withIdentifier: "DomiSwitchSegueIdentifier", sender: indexPath)
-//        }
         
     }
     

@@ -1,11 +1,3 @@
-//
-//  DailyProgram.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 19/07/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import Foundation
 import RealmSwift
 import ObjectMapper

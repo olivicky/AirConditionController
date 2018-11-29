@@ -1,11 +1,3 @@
-//
-//  DomiWiiDeviceAPI.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 12/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import Foundation
 import Moya
 
@@ -26,59 +18,18 @@ let managerDevice = Manager(
 )
 
 
-//let endpointClosureDevice = { (target: DomiWiiDevice) -> Endpoint<DomiWiiDevice> in
-//    let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-//    var encoding: Moya.ParameterEncoding = JSONEncoding()
-//    
-//    switch target.method {
-//    case Moya.Method.get:
-//        encoding = JSONEncoding()
-//    default:
-//        encoding = JSONEncoding()
-//    }
-//    
-//    let endpoint: Endpoint<DomiWiiDevice> = Endpoint<DomiWiiDevice>(URL: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: encoding)
-//    
-//    return endpoint
-//}
 
-let endpointClosureDevice = { (target: DomiWiiDevice) -> Endpoint in
-    //let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-//    var encoding: Moya.ParameterEncoding = URLEncoding()
-//
-//    switch target.method {
-//    case Moya.Method.get:
-//        encoding = URLEncoding()
-//    default:
-//        encoding = URLEncoding()
-//        //encoding = JsonArrayEncoding()
-//    }
-//    let url = target.baseURL.absoluteString + target.path
+
+let endpointClosureDevice = { (target: LumiDevice) -> Endpoint in
+
     let url = URL(target: target).absoluteString
     return Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
 }
 
-//let requestClosure = { (endpoint: Endpoint, done: MoyaProvider.RequestResultClosure) in
-//    do{
-//        var request = try endpoint.urlRequest()
-//        // Modify the request however you like.
-//        done(.success(request))
-//    }
-//    catch{
-//        done(.failure(MoyaError.underlying(error, <#Response?#>)))
-//    }
-//
-//}
 
 
 
-//let DomiWiiDeviceProvider = MoyaProvider<DomiWiiDevice>(endpointClosure: endpointClosureDevice,
-//                                            requestClosure: MoyaProvider<DomiWiiDevice>.defaultRequestMapping,
-//                                            stubClosure: MoyaProvider.neverStub,
-//                                            manager: managerDevice,
-//                                            plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
-
-let DomiWiiDeviceProvider = MoyaProvider<DomiWiiDevice>(manager: DefaultAlamofireManager.sharedManager, plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
+let LumiDeviceProvider = MoyaProvider<LumiDevice>(manager: DefaultAlamofireManager.sharedManager, plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
 
 // MARK: - Provider support
@@ -89,7 +40,7 @@ private extension String {
     }
 }
 
-public enum DomiWiiDevice {
+public enum LumiDevice {
     case startControlMode()
     case endControlMode()
     case activateDevice(ssidHomeNetwork: String, password: String, ipStatico: String, mask: String, ipRouter : String, dnsPrimario : String)
@@ -98,7 +49,7 @@ public enum DomiWiiDevice {
     case manualActivationCommand(commandCode: String)
 }
 
-extension DomiWiiDevice: TargetType {
+extension LumiDevice: TargetType {
     
     
     

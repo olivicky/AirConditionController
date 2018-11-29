@@ -1,11 +1,3 @@
-//
-//  IRControllerViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 08/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 
@@ -156,7 +148,7 @@ class IRControllerViewController: UIViewController {
         let temperature : String? = (self.modeState != 0 && self.modeState != 5 && self.isStateOn) ? String(self.temperature) : nil
         let confort : String? = (self.modeState == 5 && self.isStateOn) ? String(self.confort) : nil
         
-        _ = DomiWiiProvider.request(.sendConditionerAction(alias: conditionerItem.alias, mode: modalita, speed: speed, temperature: temperature, confort: confort)) { result in
+        _ = LumiProvider.request(.sendConditionerAction(alias: conditionerItem.alias, mode: modalita, speed: speed, temperature: temperature, confort: confort)) { result in
             switch result {
             case let .success(response):
                 do{

@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 03/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import UserNotifications
 import RealmSwift
@@ -189,7 +181,7 @@ extension AppDelegate : MessagingDelegate {
         
         
         
-        _ = DomiWiiProvider.request(.subscribeDevicesNotification(devices: controllerNotDev)) { result in
+        _ = LumiProvider.request(.subscribeDevicesNotification(devices: controllerNotDev)) { result in
             switch result {
             case let .success(response):
             do{

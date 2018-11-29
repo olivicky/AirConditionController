@@ -1,19 +1,11 @@
-//
-//  ExternalCollectionViewCell.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 06/09/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 
 class ExternalCollectionViewCell: UICollectionViewCell {
     
     var dailyPlan : [Int] = []
-    var parentClass : DomiTouchProgramCollectionCollectionViewController!
+    var parentClass : LumiTouchProgramCollectionCollectionViewController!
     var dayIndex : Int = -1
-    var type : DeviceType = .DomiTouch
+    var type : DeviceType = .LumiTouch
     @IBOutlet weak var coll: UICollectionView!
     @IBOutlet weak var dayLabel: UILabel!
     fileprivate let itemsPerRow: CGFloat = 4
@@ -140,7 +132,7 @@ extension ExternalCollectionViewCell: UICollectionViewDelegate{
                 cell.backgroundColor = UIColor.blue
          }
         else if dailyPlan[indexPath.row] == 1{
-            if type == .DomiTouch{
+            if type == .LumiTouch{
                 parentClass.plan[dayIndex][indexPath.row] = 2
                 dailyPlan[indexPath.row] = 2
                 cell.backgroundColor = UIColor.red

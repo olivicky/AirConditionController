@@ -1,11 +1,3 @@
-//
-//  FirstActivationTableViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 06/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import Moya_ObjectMapper
 

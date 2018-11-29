@@ -1,11 +1,3 @@
-//
-//  DomiWiiAPI.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 12/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import Foundation
 import Moya
 import Alamofire
@@ -39,7 +31,7 @@ class DefaultAlamofireManager: Alamofire.SessionManager {
 
 
 
-let endpointClosure = { (target: DomiWii) -> Endpoint in
+let endpointClosure = { (target: Lumi) -> Endpoint in
     let url = target.baseURL.appendingPathComponent(target.path).absoluteString
     var encoding: Moya.ParameterEncoding = JSONEncoding()
     
@@ -57,13 +49,8 @@ let endpointClosure = { (target: DomiWii) -> Endpoint in
     return endpoint
 }
 
-//let DomiWiiProvider = MoyaProvider<DomiWii>(endpointClosure: MoyaProvider,
-//                                            requestClosure: MoyaProvider.defaultRequestMapping,
-//                                            stubClosure: MoyaProvider.neverStub,
-//                                            manager: manager,
-//                                            plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
-let DomiWiiProvider = MoyaProvider<DomiWii>(manager: DefaultAlamofireManager.sharedManager, plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
+let LumiProvider = MoyaProvider<Lumi>(manager: DefaultAlamofireManager.sharedManager, plugins:[NetworkLoggerPlugin(verbose: true, responseDataFormatter: nil)])
 
 // MARK: - Provider support
 
@@ -73,7 +60,7 @@ private extension String {
     }
 }
 
-public enum DomiWii {
+public enum Lumi {
     case devicesMetadata(aliases : [String])
     case conditionerList()
     case sendConditionerAction(alias: String, mode: String, speed: String?, temperature: String?, confort: String?)
@@ -87,7 +74,7 @@ public enum DomiWii {
     
 }
 
-extension DomiWii: TargetType {
+extension Lumi: TargetType {
     
     public var headers: [String : String]? {
         return ["Content-Type": "application/json"]

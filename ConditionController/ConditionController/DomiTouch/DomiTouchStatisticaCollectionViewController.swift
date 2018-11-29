@@ -1,16 +1,8 @@
-//
-//  DomiTouchStatisticaCollectionViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 13/09/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 
 private let reuseIdentifier = "StatisticaCell"
 
-class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
+class LumiTouchStatisticaCollectionViewController: UICollectionViewController {
     
     var device : Device!
     let itemsPerRow: CGFloat = 3
@@ -78,7 +70,7 @@ class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
                 timeM="0"+timeM;
             }
             
-            if(device.type == .DomiTouch){
+            if(device.type == .LumiTouch){
                 cell.temp.text = timeH + ":" + timeM
             }
             else {
@@ -120,7 +112,7 @@ class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
         
         else if indexPath.section == 1{
             let consValue : Int
-            if(device.type == .DomiTouch){
+            if(device.type == .LumiTouch){
                 consValue = self.device.daily_temperature[indexPath.row]
             }
             else {
@@ -138,7 +130,7 @@ class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
                 timeM="0"+timeM;
             }
             
-            if(device.type == .DomiTouch){
+            if(device.type == .LumiTouch){
                 cell.temp.text = String(consValue) + "°"
                 
             }
@@ -225,7 +217,7 @@ class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "StatisticheHeader", for: indexPath) as! StatisticheHeaderCollectionReusableView
             
             if (indexPath.section == 0){
-                if(device.type == .DomiTouch){
+                if(device.type == .LumiTouch){
                     header.headerLabel.text = "Periodo di funzionamento"
                 }
                 else
@@ -234,7 +226,7 @@ class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
                 }
             }
             else {
-                if(device.type == .DomiTouch){
+                if(device.type == .LumiTouch){
                     header.headerLabel.text = "Temperatura media giornaliera"
                 }
                 else
@@ -255,7 +247,7 @@ class DomiTouchStatisticaCollectionViewController: UICollectionViewController {
 
 
 
-extension DomiTouchStatisticaCollectionViewController : UICollectionViewDelegateFlowLayout{
+extension LumiTouchStatisticaCollectionViewController : UICollectionViewDelegateFlowLayout{
 
     
     func collectionView(_ collectionView: UICollectionView,

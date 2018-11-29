@@ -1,16 +1,8 @@
-//
-//  DomiTouchManualCommandTableViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 07/08/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 import PKHUD
 
-class DomiTouchManualCommandTableViewController: UITableViewController {
+class LumiTouchManualCommandTableViewController: UITableViewController {
 
     var device: Device!
     
@@ -37,7 +29,7 @@ class DomiTouchManualCommandTableViewController: UITableViewController {
     
     @IBAction func applicaButtonTapped(_ sender: Any) {
         HUD.show(.labeledProgress(title: nil, subtitle: "Invio comando in corso"))
-        _ = DomiWiiProvider.request(.sendDeviceAction(alias: device.alias, password: device.password, uuid: device.uid, command: 1, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: self.stagione.selectedSegmentIndex, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: Int(self.setPointLabel.text!)!, timeOn: Int(self.timerOnLabel.text!)!, planning: nil)) {
+        _ = LumiProvider.request(.sendDeviceAction(alias: device.alias, password: device.password, uuid: device.uid, command: 1, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: self.stagione.selectedSegmentIndex, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: Int(self.setPointLabel.text!)!, timeOn: Int(self.timerOnLabel.text!)!, planning: nil)) {
             result in
             switch result {
             case let .success(response):

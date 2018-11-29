@@ -1,11 +1,3 @@
-//
-//  ManualActivationViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 26/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import PKHUD
 
@@ -145,7 +137,7 @@ class ManualActivationViewController: UITableViewController {
         
         // Show spinner
         HUD.show(.progress)
-        _ = DomiWiiDeviceProvider.request(.manualActivationCommand(commandCode: String(code))) { result in
+        _ = LumiDeviceProvider.request(.manualActivationCommand(commandCode: String(code))) { result in
             switch result {
             case .success(_):
                     //self.tableView.deselectRow(at: indexPath, animated: true)

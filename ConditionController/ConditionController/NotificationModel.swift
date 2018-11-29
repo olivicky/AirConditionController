@@ -1,11 +1,3 @@
-//
-//  NotificationModel.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 04/10/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import Foundation
 import ObjectMapper
 

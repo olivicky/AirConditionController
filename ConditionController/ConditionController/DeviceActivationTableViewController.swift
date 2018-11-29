@@ -1,11 +1,3 @@
-//
-//  DeviceActivationTableViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 22/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 import PKHUD
@@ -15,7 +7,7 @@ import PKHUD
 class DeviceActivationTableViewController: UITableViewController, ModelListViewControllerDelegate, GuideNetworkViewControllerDelegate {
 
     @IBOutlet weak var modelLabel: UILabel!
-    let DomiWiiSSID = "DomiWii_"
+    let LumiDeviceSSID = "DomiWii_"
     var conditionerListIsEmpty : Bool = true
     var homeNetworkSSID : String! = nil
     var homeNetworkPassword : String! = nil
@@ -62,7 +54,7 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
             paramsString = paramsString.replacingOccurrences(of: "]", with: ",")
           //  paramsString = paramsString + "?"
         
-        _ = DomiWiiDeviceProvider.request(.registerDevice(count: String(counter), codes: paramsString)) { result in
+        _ = LumiDeviceProvider.request(.registerDevice(count: String(counter), codes: paramsString)) { result in
             switch result {
             case .success(_):
                let when = DispatchTime.now() + self.delayTime // change 2 to desired number of seconds
@@ -87,12 +79,12 @@ class DeviceActivationTableViewController: UITableViewController, ModelListViewC
     func startDeviceControl(){
         if(Util.getSSID() != nil){
             
-            if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
+            if(Util.getSSID()?.hasPrefix(LumiDeviceSSID))!{
         
         
         // Show spinner
         HUD.show(.progress)
-        _ = DomiWiiDeviceProvider.request(.startControlMode()) { result in
+        _ = LumiDeviceProvider.request(.startControlMode()) { result in
             switch result {
             case .success(_):
                 // Hide spinner

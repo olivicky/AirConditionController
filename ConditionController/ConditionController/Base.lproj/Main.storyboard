@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Domi Home-->
+        <!--Lumi Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,13 +119,13 @@
                             <constraint firstItem="cUb-5s-RLg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rSi-iG-0Hk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Domi Home" id="XvQ-6w-hQj"/>
+                    <navigationItem key="navigationItem" title="Lumi Home" id="XvQ-6w-hQj"/>
                     <connections>
                         <outlet property="heightButtonBoxConstraint" destination="x1A-Xn-BM9" id="303-8m-CQ4"/>
                         <outlet property="heightLogoConstraint" destination="UKY-k4-UOe" id="2h2-hl-Z6h"/>
                         <outlet property="widthLogoConstraint" destination="VCY-6G-vLC" id="Bq0-Nw-C7G"/>
-                        <segue destination="t74-xL-r0E" kind="show" identifier="ConfiguraSistemaDomiWiiSegueIdentifier" id="AUR-dK-mpu"/>
-                        <segue destination="Gyf-MQ-qnd" kind="show" identifier="ConfiguraSistemaDomiHomeSegueIdentifier" id="Nit-6F-GjA"/>
+                        <segue destination="t74-xL-r0E" kind="show" identifier="ConfiguraSistemaLumiWiiSegueIdentifier" id="AUR-dK-mpu"/>
+                        <segue destination="Gyf-MQ-qnd" kind="show" identifier="ConfiguraSistemaLumiHomeSegueIdentifier" id="Nit-6F-GjA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -467,14 +467,14 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domi-connect" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-tB-Num">
                                                 <rect key="frame" x="120" y="50.5" width="135" height="100"/>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleziona la rete WI-FI DomiWii_XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
-                                                <rect key="frame" x="74.5" y="158.5" width="226.5" height="17"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleziona la rete WI-FI LumiWii_XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-M7-kD4">
+                                                <rect key="frame" x="75.5" y="158.5" width="224.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-AU-aVQ">
-                                                <rect key="frame" x="54.5" y="158.5" width="17" height="17"/>
+                                                <rect key="frame" x="55.5" y="158.5" width="17" height="17"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -515,10 +515,10 @@
             </objects>
             <point key="canvasLocation" x="3754" y="2694"/>
         </scene>
-        <!--DomiSwitch-->
+        <!--LumiSwitch-->
         <scene sceneID="bNW-Dc-nvR">
             <objects>
-                <viewController id="PgS-4d-o1J" customClass="DomiSwitchViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PgS-4d-o1J" customClass="LumiSwitchViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kHU-yo-A1O"/>
                         <viewControllerLayoutGuide type="bottom" id="Fex-cm-oN7"/>
@@ -545,7 +545,7 @@
                             <constraint firstItem="qWB-SO-Rk1" firstAttribute="centerY" secondItem="jKY-1U-h4J" secondAttribute="centerY" id="1gc-8C-ykI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiSwitch" id="CTd-af-Z2R"/>
+                    <navigationItem key="navigationItem" title="LumiSwitch" id="CTd-af-Z2R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQ8-cx-52E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -671,7 +671,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConditionerDeviceCellIdentifier" textLabel="iyr-R9-hfn" style="IBUITableViewCellStyleDefault" id="5FP-yo-R2h">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConditionerDeviceCellIdentifier" textLabel="iyr-R9-hfn" style="IBUITableViewCellStyleDefault" id="5FP-yo-R2h">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5FP-yo-R2h" id="AJS-KX-6fh">
@@ -1021,7 +1021,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DevicesCellIdentifier" textLabel="Aow-sV-3YE" detailTextLabel="Yqp-GD-8NZ" imageView="VMd-AU-AXn" rowHeight="83" style="IBUITableViewCellStyleSubtitle" id="ll7-ow-A7w">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DevicesCellIdentifier" textLabel="Aow-sV-3YE" detailTextLabel="Yqp-GD-8NZ" imageView="VMd-AU-AXn" rowHeight="83" style="IBUITableViewCellStyleSubtitle" id="ll7-ow-A7w">
                                         <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ll7-ow-A7w" id="eUt-qV-13B">
@@ -1067,11 +1067,11 @@
                     <navigationItem key="navigationItem" title="Lista dispositivi" id="2Rf-Lw-EPc"/>
                     <connections>
                         <outlet property="tableView" destination="fbf-Ys-EMd" id="z3O-nS-BJN"/>
-                        <segue destination="X5v-ND-WDR" kind="show" identifier="DomiTouchSegueIdentifier" id="Sw1-Lt-j6F"/>
-                        <segue destination="5Ty-aL-kiu" kind="show" identifier="DomiWiiSegueIdentifier" id="7cx-vN-QIO"/>
-                        <segue destination="a5b-YD-eqe" kind="show" identifier="DomiPlugSegueIdentifier" id="nzI-Sj-CGp"/>
-                        <segue destination="Pc3-rW-VGH" kind="show" identifier="DomiPlugProSegueIdentifier" id="NuF-UR-LWk"/>
-                        <segue destination="PgS-4d-o1J" kind="show" identifier="DomiSwitchSegueIdentifier" id="QS0-dB-Wbi"/>
+                        <segue destination="X5v-ND-WDR" kind="show" identifier="LumiTouchSegueIdentifier" id="Sw1-Lt-j6F"/>
+                        <segue destination="5Ty-aL-kiu" kind="show" identifier="LumiWiiSegueIdentifier" id="7cx-vN-QIO"/>
+                        <segue destination="a5b-YD-eqe" kind="show" identifier="LumiPlugSegueIdentifier" id="nzI-Sj-CGp"/>
+                        <segue destination="Pc3-rW-VGH" kind="show" identifier="LumiPlugProSegueIdentifier" id="NuF-UR-LWk"/>
+                        <segue destination="PgS-4d-o1J" kind="show" identifier="LumiSwitchSegueIdentifier" id="QS0-dB-Wbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M46-K3-v33" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1170,7 +1170,7 @@
             </objects>
             <point key="canvasLocation" x="134" y="1505"/>
         </scene>
-        <!--DomiWii-->
+        <!--LumiWii-->
         <scene sceneID="0nj-Qz-5l5">
             <objects>
                 <viewController id="5Ty-aL-kiu" customClass="IRControllerViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
@@ -1306,7 +1306,7 @@
                             <constraint firstItem="RZp-xO-qsA" firstAttribute="top" secondItem="dPc-Ib-9Up" secondAttribute="bottom" id="xIv-tz-pdC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiWii" id="mfW-31-wDq"/>
+                    <navigationItem key="navigationItem" title="LumiWii" id="mfW-31-wDq"/>
                     <connections>
                         <outlet property="conditionerTitle" destination="mfW-31-wDq" id="kwo-bc-e8L"/>
                         <outlet property="downButton" destination="R7a-6h-MhU" id="1qP-yE-Jac"/>
@@ -1652,8 +1652,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q3u-aG-wPl">
-                                                    <rect key="frame" x="121" y="25" width="63.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q3u-aG-wPl">
+                                                    <rect key="frame" x="121" y="25" width="61" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1684,8 +1684,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oex-OJ-BxP">
-                                                    <rect key="frame" x="121" y="25" width="86.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oex-OJ-BxP">
+                                                    <rect key="frame" x="121" y="25" width="84" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1716,8 +1716,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fva-XK-KkF">
-                                                    <rect key="frame" x="121" y="25" width="74" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fva-XK-KkF">
+                                                    <rect key="frame" x="121" y="25" width="71" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1748,8 +1748,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mc2-Xp-1Db">
-                                                    <rect key="frame" x="121" y="25" width="91.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mc2-Xp-1Db">
+                                                    <rect key="frame" x="121" y="25" width="88.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1786,10 +1786,10 @@
             </objects>
             <point key="canvasLocation" x="2996" y="-2177"/>
         </scene>
-        <!--DomiTouch-->
+        <!--LumiTouch-->
         <scene sceneID="iLx-5E-BjM">
             <objects>
-                <viewController id="X5v-ND-WDR" customClass="DomiTouchViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X5v-ND-WDR" customClass="LumiTouchViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="31G-JS-dJ9"/>
                         <viewControllerLayoutGuide type="bottom" id="W1m-YJ-rzr"/>
@@ -2069,7 +2069,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="177.5" height="133.5"/>
                                                         <state key="normal" image="general_settings"/>
                                                         <connections>
-                                                            <segue destination="YAv-Io-hci" kind="show" identifier="impostazioniDomiTouchSegue" id="Z1p-RR-ZD5"/>
+                                                            <segue destination="YAv-Io-hci" kind="show" identifier="impostazioniLumiTouchSegue" id="Z1p-RR-ZD5"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNB-mk-UW4" userLabel="programma">
@@ -2142,7 +2142,7 @@
                             <constraint firstItem="0kg-Hu-l1w" firstAttribute="top" secondItem="AIL-4y-wMi" secondAttribute="bottom" id="e7v-jE-cGn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiTouch" id="3OY-yc-Ack"/>
+                    <navigationItem key="navigationItem" title="LumiTouch" id="3OY-yc-Ack"/>
                     <connections>
                         <outlet property="comandoDispositivoButton" destination="0kQ-Zi-nsa" id="FJl-eu-5Yh"/>
                         <outlet property="erroreLabel" destination="xg3-7t-YOD" id="6DM-GJ-lgu"/>
@@ -2166,7 +2166,7 @@
         <!--Impostazioni-->
         <scene sceneID="UZg-eq-icY">
             <objects>
-                <tableViewController id="YAv-Io-hci" customClass="DomiTouchSettingsTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="YAv-Io-hci" customClass="LumiTouchSettingsTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YXM-U9-xhV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2579,7 +2579,7 @@
         <!--Statistiche-->
         <scene sceneID="u6V-Da-IhA">
             <objects>
-                <collectionViewController id="e7o-yQ-8gb" customClass="DomiTouchStatisticaCollectionViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="e7o-yQ-8gb" customClass="LumiTouchStatisticaCollectionViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RxR-OJ-VZU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2632,7 +2632,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="StatisticheHeader" id="xj5-cQ-A2P" customClass="StatisticheHeaderCollectionReusableView" customModule="ConditionController" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="StatisticheHeader" id="xj5-cQ-A2P" customClass="StatisticheHeaderCollectionReusableView" customModule="ConditionController" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -2667,7 +2667,7 @@
         <!--Programma-->
         <scene sceneID="9LI-sR-6Vx">
             <objects>
-                <collectionViewController id="m1K-M2-sfG" customClass="DomiTouchProgramCollectionCollectionViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="m1K-M2-sfG" customClass="LumiTouchProgramCollectionCollectionViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" prefetchingEnabled="NO" id="mOC-R1-TaP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2790,7 +2790,7 @@
         <!--Manuale-->
         <scene sceneID="khr-YZ-bI5">
             <objects>
-                <tableViewController id="K9L-ny-1pw" customClass="DomiTouchManualCommandTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="K9L-ny-1pw" customClass="LumiTouchManualCommandTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="FU8-e1-M7T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3005,10 +3005,10 @@
             </objects>
             <point key="canvasLocation" x="2996" y="506"/>
         </scene>
-        <!--DomiPlug-->
+        <!--LumiPlug-->
         <scene sceneID="8iR-Au-xCZ">
             <objects>
-                <viewController id="a5b-YD-eqe" customClass="DomiPlugViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a5b-YD-eqe" customClass="LumiPlugViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gMh-Hw-eOM"/>
                         <viewControllerLayoutGuide type="bottom" id="zJH-bU-YGe"/>
@@ -3137,14 +3137,14 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="177.5" height="133.5"/>
                                                         <state key="normal" image="general_settings"/>
                                                         <connections>
-                                                            <segue destination="mPf-3r-4Yf" kind="show" identifier="impostazioniDomiPlugSegue" id="ubL-Zn-op5"/>
+                                                            <segue destination="mPf-3r-4Yf" kind="show" identifier="impostazioniLumiPlugSegue" id="ubL-Zn-op5"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-7D-65W" userLabel="programma">
                                                         <rect key="frame" x="197.5" y="0.0" width="177.5" height="133.5"/>
                                                         <state key="normal" image="programma"/>
                                                         <connections>
-                                                            <segue destination="m1K-M2-sfG" kind="show" identifier="programmaDomiPlugSegue" id="7l1-FT-dKD"/>
+                                                            <segue destination="m1K-M2-sfG" kind="show" identifier="programmaLumiPlugSegue" id="7l1-FT-dKD"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3202,7 +3202,7 @@
                             <constraint firstAttribute="trailing" secondItem="1KJ-U0-Q5q" secondAttribute="trailing" id="ysK-Ps-unW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiPlug" id="iP7-qt-Xq2"/>
+                    <navigationItem key="navigationItem" title="LumiPlug" id="iP7-qt-Xq2"/>
                     <connections>
                         <outlet property="comandoDispositivoButton" destination="2Jt-xN-G3O" id="Gpl-jE-vv3"/>
                         <outlet property="erroreLabel" destination="ncd-qO-pXR" id="4XI-JZ-ccI"/>
@@ -3213,7 +3213,7 @@
                         <outlet property="programmaSettimanaleButton" destination="p3L-7D-65W" id="Jtz-Ej-s6E"/>
                         <outlet property="timeChartContainer" destination="5NB-5X-lg5" id="R68-99-JFv"/>
                         <outlet property="timerLabel" destination="pYa-zM-Dw5" id="sBJ-Yz-SU4"/>
-                        <segue destination="bfK-aM-g5Q" kind="show" identifier="comandiDomiPlugSegue" id="6Oo-OG-Gz6"/>
+                        <segue destination="bfK-aM-g5Q" kind="show" identifier="comandiLumiPlugSegue" id="6Oo-OG-Gz6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qar-M0-NTx" sceneMemberID="firstResponder"/>
@@ -3223,7 +3223,7 @@
         <!--Timer-->
         <scene sceneID="9Df-Oc-dEj">
             <objects>
-                <tableViewController id="bfK-aM-g5Q" customClass="DomiPlugManualCommandTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bfK-aM-g5Q" customClass="LumiPlugManualCommandTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="77d-YH-39I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3303,7 +3303,7 @@
         <!--Impostazioni-->
         <scene sceneID="8SQ-4J-uc5">
             <objects>
-                <tableViewController id="mPf-3r-4Yf" customClass="DomiPlugSettingsTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mPf-3r-4Yf" customClass="LumiPlugSettingsTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="MHJ-cW-2XF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3359,10 +3359,10 @@
             </objects>
             <point key="canvasLocation" x="6950" y="3125"/>
         </scene>
-        <!--DomiPlug Top-->
+        <!--LumiPllug Top-->
         <scene sceneID="VEK-iX-Wfh">
             <objects>
-                <viewController id="Pc3-rW-VGH" customClass="DomiPlugProViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pc3-rW-VGH" customClass="LumiPlugProViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="od8-42-gjs"/>
                         <viewControllerLayoutGuide type="bottom" id="gsc-d0-2Lh"/>
@@ -3601,7 +3601,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="177.5" height="133.5"/>
                                                         <state key="normal" image="general_settings"/>
                                                         <connections>
-                                                            <segue destination="8Xu-f3-AU2" kind="show" identifier="impostazioniDomiPlugProSegue" id="j2x-qq-wv6"/>
+                                                            <segue destination="8Xu-f3-AU2" kind="show" identifier="impostazioniLumiPlugProSegue" id="j2x-qq-wv6"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjU-Db-x7v" userLabel="programma">
@@ -3624,7 +3624,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="177.5" height="133.5"/>
                                                         <state key="normal" image="programma"/>
                                                         <connections>
-                                                            <segue destination="m1K-M2-sfG" kind="show" identifier="programmaDomiPlugProSegue" id="hfm-Co-QuO"/>
+                                                            <segue destination="m1K-M2-sfG" kind="show" identifier="programmaLumiPlugProSegue" id="hfm-Co-QuO"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhi-VU-DwL" userLabel="faq">
@@ -3677,7 +3677,7 @@
                             <constraint firstAttribute="trailing" secondItem="t4m-oX-KYp" secondAttribute="trailing" id="yd9-H4-QUT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DomiPlug Top" id="p8N-34-Z6G"/>
+                    <navigationItem key="navigationItem" title="LumiPllug Top" id="p8N-34-Z6G"/>
                     <connections>
                         <outlet property="erroreLabel" destination="3TY-jr-zWr" id="Q80-zn-vQj"/>
                         <outlet property="funzioneLabel" destination="IqR-IQ-ZuK" id="K4s-wL-zgL"/>
@@ -3689,7 +3689,7 @@
                         <outlet property="tempRingView" destination="xoY-DD-Hmn" id="SsN-kk-zUg"/>
                         <outlet property="timeChartContainer" destination="s4D-Pz-JPA" id="pYp-AQ-zqX"/>
                         <outlet property="timerLabel" destination="gS4-l3-VGn" id="uLe-Ro-ODJ"/>
-                        <segue destination="bfK-aM-g5Q" kind="show" identifier="comandiDomiPlugProSegue" id="mcn-nu-xIb"/>
+                        <segue destination="bfK-aM-g5Q" kind="show" identifier="comandiLumiPlugProSegue" id="mcn-nu-xIb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5H-CE-bS7" sceneMemberID="firstResponder"/>
@@ -3699,7 +3699,7 @@
         <!--Impostazioni-->
         <scene sceneID="anw-58-8PR">
             <objects>
-                <tableViewController id="8Xu-f3-AU2" customClass="DomiPlugProSettingsTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="8Xu-f3-AU2" customClass="LumiPlugProSettingsTableViewController" customModule="ConditionController" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="srj-Ww-aRu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3935,8 +3935,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qQ8-Qa-SFU">
-                                                    <rect key="frame" x="121" y="25" width="63.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiWii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qQ8-Qa-SFU">
+                                                    <rect key="frame" x="121" y="25" width="61" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -3957,7 +3957,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98039215690000003" green="0.84705882349999995" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="DomiWiiFAQIdentifier" id="eou-XE-QQu"/>
+                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="LumiWiiFAQIdentifier" id="eou-XE-QQu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DomitouchCellIdentifier" textLabel="iZx-EU-XPh" detailTextLabel="lVh-n9-uo8" imageView="2Km-YT-KuM" style="IBUITableViewCellStyleSubtitle" id="P9N-CC-E3S">
@@ -3967,8 +3967,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iZx-EU-XPh">
-                                                    <rect key="frame" x="121" y="25" width="86.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iZx-EU-XPh">
+                                                    <rect key="frame" x="121" y="25" width="84" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -3989,7 +3989,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.55294117649999996" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="DomiTouchFAQIdentifier" id="rOx-u8-nlU"/>
+                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="LumiTouchFAQIdentifier" id="rOx-u8-nlU"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DomiplugCellIdentifier" textLabel="HRt-Qc-mpO" detailTextLabel="gI7-g3-6qy" imageView="Olu-0r-H2O" style="IBUITableViewCellStyleSubtitle" id="kap-bN-YTA">
@@ -3999,8 +3999,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRt-Qc-mpO">
-                                                    <rect key="frame" x="121" y="25" width="74" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiPlug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRt-Qc-mpO">
+                                                    <rect key="frame" x="121" y="25" width="71" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -4021,7 +4021,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.33725490200000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="DomiPlugFAQIdentifier" id="Nd7-P9-QA5"/>
+                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="LumiPlugFAQIdentifier" id="Nd7-P9-QA5"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DomiswitchCellIdentifier" textLabel="TeT-bP-2K9" detailTextLabel="pU0-hg-gNd" imageView="rws-5O-joP" style="IBUITableViewCellStyleSubtitle" id="TUQ-e8-Zzx">
@@ -4031,8 +4031,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DomiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TeT-bP-2K9">
-                                                    <rect key="frame" x="121" y="25" width="91.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LumiSwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TeT-bP-2K9">
+                                                    <rect key="frame" x="121" y="25" width="88.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -4053,7 +4053,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.74509803919999995" green="0.83921568629999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="DomiSwitchFAQIdentifier" id="LGx-lL-MaV"/>
+                                            <segue destination="N26-Ej-Jhz" kind="show" identifier="LumiSwitchFAQIdentifier" id="LGx-lL-MaV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -4087,7 +4087,7 @@
         <image name="faq" width="89" height="112"/>
         <image name="finish_configuration" width="89" height="112"/>
         <image name="general_settings" width="89" height="112"/>
-        <image name="logo" width="250" height="230"/>
+        <image name="logo" width="250" height="100"/>
         <image name="min100" width="50" height="50"/>
         <image name="off" width="261" height="267"/>
         <image name="programma" width="89" height="112"/>
@@ -4104,9 +4104,9 @@
         <image name="wifi-connect" width="253" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mcn-nu-xIb"/>
-        <segue reference="cIw-x8-pwf"/>
-        <segue reference="9nR-gx-VZc"/>
+        <segue reference="6Oo-OG-Gz6"/>
+        <segue reference="7l1-FT-dKD"/>
+        <segue reference="UkT-9a-0Pj"/>
         <segue reference="O7Y-sT-AMn"/>
         <segue reference="LGx-lL-MaV"/>
         <segue reference="z0n-LM-2hY"/>

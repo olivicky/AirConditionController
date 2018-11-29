@@ -1,11 +1,3 @@
-//
-//  AddDeviceTableViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 19/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 import RealmSwift
@@ -52,7 +44,7 @@ class AddDeviceTableViewController: UITableViewController {
     }
 
     @IBAction func addButtonTapped(_ sender: AnyObject) {
-        _ = DomiWiiProvider.request(.checkDevice(alias: self.aliasTextField.text!, password: self.passwordTextField.text!)) { result in
+        _ = LumiProvider.request(.checkDevice(alias: self.aliasTextField.text!, password: self.passwordTextField.text!)) { result in
             switch result {
             case let .success(response):
                 do{
@@ -75,7 +67,7 @@ class AddDeviceTableViewController: UITableViewController {
                         
                         let controlledNotificationDevice = ControlledNotificationDevices(device: devNot)
                         
-                        _ = DomiWiiProvider.request(.subscribeDevicesNotification(devices: controlledNotificationDevice)) { result in
+                        _ = LumiProvider.request(.subscribeDevicesNotification(devices: controlledNotificationDevice)) { result in
                             switch result {
                             case let .success(response):
                                 do{

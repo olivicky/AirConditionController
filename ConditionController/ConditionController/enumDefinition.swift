@@ -1,20 +1,12 @@
-//
-//  enumDefinition.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 19/07/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import Foundation
 
 
 enum DeviceType: String {
-    case DomiWii = "domiwii"
-    case DomiTouch = "domitouch"
-    case DomiPlug = "domiplug"
-    case DomiPlugPro = "domiplugpro"
-    case DomiSwitch = "domiswitch"
+    case LumiWii = "lumiwii"
+    case LumiTouch = "lumitouch"
+    case LumiPlug = "lumiplug"
+    case LumiPlugPro = "lumiplugpro"
+    case LumiSwitch = "lumiswitch"
 }
 
 enum ThermostatStatus : Int{

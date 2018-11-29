@@ -1,11 +1,3 @@
-//
-//  FAQViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo on 27/04/2017.
-//  Copyright © 2017 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 
 class FAQViewController: UIViewController {

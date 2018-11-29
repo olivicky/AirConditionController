@@ -1,18 +1,10 @@
-//
-//  DomiTouchProgramCollectionCollectionViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 31/08/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 import PKHUD
 
 private let reuseIdentifier = "Cell"
 
-class DomiTouchProgramCollectionCollectionViewController: UICollectionViewController {
+class LumiTouchProgramCollectionCollectionViewController: UICollectionViewController {
     var device : Device!
     var plan : [[Int]] = [[]]
     @IBOutlet weak var caricaButton: UIBarButtonItem!
@@ -37,7 +29,7 @@ class DomiTouchProgramCollectionCollectionViewController: UICollectionViewContro
     
     @IBAction func caricaButtonTapped(_ sender: UIBarButtonItem) {
         HUD.show(.labeledProgress(title: nil, subtitle: "Invio comando in corso"))
-        _ = DomiWiiProvider.request(.sendDeviceAction(alias: self.device.alias, password: device.password, uuid: device.uid, command: 4, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: nil, timeOn: nil, planning: plan)) {
+        _ = LumiProvider.request(.sendDeviceAction(alias: self.device.alias, password: device.password, uuid: device.uid, command: 4, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: nil, timeOn: nil, planning: plan)) {
             result in
             switch result {
             case let .success(response):
@@ -162,32 +154,3 @@ class DomiTouchProgramCollectionCollectionViewController: UICollectionViewContro
 
 
 }
-
-//extension DomiTouchProgramCollectionCollectionViewController : UICollectionViewDelegateFlowLayout{
-//
-//    //1
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        //2
-//        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-//        let availableWidth = (self.collectionView?.frame.width)! - paddingSpace
-//        let widthPerItem = availableWidth / itemsPerRow
-//
-//        return CGSize(width: widthPerItem, height: widthPerItem)
-//    }
-//
-//    //3
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return sectionInsets
-//    }
-//
-//    // 4
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return sectionInsets.left
-//    }
-//}

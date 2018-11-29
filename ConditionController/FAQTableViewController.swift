@@ -1,11 +1,3 @@
-//
-//  FAQTableViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 06/11/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 
 class FAQTableViewController: UITableViewController {
@@ -86,26 +78,22 @@ class FAQTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         let path = self.tableView.indexPathForSelectedRow!
         
-        if segue.identifier == "DomiWiiFAQIdentifier" {
+        if segue.identifier == "LumiWiiFAQIdentifier" {
             let faqViewController = segue.destination as! FAQViewController
             faqViewController.index = "1"
         }
-        else if segue.identifier == "DomiTouchFAQIdentifier" {
+        else if segue.identifier == "LumiTouchFAQIdentifier" {
             let faqViewController = segue.destination as! FAQViewController
             faqViewController.index = "2"
         }
-        else if segue.identifier == "DomiPlugFAQIdentifier" {
+        else if segue.identifier == "LumiPlugFAQIdentifier" {
             let faqViewController = segue.destination as! FAQViewController
             faqViewController.index = "3"
         }
-        else if segue.identifier == "DomiSwitchFAQIdentifier" {
+        else if segue.identifier == "LumiSwitchFAQIdentifier" {
             let faqViewController = segue.destination as! FAQViewController
             faqViewController.index = "3"
         }
-        
-        //        else if device.type == "domiswitch"{
-        //            performSegue(withIdentifier: "DomiSwitchSegueIdentifier", sender: indexPath)
-        //        }
         
     }
     

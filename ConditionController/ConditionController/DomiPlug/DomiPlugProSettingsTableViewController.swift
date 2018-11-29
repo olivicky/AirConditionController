@@ -1,16 +1,8 @@
-//
-//  DomiPlugProSettingsTableViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 27/09/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 import PKHUD
 
-class DomiPlugProSettingsTableViewController: UITableViewController {
+class LumiPlugProSettingsTableViewController: UITableViewController {
 
     var device: Device!
     
@@ -72,7 +64,7 @@ class DomiPlugProSettingsTableViewController: UITableViewController {
             dayOfWeek += 7
         }
         HUD.show(.labeledProgress(title: nil, subtitle: "Invio comando in corso"))
-        _ = DomiWiiProvider.request(.sendDeviceAction(alias: device.alias, password: device.password, uuid: device.uid, command: 8, day: dayOfWeek, hour: hourOfDay, minutes: minutes, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: periodicita, enableMobileNotification: self.inAppNotification.isOn, enableBotNotification: self.facebookNotification.isOn, temperature: nil, timeOn: nil, planning: nil)) {
+        _ = LumiProvider.request(.sendDeviceAction(alias: device.alias, password: device.password, uuid: device.uid, command: 8, day: dayOfWeek, hour: hourOfDay, minutes: minutes, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: periodicita, enableMobileNotification: self.inAppNotification.isOn, enableBotNotification: self.facebookNotification.isOn, temperature: nil, timeOn: nil, planning: nil)) {
             result in
             switch result {
             case let .success(response):

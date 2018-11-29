@@ -1,10 +1,3 @@
-//
-//  FirstSettingDeviceViewController.swift
-//  
-//
-//  Created by Vincenzo Olivito on 27/08/2018.
-//
-
 import UIKit
 
 class FirstSettingDeviceViewController: UIViewController {
@@ -20,7 +13,7 @@ class FirstSettingDeviceViewController: UIViewController {
     }
     
     @IBAction func completeConfigurationTapped(_ sender: Any) {
-        _ = DomiWiiDeviceProvider.request(.endControlMode()) { result in
+        _ = LumiDeviceProvider.request(.endControlMode()) { result in
             switch result {
             case .success(_):
                 self.navigationController?.popViewController(animated: true)

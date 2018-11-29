@@ -1,11 +1,3 @@
-//
-//  ManualActivationViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 26/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 
 //protocol ManualActivationViewControllerDelegate
@@ -142,7 +134,7 @@ class TestCommandTableViewController: UITableViewController {
         
         
         
-        _ = DomiWiiDeviceProvider.request(.testCommand(commandCode: String(code))) { result in
+        _ = LumiDeviceProvider.request(.testCommand(commandCode: String(code))) { result in
             switch result {
             case .success(_):
                 //self.tableView.deselectRow(at: indexPath, animated: true)

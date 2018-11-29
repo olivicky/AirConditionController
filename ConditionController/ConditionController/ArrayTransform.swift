@@ -1,11 +1,3 @@
-//
-//  ArrayTransform.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 10/07/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import RealmSwift
 import ObjectMapper
 

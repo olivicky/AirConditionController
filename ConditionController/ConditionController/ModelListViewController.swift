@@ -1,11 +1,3 @@
-//
-//  ModelListViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 16/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 
 protocol ModelListViewControllerDelegate
@@ -44,7 +36,7 @@ class ModelListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.delegate.modelListSelectedItem(viewController: self, didFinishSelectedItem: self.selectedConditionerModel)
         self.navigationController?.popViewController(animated: true)
         
-//            _ = DomiWiiDeviceProvider.request(.saveDevice()) { result in
+//            _ = LumiDeviceProvider.request(.saveDevice()) { result in
 //                switch result {
 //                case let .success(response): break
 //                    self.delegate.modelListSelectedItem(viewController: self, didFinishSelectedItem: self.selectedConditionerModel)

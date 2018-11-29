@@ -1,11 +1,3 @@
-//
-//  Conditioner.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 05/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import Foundation
 import RealmSwift
 import ObjectMapper
@@ -178,19 +170,19 @@ class Device: Object, Mappable{
 
     let transformerDeviceType = TransformOf<String, String>(fromJSON: { (value: String?) -> String? in
         if(value!.hasPrefix("2")){
-            return "domitouch"
+            return "lumitouch"
         }
         else if(value!.hasPrefix("3")){
-            return "domiplug"
+            return "lumiplug"
         }
         else if(value!.hasPrefix("4")){
-            return "domiplugpro"
+            return "lumiplugpro"
         }
         else if(value!.hasPrefix("5")){
-            return "domiswitch"
+            return "dlumiswitch"
         }
         else{
-            return "domiwii"
+            return "lumiwii"
         }
     }, toJSON: { (value: String?) -> String? in
         // transform value from Int? to String?

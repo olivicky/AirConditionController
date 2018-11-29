@@ -1,16 +1,8 @@
-//
-//  DomiTouchSettingsTableViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 26/07/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 import PKHUD
 
-class DomiTouchSettingsTableViewController: UITableViewController {
+class LumiTouchSettingsTableViewController: UITableViewController {
     
     var device: Device!
     
@@ -48,15 +40,6 @@ class DomiTouchSettingsTableViewController: UITableViewController {
         self.tempMaxSlider.value = Float(device.max_temperature)
         self.ecoSlider.value = Float(device.set_point_eco)
         self.benessereSlider.value = Float(device.set_point_benessere)
-//        addButton.isEnabled = false
-//        //        ssdTextField.addTarget(self, action: #selector(FirstActivationTableViewController.checkFields(sender:)) , for: .editingDidEnd)
-//        capTextField.addTarget(self, action: #selector(DomiTouchSettingsTableViewController.checkFields(sender:)), for: .editingChanged)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         getTimeOfDate()
     }
     
@@ -103,7 +86,7 @@ class DomiTouchSettingsTableViewController: UITableViewController {
         
         
         HUD.show(.labeledProgress(title: nil, subtitle: "Invio comando in corso"))
-        _ = DomiWiiProvider.request(.sendDeviceAction(alias: device.alias, password: device.password, uuid: device.uid, command: 8, day: dayOfWeek, hour: hourOfDay, minutes: minutes, cap: ((self.capTextField.text != "") ? Int(self.capTextField.text!)! : nil) , setPointBenessere: Int(self.benessereLabel.text!)!, setPointEco: Int(self.ecoLabel.text!)!, mode: self.stagione.selectedSegmentIndex, minTemperature: Int(self.tempMinLabel.text!)!, maxTemperatura: Int(self.tempMaxLabel.text!)!, notificationPeriod: periodicita, enableMobileNotification: self.inAppNotification.isOn, enableBotNotification: self.facebookNotification.isOn, temperature: nil, timeOn: nil, planning: nil)) {
+        _ = LumiProvider.request(.sendDeviceAction(alias: device.alias, password: device.password, uuid: device.uid, command: 8, day: dayOfWeek, hour: hourOfDay, minutes: minutes, cap: ((self.capTextField.text != "") ? Int(self.capTextField.text!)! : nil) , setPointBenessere: Int(self.benessereLabel.text!)!, setPointEco: Int(self.ecoLabel.text!)!, mode: self.stagione.selectedSegmentIndex, minTemperature: Int(self.tempMinLabel.text!)!, maxTemperatura: Int(self.tempMaxLabel.text!)!, notificationPeriod: periodicita, enableMobileNotification: self.inAppNotification.isOn, enableBotNotification: self.facebookNotification.isOn, temperature: nil, timeOn: nil, planning: nil)) {
             result in
             switch result {
             case let .success(response):

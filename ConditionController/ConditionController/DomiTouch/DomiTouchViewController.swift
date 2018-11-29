@@ -1,11 +1,3 @@
-//
-//  DomiTouchViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 06/07/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import PKHUD
 import SwiftyJSON
@@ -14,7 +6,7 @@ import MKMagneticProgress
 import RKPieChart
 
 
-class DomiTouchViewController: UIViewController {
+class LumiTouchViewController: UIViewController {
 
     let realm = try! Realm()
     var touch: Device!
@@ -91,7 +83,7 @@ class DomiTouchViewController: UIViewController {
     func getDeviceMetadata(){
         // Show spinner
 //        HUD.show(.progress)
-        _ = DomiWiiProvider.request(.devicesMetadata(aliases: [self.touch.uid])) { result in
+        _ = LumiProvider.request(.devicesMetadata(aliases: [self.touch.uid])) { result in
             switch result {
             case let .success(response):
                 do {
@@ -120,7 +112,7 @@ class DomiTouchViewController: UIViewController {
                 //                guard let error = error as? CustomStringConvertible else {
                 //                    break
                 //                }
-                self.showAlert("DomiTouch", message: error.errorDescription!)
+                self.showAlert("LumiTouch", message: error.errorDescription!)
                 
                 //HUD.hide(afterDelay: 2.0)
             }
@@ -133,7 +125,7 @@ class DomiTouchViewController: UIViewController {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let manualeButton = UIAlertAction(title: "Manuale", style: .default, handler: { (action) -> Void in
-            self.performSegue(withIdentifier: "manualCommandSegue",  sender: DomiTouchViewController.self)
+            self.performSegue(withIdentifier: "manualCommandSegue",  sender: LumiTouchViewController.self)
         })
         
         let  spentoButton = UIAlertAction(title: "Spento", style: .default, handler: { (action) -> Void in
@@ -169,7 +161,7 @@ class DomiTouchViewController: UIViewController {
     
     func sendCommand(command: Int){
         HUD.show(.labeledProgress(title: nil, subtitle: "Invio comando in corso"))
-        _ = DomiWiiProvider.request(.sendDeviceAction(alias: self.touch.alias, password: self.touch.password, uuid: self.touch.uid, command: command, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: nil, timeOn: nil, planning: nil)) {
+        _ = LumiProvider.request(.sendDeviceAction(alias: self.touch.alias, password: self.touch.password, uuid: self.touch.uid, command: command, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: nil, timeOn: nil, planning: nil)) {
             
             result in
             switch result {
@@ -416,18 +408,18 @@ class DomiTouchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if(segue.identifier == "impostazioniDomiTouchSegue"){
-            (segue.destination as! DomiTouchSettingsTableViewController).device = self.touch
+        if(segue.identifier == "impostazioniLumiTouchSegue"){
+            (segue.destination as! LumiTouchSettingsTableViewController).device = self.touch
         }
         else if(segue.identifier == "manualCommandSegue"){
-            (segue.destination as! DomiTouchManualCommandTableViewController).device = self.touch
+            (segue.destination as! LumiTouchManualCommandTableViewController).device = self.touch
         }
         else if(segue.identifier == "programmaSegue"){
-            (segue.destination as! DomiTouchProgramCollectionCollectionViewController).plan = self.touch.planning
-            (segue.destination as! DomiTouchProgramCollectionCollectionViewController).device = self.touch
+            (segue.destination as! LumiTouchProgramCollectionCollectionViewController).plan = self.touch.planning
+            (segue.destination as! LumiTouchProgramCollectionCollectionViewController).device = self.touch
         }
         else if(segue.identifier == "statisticaSegue"){
-            (segue.destination as! DomiTouchStatisticaCollectionViewController).device = self.touch
+            (segue.destination as! LumiTouchStatisticaCollectionViewController).device = self.touch
         }
     }
 

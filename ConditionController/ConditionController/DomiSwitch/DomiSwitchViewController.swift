@@ -1,17 +1,9 @@
-//
-//  DomiSwitchViewController.swift
-//  ConditionController
-//
-//  Created by Vincenzo Olivito on 28/09/2018.
-//  Copyright © 2018 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import PKHUD
 import SwiftyJSON
 
 
-class DomiSwitchViewController: UIViewController {
+class LumiSwitchViewController: UIViewController {
 
     var touch: Device!
     
@@ -28,7 +20,7 @@ class DomiSwitchViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: Any) {
         HUD.show(.labeledProgress(title: nil, subtitle: "Invio comando in corso"))
-        _ = DomiWiiProvider.request(.sendDeviceAction(alias: self.touch.alias, password: self.touch.password, uuid: self.touch.uid, command: 9, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: nil, timeOn: nil, planning: nil)) {
+        _ = LumiProvider.request(.sendDeviceAction(alias: self.touch.alias, password: self.touch.password, uuid: self.touch.uid, command: 9, day: nil, hour: nil, minutes: nil, cap: nil, setPointBenessere: nil, setPointEco: nil, mode: nil, minTemperature: nil, maxTemperatura: nil, notificationPeriod: nil, enableMobileNotification: nil, enableBotNotification: nil, temperature: nil, timeOn: nil, planning: nil)) {
             
             result in
             switch result {

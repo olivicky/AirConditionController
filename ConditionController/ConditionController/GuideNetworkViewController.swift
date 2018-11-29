@@ -1,11 +1,3 @@
-//
-//  GuideNetworkViewController.swift
-//  ConditionController
-//
-//  Created by Beta 8.0 Technology on 16/10/16.
-//  Copyright © 2016 vincenzoOlivito. All rights reserved.
-//
-
 import UIKit
 import PKHUD
 
@@ -17,7 +9,7 @@ protocol GuideNetworkViewControllerDelegate
 
 class GuideNetworkViewController: UIViewController {
     
-    let DomiWiiSSID = "Domi"
+    let LumiSSID = "Domi"
     var homeNetworkSSID : String! = nil
     var homeNetworkPassword : String! = nil
     var ipStatico : String?
@@ -33,7 +25,7 @@ class GuideNetworkViewController: UIViewController {
         HUD.dimsBackground = false
         HUD.allowsInteraction = false
         
-        NotificationCenter.default.addObserver(self, selector: #selector(GuideNetworkViewController.checkDomiNetworkConnection), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GuideNetworkViewController.checkLumiNetworkConnection), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -42,10 +34,10 @@ class GuideNetworkViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func checkDomiNetworkConnection(){
+    func checkLumiNetworkConnection(){
         if(Util.getSSID() != nil){
             
-            if(Util.getSSID()?.hasPrefix(DomiWiiSSID))!{
+            if(Util.getSSID()?.hasPrefix(LumiSSID))!{
 //            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeviceActivationTableViewController") as? DeviceActivationTableViewController
 //            {
 //                vc.conditionerDeviceList = self.deviceList
@@ -63,7 +55,7 @@ class GuideNetworkViewController: UIViewController {
         // Show spinner
         HUD.show(.progress)
         
-        _ = DomiWiiDeviceProvider.request(.startControlMode()) { result in
+        _ = LumiDeviceProvider.request(.startControlMode()) { result in
             switch result {
             case let .success(response):
                 if(self.isFromFirstActivation){
@@ -94,7 +86,7 @@ class GuideNetworkViewController: UIViewController {
     }
     
     func registerDevice(ssidHomeNetwork: String, password: String, ipStatico: String?, mask: String?, ipRouter : String?, dnsPrimario : String?){
-        _ = DomiWiiDeviceProvider.request(.activateDevice(ssidHomeNetwork: ssidHomeNetwork, password: password, ipStatico: (ipStatico != nil ? ipStatico! : "0"), mask: (mask != nil ? mask!: "0"), ipRouter: (ipRouter != nil ? ipRouter! : "0"), dnsPrimario: (dnsPrimario != nil ? dnsPrimario!: "0"))) { result in
+        _ = LumiDeviceProvider.request(.activateDevice(ssidHomeNetwork: ssidHomeNetwork, password: password, ipStatico: (ipStatico != nil ? ipStatico! : "0"), mask: (mask != nil ? mask!: "0"), ipRouter: (ipRouter != nil ? ipRouter! : "0"), dnsPrimario: (dnsPrimario != nil ? dnsPrimario!: "0"))) { result in
             switch result {
             case .success(_):
                 // Hide spinner
