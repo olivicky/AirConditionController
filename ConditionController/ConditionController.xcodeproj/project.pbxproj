@@ -9,29 +9,29 @@
 /* Begin PBXBuildFile section */
 		4D8D02851EB22DF2008F4971 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D02841EB22DF2008F4971 /* FAQViewController.swift */; };
 		4D8E08F61E9047C40086A3DE /* ControlledDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */; };
-		AD02B2F5215B967E00C23634 /* DomiPlugProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02B2F4215B967E00C23634 /* DomiPlugProViewController.swift */; };
+		AD02B2F5215B967E00C23634 /* LumiPlugProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02B2F4215B967E00C23634 /* LumiPlugProViewController.swift */; };
 		AD02DC7021661DAA0097B8D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD02DC6F21661DA90097B8D8 /* GoogleService-Info.plist */; };
 		AD02DC7421665A150097B8D8 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02DC7321665A150097B8D8 /* NotificationModel.swift */; };
 		AD02DC7621665C190097B8D8 /* ControlledNotificationDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02DC7521665C190097B8D8 /* ControlledNotificationDevice.swift */; };
-		AD033117215D1E8A008902D1 /* DomiPlugProSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD033116215D1E8A008902D1 /* DomiPlugProSettingsTableViewController.swift */; };
+		AD033117215D1E8A008902D1 /* LumiPlugProSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD033116215D1E8A008902D1 /* LumiPlugProSettingsTableViewController.swift */; };
 		AD04281A2100D54900EC8841 /* enumDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0428192100D54900EC8841 /* enumDefinition.swift */; };
 		AD04281C2101158000EC8841 /* DailyProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD04281B2101158000EC8841 /* DailyProgram.swift */; };
-		AD042820210A6B3900EC8841 /* DomiTouchSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD04281F210A6B3900EC8841 /* DomiTouchSettingsTableViewController.swift */; };
-		AD0C57402119BEEA00D6B05D /* DomiTouchManualCommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C573F2119BEEA00D6B05D /* DomiTouchManualCommandTableViewController.swift */; };
+		AD042820210A6B3900EC8841 /* LumiTouchSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD04281F210A6B3900EC8841 /* LumiTouchSettingsTableViewController.swift */; };
+		AD0C57402119BEEA00D6B05D /* LumiTouchManualCommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C573F2119BEEA00D6B05D /* LumiTouchManualCommandTableViewController.swift */; };
 		AD10E8CA2141890000498004 /* InternalCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD10E8C92141890000498004 /* InternalCellCollectionViewCell.swift */; };
 		AD10E8CC21418FA600498004 /* ExternalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD10E8CB21418FA600498004 /* ExternalCollectionViewCell.swift */; };
 		AD407D34214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD407D33214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift */; };
 		AD425418216A0326004359FF /* F.A.Q..pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD425417216A0325004359FF /* F.A.Q..pdf */; };
 		AD4AF68C20F53B150058885E /* ArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4AF68B20F53B150058885E /* ArrayTransform.swift */; };
-		AD50C1C020EF7348006100BE /* DomiTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50C1BF20EF7348006100BE /* DomiTouchViewController.swift */; };
-		AD57B02A215304DB00D92866 /* DomiPlugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57B029215304DB00D92866 /* DomiPlugViewController.swift */; };
-		AD5B2C21215E660100555998 /* DomiSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2C20215E660100555998 /* DomiSwitchViewController.swift */; };
-		AD7DEFD921543CC9001D3885 /* DomiPlugManualCommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DEFD821543CC9001D3885 /* DomiPlugManualCommandTableViewController.swift */; };
-		AD7DEFDB21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DEFDA21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift */; };
-		AD8ED25D2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8ED25C2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift */; };
+		AD50C1C020EF7348006100BE /* LumiTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50C1BF20EF7348006100BE /* LumiTouchViewController.swift */; };
+		AD57B02A215304DB00D92866 /* LumiPlugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57B029215304DB00D92866 /* LumiPlugViewController.swift */; };
+		AD5B2C21215E660100555998 /* LumiSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2C20215E660100555998 /* LumiSwitchViewController.swift */; };
+		AD7DEFD921543CC9001D3885 /* LumiPlugManualCommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DEFD821543CC9001D3885 /* LumiPlugManualCommandTableViewController.swift */; };
+		AD7DEFDB21543FF6001D3885 /* LumiPlugSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7DEFDA21543FF6001D3885 /* LumiPlugSettingsTableViewController.swift */; };
+		AD8ED25D2139AA360074960F /* LumiTouchProgramCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8ED25C2139AA360074960F /* LumiTouchProgramCollectionCollectionViewController.swift */; };
 		AD992A092137F37100F1C04B /* FirstSettingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD992A082137F37100F1C04B /* FirstSettingDeviceViewController.swift */; };
 		AD9B2B732191ADBC00392E46 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */; };
-		ADFE6E88214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE6E87214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift */; };
+		ADFE6E88214B146800DD5349 /* LumiTouchStatisticaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE6E87214B146800DD5349 /* LumiTouchStatisticaCollectionViewController.swift */; };
 		ADFE6E8A214B1D6700DD5349 /* StatisticaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE6E89214B1D6700DD5349 /* StatisticaCollectionViewCell.swift */; };
 		ED51B8578A2A21569BD32DC2 /* Pods_ConditionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */; };
 		F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001A6741E1A92D9000BE03F /* CodeItem.swift */; };
@@ -65,30 +65,30 @@
 		4D8D02841EB22DF2008F4971 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		4D8E08F51E9047C40086A3DE /* ControlledDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlledDevices.swift; sourceTree = "<group>"; };
 		A4B912169C5EF06F6446729B /* Pods_ConditionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConditionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD02B2F4215B967E00C23634 /* DomiPlugProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugProViewController.swift; sourceTree = "<group>"; };
+		AD02B2F4215B967E00C23634 /* LumiPlugProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiPlugProViewController.swift; sourceTree = "<group>"; };
 		AD02DC6E2163A15D0097B8D8 /* ConditionController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConditionController.entitlements; sourceTree = "<group>"; };
 		AD02DC6F21661DA90097B8D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD02DC7321665A150097B8D8 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		AD02DC7521665C190097B8D8 /* ControlledNotificationDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledNotificationDevice.swift; sourceTree = "<group>"; };
-		AD033116215D1E8A008902D1 /* DomiPlugProSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugProSettingsTableViewController.swift; sourceTree = "<group>"; };
+		AD033116215D1E8A008902D1 /* LumiPlugProSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiPlugProSettingsTableViewController.swift; sourceTree = "<group>"; };
 		AD0428192100D54900EC8841 /* enumDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enumDefinition.swift; sourceTree = "<group>"; };
 		AD04281B2101158000EC8841 /* DailyProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgram.swift; sourceTree = "<group>"; };
-		AD04281F210A6B3900EC8841 /* DomiTouchSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchSettingsTableViewController.swift; sourceTree = "<group>"; };
-		AD0C573F2119BEEA00D6B05D /* DomiTouchManualCommandTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchManualCommandTableViewController.swift; sourceTree = "<group>"; };
+		AD04281F210A6B3900EC8841 /* LumiTouchSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiTouchSettingsTableViewController.swift; sourceTree = "<group>"; };
+		AD0C573F2119BEEA00D6B05D /* LumiTouchManualCommandTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiTouchManualCommandTableViewController.swift; sourceTree = "<group>"; };
 		AD10E8C92141890000498004 /* InternalCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD10E8CB21418FA600498004 /* ExternalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD407D33214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		AD425417216A0325004359FF /* F.A.Q..pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = F.A.Q..pdf; sourceTree = "<group>"; };
 		AD4AF68B20F53B150058885E /* ArrayTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTransform.swift; sourceTree = "<group>"; };
-		AD50C1BF20EF7348006100BE /* DomiTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchViewController.swift; sourceTree = "<group>"; };
-		AD57B029215304DB00D92866 /* DomiPlugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugViewController.swift; sourceTree = "<group>"; };
-		AD5B2C20215E660100555998 /* DomiSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiSwitchViewController.swift; sourceTree = "<group>"; };
-		AD7DEFD821543CC9001D3885 /* DomiPlugManualCommandTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugManualCommandTableViewController.swift; sourceTree = "<group>"; };
-		AD7DEFDA21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiPlugSettingsTableViewController.swift; sourceTree = "<group>"; };
-		AD8ED25C2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchProgramCollectionCollectionViewController.swift; sourceTree = "<group>"; };
+		AD50C1BF20EF7348006100BE /* LumiTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiTouchViewController.swift; sourceTree = "<group>"; };
+		AD57B029215304DB00D92866 /* LumiPlugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiPlugViewController.swift; sourceTree = "<group>"; };
+		AD5B2C20215E660100555998 /* LumiSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiSwitchViewController.swift; sourceTree = "<group>"; };
+		AD7DEFD821543CC9001D3885 /* LumiPlugManualCommandTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiPlugManualCommandTableViewController.swift; sourceTree = "<group>"; };
+		AD7DEFDA21543FF6001D3885 /* LumiPlugSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiPlugSettingsTableViewController.swift; sourceTree = "<group>"; };
+		AD8ED25C2139AA360074960F /* LumiTouchProgramCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiTouchProgramCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		AD992A082137F37100F1C04B /* FirstSettingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstSettingDeviceViewController.swift; path = /Users/vincenzoolivito/Desktop/DomiWiiIOS/ConditionController/ConditionController/FirstSettingDeviceViewController.swift; sourceTree = "<absolute>"; };
 		AD9B2B722191ADBC00392E46 /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
-		ADFE6E87214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomiTouchStatisticaCollectionViewController.swift; sourceTree = "<group>"; };
+		ADFE6E87214B146800DD5349 /* LumiTouchStatisticaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiTouchStatisticaCollectionViewController.swift; sourceTree = "<group>"; };
 		ADFE6E89214B1D6700DD5349 /* StatisticaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticaCollectionViewCell.swift; sourceTree = "<group>"; };
 		E75CB0612404C89E9A1B28D0 /* Pods-ConditionController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConditionController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConditionController/Pods-ConditionController.release.xcconfig"; sourceTree = "<group>"; };
 		F001A6741E1A92D9000BE03F /* CodeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeItem.swift; sourceTree = "<group>"; };
@@ -132,48 +132,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AD50C1C220EF7390006100BE /* DomiWii */ = {
+		AD50C1C220EF7390006100BE /* LumiWii */ = {
 			isa = PBXGroup;
 			children = (
 				F01E89911DA906D4008CCC08 /* IRControllerViewController.swift */,
 			);
-			path = DomiWii;
+			path = LumiWii;
 			sourceTree = "<group>";
 		};
-		AD50C1C320EF74A7006100BE /* DomiTouch */ = {
+		AD50C1C320EF74A7006100BE /* LumiTouch */ = {
 			isa = PBXGroup;
 			children = (
-				AD50C1BF20EF7348006100BE /* DomiTouchViewController.swift */,
-				AD04281F210A6B3900EC8841 /* DomiTouchSettingsTableViewController.swift */,
-				AD0C573F2119BEEA00D6B05D /* DomiTouchManualCommandTableViewController.swift */,
-				AD8ED25C2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift */,
+				AD50C1BF20EF7348006100BE /* LumiTouchViewController.swift */,
+				AD04281F210A6B3900EC8841 /* LumiTouchSettingsTableViewController.swift */,
+				AD0C573F2119BEEA00D6B05D /* LumiTouchManualCommandTableViewController.swift */,
+				AD8ED25C2139AA360074960F /* LumiTouchProgramCollectionCollectionViewController.swift */,
 				AD10E8C92141890000498004 /* InternalCellCollectionViewCell.swift */,
 				AD10E8CB21418FA600498004 /* ExternalCollectionViewCell.swift */,
-				ADFE6E87214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift */,
+				ADFE6E87214B146800DD5349 /* LumiTouchStatisticaCollectionViewController.swift */,
 				ADFE6E89214B1D6700DD5349 /* StatisticaCollectionViewCell.swift */,
 				AD407D33214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift */,
 			);
-			path = DomiTouch;
+			path = LumiTouch;
 			sourceTree = "<group>";
 		};
-		AD57B028215304B100D92866 /* DomiPlug */ = {
+		AD57B028215304B100D92866 /* LumiPlug */ = {
 			isa = PBXGroup;
 			children = (
-				AD57B029215304DB00D92866 /* DomiPlugViewController.swift */,
-				AD7DEFD821543CC9001D3885 /* DomiPlugManualCommandTableViewController.swift */,
-				AD7DEFDA21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift */,
-				AD02B2F4215B967E00C23634 /* DomiPlugProViewController.swift */,
-				AD033116215D1E8A008902D1 /* DomiPlugProSettingsTableViewController.swift */,
+				AD57B029215304DB00D92866 /* LumiPlugViewController.swift */,
+				AD7DEFD821543CC9001D3885 /* LumiPlugManualCommandTableViewController.swift */,
+				AD7DEFDA21543FF6001D3885 /* LumiPlugSettingsTableViewController.swift */,
+				AD02B2F4215B967E00C23634 /* LumiPlugProViewController.swift */,
+				AD033116215D1E8A008902D1 /* LumiPlugProSettingsTableViewController.swift */,
 			);
-			path = DomiPlug;
+			path = LumiPlug;
 			sourceTree = "<group>";
 		};
-		AD5B2C1F215E65DF00555998 /* DomiSwitch */ = {
+		AD5B2C1F215E65DF00555998 /* LumiSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				AD5B2C20215E660100555998 /* DomiSwitchViewController.swift */,
+				AD5B2C20215E660100555998 /* LumiSwitchViewController.swift */,
 			);
-			path = DomiSwitch;
+			path = LumiSwitch;
 			sourceTree = "<group>";
 		};
 		BAE27409EE676A6193AD3494 /* Frameworks */ = {
@@ -246,8 +246,8 @@
 			children = (
 				AD02DC6F21661DA90097B8D8 /* GoogleService-Info.plist */,
 				AD02DC6E2163A15D0097B8D8 /* ConditionController.entitlements */,
-				AD5B2C1F215E65DF00555998 /* DomiSwitch */,
-				AD57B028215304B100D92866 /* DomiPlug */,
+				AD5B2C1F215E65DF00555998 /* LumiSwitch */,
+				AD57B028215304B100D92866 /* LumiPlug */,
 				AD425417216A0325004359FF /* F.A.Q..pdf */,
 				F09BF4781DB3E21700918FC9 /* Model */,
 				F02016871DA450CC003F3D90 /* Utils */,
@@ -257,8 +257,8 @@
 				F0EF18A51DA2F07000EF1718 /* Assets.xcassets */,
 				F0EF18A71DA2F07000EF1718 /* LaunchScreen.storyboard */,
 				F0EF18AA1DA2F07000EF1718 /* Info.plist */,
-				AD50C1C220EF7390006100BE /* DomiWii */,
-				AD50C1C320EF74A7006100BE /* DomiTouch */,
+				AD50C1C220EF7390006100BE /* LumiWii */,
+				AD50C1C320EF74A7006100BE /* LumiTouch */,
 				F0059A691DB81A960066D780 /* AddDeviceTableViewController.swift */,
 				F00B50B31DA5904D00CD4008 /* DevicesViewController.swift */,
 				F0AD2C591DC14CF10017AE18 /* ManualActivationViewController.swift */,
@@ -429,15 +429,15 @@
 				AD02DC7421665A150097B8D8 /* NotificationModel.swift in Sources */,
 				F02D739D1DB3F2A0005DB870 /* ConditionerDeviceList.swift in Sources */,
 				F01DEEE31E1BC2F900C480C1 /* TestCommandTableViewController.swift in Sources */,
-				AD0C57402119BEEA00D6B05D /* DomiTouchManualCommandTableViewController.swift in Sources */,
+				AD0C57402119BEEA00D6B05D /* LumiTouchManualCommandTableViewController.swift in Sources */,
 				AD04281C2101158000EC8841 /* DailyProgram.swift in Sources */,
-				AD02B2F5215B967E00C23634 /* DomiPlugProViewController.swift in Sources */,
+				AD02B2F5215B967E00C23634 /* LumiPlugProViewController.swift in Sources */,
 				AD4AF68C20F53B150058885E /* ArrayTransform.swift in Sources */,
-				AD7DEFD921543CC9001D3885 /* DomiPlugManualCommandTableViewController.swift in Sources */,
+				AD7DEFD921543CC9001D3885 /* LumiPlugManualCommandTableViewController.swift in Sources */,
 				F0059A6A1DB81A960066D780 /* AddDeviceTableViewController.swift in Sources */,
 				AD10E8CA2141890000498004 /* InternalCellCollectionViewCell.swift in Sources */,
-				AD033117215D1E8A008902D1 /* DomiPlugProSettingsTableViewController.swift in Sources */,
-				AD57B02A215304DB00D92866 /* DomiPlugViewController.swift in Sources */,
+				AD033117215D1E8A008902D1 /* LumiPlugProSettingsTableViewController.swift in Sources */,
+				AD57B02A215304DB00D92866 /* LumiPlugViewController.swift in Sources */,
 				4D8E08F61E9047C40086A3DE /* ControlledDevices.swift in Sources */,
 				F0EF18A11DA2F07000EF1718 /* ViewController.swift in Sources */,
 				F00B50B41DA5904D00CD4008 /* DevicesViewController.swift in Sources */,
@@ -448,7 +448,7 @@
 				F01E89921DA906D4008CCC08 /* IRControllerViewController.swift in Sources */,
 				F00B50B61DA595DB00CD4008 /* Device.swift in Sources */,
 				AD407D34214BFB900000741C /* StatisticheHeaderCollectionReusableView.swift in Sources */,
-				ADFE6E88214B146800DD5349 /* DomiTouchStatisticaCollectionViewController.swift in Sources */,
+				ADFE6E88214B146800DD5349 /* LumiTouchStatisticaCollectionViewController.swift in Sources */,
 				F001A6751E1A92D9000BE03F /* CodeItem.swift in Sources */,
 				F0035B461DA6D016009FA188 /* FirstActivationTableViewController.swift in Sources */,
 				F09BF47A1DB3E38C00918FC9 /* ConditionerDevice.swift in Sources */,
@@ -458,15 +458,15 @@
 				AD02DC7621665C190097B8D8 /* ControlledNotificationDevice.swift in Sources */,
 				F0EF189F1DA2F07000EF1718 /* AppDelegate.swift in Sources */,
 				AD992A092137F37100F1C04B /* FirstSettingDeviceViewController.swift in Sources */,
-				AD7DEFDB21543FF6001D3885 /* DomiPlugSettingsTableViewController.swift in Sources */,
+				AD7DEFDB21543FF6001D3885 /* LumiPlugSettingsTableViewController.swift in Sources */,
 				F0A514EF1E131EE9003F28D8 /* FirstSettingsTableViewController.swift in Sources */,
 				AD04281A2100D54900EC8841 /* enumDefinition.swift in Sources */,
 				F02D739F1DB3F823005DB870 /* ModelListViewController.swift in Sources */,
 				F0AD2C581DC13F910017AE18 /* DomiWiiDeviceAPI.swift in Sources */,
-				AD042820210A6B3900EC8841 /* DomiTouchSettingsTableViewController.swift in Sources */,
-				AD8ED25D2139AA360074960F /* DomiTouchProgramCollectionCollectionViewController.swift in Sources */,
-				AD5B2C21215E660100555998 /* DomiSwitchViewController.swift in Sources */,
-				AD50C1C020EF7348006100BE /* DomiTouchViewController.swift in Sources */,
+				AD042820210A6B3900EC8841 /* LumiTouchSettingsTableViewController.swift in Sources */,
+				AD8ED25D2139AA360074960F /* LumiTouchProgramCollectionCollectionViewController.swift in Sources */,
+				AD5B2C21215E660100555998 /* LumiSwitchViewController.swift in Sources */,
+				AD50C1C020EF7348006100BE /* LumiTouchViewController.swift in Sources */,
 				ADFE6E8A214B1D6700DD5349 /* StatisticaCollectionViewCell.swift in Sources */,
 				F0045FD41DB3BA41006024FE /* GuideNetworkViewController.swift in Sources */,
 				F0FEE8101DAECA4D00581214 /* DomiWiiAPI.swift in Sources */,
